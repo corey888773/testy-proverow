@@ -1,0 +1,204 @@
+%------------------------------------------------------------------------ 
+fof(gte_relation,axiom,(
+	gte(X,X1))).
+fof(clause0,axiom,(
+	! [X] : (~(~var186(X) | var47(X))))).
+fof(clause1,axiom,(
+	! [X] : (~(var159(X) | var299(X))))).
+fof(clause2,axiom,(
+	! [X] : (~(var291(X) | ~var1(X))))).
+fof(clause3,axiom,(
+	! [X] : (~(~var103(X) | ~var146(X))))).
+fof(clause4,axiom,(
+	! [X] : (~(~var160(X) | ~var162(X))))).
+fof(clause5,axiom,(
+	! [X] : (~(var13(X) | var233(X))))).
+fof(clause6,axiom,(
+	! [X] : (~(~var36(X) | ~var17(X))))).
+fof(clause7,axiom,(
+	! [X] : (~(var276(X) | ~var14(X))))).
+fof(clause8,axiom,(
+	! [X] : (~(~var6(X) | var167(X))))).
+fof(clause9,axiom,(
+	! [X] : (~(~var144(X) | var266(X))))).
+fof(clause10,axiom,(
+	! [X] : (~(var32(X) | var217(X))))).
+fof(clause11,axiom,(
+	! [X] : (~(var99(X) | ~var169(X))))).
+fof(clause12,axiom,(
+	! [X] : (~(var65(X) | ~var264(X))))).
+fof(clause13,axiom,(
+	! [X] : (~(~var195(X) | ~var34(X))))).
+fof(clause14,axiom,(
+	! [X] : (~(var118(X) | var234(X))))).
+fof(clause15,axiom,(
+	! [X] : (~(var84(X) | ~var85(X))))).
+fof(clause16,axiom,(
+	! [X] : (~(var194(X) | ~var121(X))))).
+fof(clause17,axiom,(
+	! [X] : (~(var168(X) | ~var139(X))))).
+fof(clause18,axiom,(
+	! [X] : (~(~var226(X) | var241(X))))).
+fof(clause19,axiom,(
+	! [X] : (~(var161(X) | ~var71(X))))).
+fof(clause20,axiom,(
+	! [X] : (~(var122(X) | var142(X))))).
+fof(clause21,axiom,(
+	! [X] : (~(var54(X) | var184(X))))).
+fof(clause22,axiom,(
+	! [X] : (~(var155(X) | var218(X))))).
+fof(clause23,axiom,(
+	! [X] : (~(var175(X) | var210(X))))).
+fof(clause24,axiom,(
+	! [X] : (~(var172(X) | ~var219(X))))).
+fof(clause25,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var88(X1)) => (~var281(X)))))).
+fof(clause26,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var110(X1)) => (~var268(X)))))).
+fof(clause27,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var73(X1)) => (var77(X)))))).
+fof(clause28,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var209(X1)) => (~var7(X)))))).
+fof(clause29,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var246(X1)) => (var288(X)))))).
+fof(clause30,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var93(X1)) => (~var4(X)))))).
+fof(clause31,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var242(X1)) => (~var35(X)))))).
+fof(clause32,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var108(X1)) => (var48(X)))))).
+fof(clause33,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var78(X1)) => (var44(X)))))).
+fof(clause34,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var124(X1)) => (var49(X)))))).
+fof(clause35,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var15(X1)) => (var27(X)))))).
+fof(clause36,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var2(X1)) => (var86(X)))))).
+fof(clause37,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var69(X1)) => (var18(X)))))).
+fof(clause38,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var252(X1)) => (var57(X)))))).
+fof(clause39,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var19(X1)) => (var171(X)))))).
+fof(clause40,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var166(X1)) => (~var38(X)))))).
+fof(clause41,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var145(X1)) => (var119(X)))))).
+fof(clause42,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var138(X1)) => (~var289(X)))))).
+fof(clause43,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var63(X1)) => (var40(X)))))).
+fof(clause44,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var22(X1)) => (var260(X)))))).
+fof(clause45,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var30(X1)) => (~var45(X)))))).
+fof(clause46,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var50(X1)) => (var89(X)))))).
+fof(clause47,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var37(X1)) => (~var208(X)))))).
+fof(clause48,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var102(X1)) => (~var53(X)))))).
+fof(clause49,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var60(X1)) => (var29(X)))))).
+fof(clause50,axiom,(
+	! [X] : (~(var76(X) | ~var5(X) | var43(X))))).
+fof(clause51,axiom,(
+	! [X] : (~(var183(X) | var114(X) | ~var64(X))))).
+fof(clause52,axiom,(
+	! [X] : (~(var83(X) | ~var133(X) | ~var170(X))))).
+fof(clause53,axiom,(
+	! [X] : (~(var80(X) | ~var158(X) | ~var58(X))))).
+fof(clause54,axiom,(
+	! [X] : (~(var163(X) | var75(X) | ~var202(X))))).
+fof(clause55,axiom,(
+	! [X] : (~(var11(X) | ~var200(X) | ~var23(X))))).
+fof(clause56,axiom,(
+	! [X] : (~(~var235(X) | var26(X) | ~var56(X))))).
+fof(clause57,axiom,(
+	! [X] : (~(var182(X) | var177(X) | ~var150(X))))).
+fof(clause58,axiom,(
+	! [X] : (~(~var127(X) | var91(X) | var247(X))))).
+fof(clause59,axiom,(
+	! [X] : (~(~var294(X) | var94(X) | var109(X))))).
+fof(clause60,axiom,(
+	! [X] : (~(~var107(X) | ~var28(X) | ~var25(X))))).
+fof(clause61,axiom,(
+	! [X] : (~(var62(X) | var149(X) | ~var265(X))))).
+fof(clause62,axiom,(
+	! [X] : (~(var153(X) | var222(X) | var46(X))))).
+fof(clause63,axiom,(
+	! [X] : (~(var117(X) | ~var100(X) | var293(X))))).
+fof(clause64,axiom,(
+	! [X] : (~(~var187(X) | ~var74(X) | var42(X))))).
+fof(clause65,axiom,(
+	! [X] : (~(var20(X) | var261(X) | ~var55(X))))).
+fof(clause66,axiom,(
+	! [X] : (~(var180(X) | ~var231(X) | var152(X))))).
+fof(clause67,axiom,(
+	! [X] : (~(var128(X) | ~var298(X) | ~var192(X))))).
+fof(clause68,axiom,(
+	! [X] : (~(var82(X) | var285(X) | var31(X))))).
+fof(clause69,axiom,(
+	! [X] : (~(~var52(X) | ~var156(X) | ~var140(X))))).
+fof(clause70,axiom,(
+	! [X] : (~(var151(X) | var199(X) | ~var106(X))))).
+fof(clause71,axiom,(
+	! [X] : (~(~var10(X) | var259(X) | var136(X))))).
+fof(clause72,axiom,(
+	! [X] : (~(~var130(X) | var173(X) | var95(X))))).
+fof(clause73,axiom,(
+	! [X] : (~(var148(X) | ~var243(X) | var101(X))))).
+fof(clause74,axiom,(
+	! [X] : (~(var137(X) | var70(X) | var224(X))))).
+fof(clause75,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var92(X1) | ~var250(X1)) => (var203(X)))))).
+fof(clause76,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var98(X1) | var220(X1)) => (var8(X)))))).
+fof(clause77,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var61(X1) | var253(X1)) => (~var141(X)))))).
+fof(clause78,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var164(X1) | ~var39(X1)) => (var254(X)))))).
+fof(clause79,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var87(X1)) => (~var131(X) | ~var271(X)))))).
+fof(clause80,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var113(X1)) => (~var116(X) | var189(X)))))).
+fof(clause81,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var181(X1) | var176(X1)) => (~var16(X)))))).
+fof(clause82,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var179(X1) | ~var97(X1)) => (var174(X)))))).
+fof(clause83,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var112(X1)) => (var111(X) | ~var165(X)))))).
+fof(clause84,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var227(X1) | var120(X1)) => (~var129(X)))))).
+fof(clause85,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var225(X1)) => (var215(X) | var125(X)))))).
+fof(clause86,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var295(X1) | ~var178(X1)) => (~var157(X)))))).
+fof(clause87,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var267(X1)) => (~var90(X) | var59(X)))))).
+fof(clause88,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var255(X1)) => (var67(X) | var143(X)))))).
+fof(clause89,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var263(X1)) => (~var104(X) | var258(X)))))).
+fof(clause90,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var72(X1) | ~var205(X1)) => (var191(X)))))).
+fof(clause91,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var51(X1)) => (var115(X) | ~var132(X)))))).
+fof(clause92,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var68(X1) | var290(X1)) => (~var33(X)))))).
+fof(clause93,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var123(X1) | ~var9(X1)) => (var79(X)))))).
+fof(clause94,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var81(X1) | var211(X1)) => (var213(X)))))).
+fof(clause95,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var134(X1)) => (~var66(X) | var105(X)))))).
+fof(clause96,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var96(X1)) => (var24(X) | ~var12(X)))))).
+fof(clause97,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var3(X1) | ~var21(X1)) => (var190(X)))))).
+fof(clause98,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var147(X1)) => (~var41(X) | var135(X)))))).
+fof(clause99,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var126(X1) | ~var154(X1)) => (var185(X)))))).
+%------------------------------------------------------------------------ 

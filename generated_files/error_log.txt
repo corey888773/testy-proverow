@@ -1,0 +1,11 @@
+16:54:59 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.
+17:30:13 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.
+17:33:01 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.
+17:38:03 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.
+17:41:31 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.
+17:43:05 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.
+17:49:50 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.
+10:22:25 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.
+10:51:28 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.
+10:51:57 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.
+10:53:59 | C:\Users\piotr\Downloads\RFG-1.0.0/generated_files/problem1_c50_a25_prec50_lengths_2_3_4_6_8_10_attempt1_prover9.out | ProverRunner.getMeasuresFromOutputFile: Results not found in output file.

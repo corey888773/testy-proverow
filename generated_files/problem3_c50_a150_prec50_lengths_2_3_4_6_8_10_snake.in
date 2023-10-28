@@ -1,0 +1,104 @@
+%------------------------------------------------------------------------ 
+fof(gte_relation,axiom,(
+	gte(X,X1))).
+fof(clause0,axiom,(
+	! [X] : (~(var22(X) | var8(X))))).
+fof(clause1,axiom,(
+	! [X] : (~(var103(X) | ~var50(X))))).
+fof(clause2,axiom,(
+	! [X] : (~(var51(X) | var68(X))))).
+fof(clause3,axiom,(
+	! [X] : (~(~var64(X) | ~var147(X))))).
+fof(clause4,axiom,(
+	! [X] : (~(var69(X) | var90(X))))).
+fof(clause5,axiom,(
+	! [X] : (~(~var42(X) | var1(X))))).
+fof(clause6,axiom,(
+	! [X] : (~(~var59(X) | ~var46(X))))).
+fof(clause7,axiom,(
+	! [X] : (~(~var2(X) | var15(X))))).
+fof(clause8,axiom,(
+	! [X] : (~(var125(X) | ~var45(X))))).
+fof(clause9,axiom,(
+	! [X] : (~(var14(X) | ~var5(X))))).
+fof(clause10,axiom,(
+	! [X] : (~(var93(X) | var97(X))))).
+fof(clause11,axiom,(
+	! [X] : (~(var16(X) | var114(X))))).
+fof(clause12,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var13(X1)) => (var35(X)))))).
+fof(clause13,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var73(X1)) => (var12(X)))))).
+fof(clause14,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var24(X1)) => (~var9(X)))))).
+fof(clause15,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var63(X1)) => (~var133(X)))))).
+fof(clause16,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var81(X1)) => (var41(X)))))).
+fof(clause17,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var10(X1)) => (var6(X)))))).
+fof(clause18,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var39(X1)) => (~var23(X)))))).
+fof(clause19,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var4(X1)) => (~var3(X)))))).
+fof(clause20,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var36(X1)) => (~var75(X)))))).
+fof(clause21,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var134(X1)) => (~var77(X)))))).
+fof(clause22,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var70(X1)) => (var57(X)))))).
+fof(clause23,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var53(X1)) => (var48(X)))))).
+fof(clause24,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var34(X1)) => (var54(X)))))).
+fof(clause25,axiom,(
+	! [X] : (~(~var26(X) | ~var129(X) | var128(X))))).
+fof(clause26,axiom,(
+	! [X] : (~(~var21(X) | ~var66(X) | ~var67(X))))).
+fof(clause27,axiom,(
+	! [X] : (~(~var49(X) | ~var144(X) | var86(X))))).
+fof(clause28,axiom,(
+	! [X] : (~(var28(X) | ~var150(X) | ~var102(X))))).
+fof(clause29,axiom,(
+	! [X] : (~(var60(X) | var62(X) | ~var78(X))))).
+fof(clause30,axiom,(
+	! [X] : (~(var76(X) | ~var40(X) | ~var71(X))))).
+fof(clause31,axiom,(
+	! [X] : (~(var7(X) | ~var127(X) | var37(X))))).
+fof(clause32,axiom,(
+	! [X] : (~(~var138(X) | var109(X) | ~var72(X))))).
+fof(clause33,axiom,(
+	! [X] : (~(~var25(X) | var17(X) | var43(X))))).
+fof(clause34,axiom,(
+	! [X] : (~(var55(X) | var19(X) | var84(X))))).
+fof(clause35,axiom,(
+	! [X] : (~(var94(X) | ~var18(X) | var88(X))))).
+fof(clause36,axiom,(
+	! [X] : (~(~var65(X) | ~var83(X) | ~var95(X))))).
+fof(clause37,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var31(X1) | var124(X1)) => (var74(X)))))).
+fof(clause38,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var47(X1) | ~var80(X1)) => (var117(X)))))).
+fof(clause39,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var119(X1) | var92(X1)) => (~var56(X)))))).
+fof(clause40,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var132(X1) | ~var120(X1)) => (~var82(X)))))).
+fof(clause41,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var29(X1)) => (~var121(X) | var101(X)))))).
+fof(clause42,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var44(X1)) => (~var33(X) | ~var91(X)))))).
+fof(clause43,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var85(X1)) => (~var27(X) | ~var122(X)))))).
+fof(clause44,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var108(X1) | var11(X1)) => (var89(X)))))).
+fof(clause45,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var100(X1)) => (var99(X) | var87(X)))))).
+fof(clause46,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var118(X1) | ~var52(X1)) => (~var20(X)))))).
+fof(clause47,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var61(X1) | var79(X1)) => (var145(X)))))).
+fof(clause48,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((var149(X1)) => (var110(X) | var58(X)))))).
+fof(clause49,axiom,(
+	! [X] : ? [X1] : (gte(X,X1) & ((~var32(X1)) => (~var38(X) | var30(X)))))).
+%------------------------------------------------------------------------ 
