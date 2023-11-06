@@ -130,10 +130,13 @@ class TestEnv:
         # perform three tests on the same formula to get more truthful results
         for attempt in range(1, 4):
             # include the attempt number in output file name
-            current_output_file = os.path.dirname(__file__) + "/generated_files/" + self.filenames["output"] + \
+            current_output_file = os.path.dirname(__file__) + \
+                "/generated_files/" + self.filenames["output"] + \
                 "_attempt" + str(attempt) + "_" + prover_name + ".out"
+            
             # run prover and read output file
             usage_dict = runner.performMeasurements(current_output_file)
+
             # save results in lists
             memory_usages.append(usage_dict["memory"])
             time_usages.append(usage_dict["time"])
@@ -141,7 +144,10 @@ class TestEnv:
 
         for result_idx in range(1, len(result_list)):
             # if there are two contrary valid results in the satisfiability list, raise an error
-            if result_list[result_idx] in ["True","False"] and result_list[result_idx - 1] in ["True","False"] and  result_list[result_idx] != result_list[result_idx - 1]:
+            if result_list[result_idx] in ["True","False"] \
+                    and result_list[result_idx - 1] in ["True","False"] \
+                    and result_list[result_idx] != result_list[result_idx - 1]:
+                
                 raise RFGError("TestEnv.runProver: Different results for the same formula.", self.filenames["output"])
 
         # return the mean of time and memory results 
