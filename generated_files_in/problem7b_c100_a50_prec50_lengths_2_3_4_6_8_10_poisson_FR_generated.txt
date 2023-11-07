@@ -1,0 +1,1 @@
+[ EXISTS var14 OR var48 OR var38 OR -var12 ]

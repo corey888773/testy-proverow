@@ -2,6 +2,7 @@ import random
 import utils
 import os
 from scipy import stats
+from collections import defaultdict
 
 from customerrors import RFGError
 
@@ -144,14 +145,26 @@ class Generator:
             vampire_input_file = self.translateToVampire()
             snake_input_file = self.translateToSnake()
             z3_input_file = self.translateToZ3()
-            # cvc4_input_file = self.translateToCVC4()
-            # prov9_input_file = self.translateToProver9()
-            # spass_input_file = self.translateToSPASS()
+            cvc4_input_file = self.translateToCVC4()
+            prov9_input_file = self.translateToProver9()
+            spass_input_file = self.translateToSPASS()
 
         # return paths to saved files (and path of the output file yet to be generated) with descriptions
-        return {"vampire_input": vampire_input_file, "snake_input": snake_input_file, "z3_input": z3_input_file, "output": self.output_file_name 
-                # "prover9_input": prov9_input_file, "spass_input": spass_input_file, "cvc4_input": cvc4_input_file
-                }
+        result = defaultdict(None)
+        if not self.test_type.startswith(("problem7", "problem8")):
+            result["vampire_input"] = vampire_input_file
+            result["snake_input"] = snake_input_file
+            result["z3_input"] = z3_input_file
+            result["cvc4_input"] = cvc4_input_file
+            result["output"] = self.output_file_name
+
+        result["prover9_input"] = prov9_input_file
+        result["spass_input"] = spass_input_file
+
+        return dict(result)
+        # return {"vampire_input": vampire_input_file, "snake_input": snake_input_file, "z3_input": z3_input_file, "output": self.output_file_name 
+        #         # "prover9_input": prov9_input_file, "spass_input": spass_input_file, "cvc4_input": cvc4_input_file
+        #         }
 
     def generateProblem1(self, clauses_lengths, clauses_num, safety_coeff=0.5, target_formula=1):
         formula = []
@@ -624,8 +637,8 @@ class Generator:
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}vampire.in'
 
-        # the file is saved in a folder called "generated_files", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files'
+        # the file is saved in a folder called "generated_files_in", located in the same folder as this script
+        dir_path = f'{script_path}{os_sep}generated_files_in'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -727,8 +740,8 @@ class Generator:
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}snake.in'
 
-        # the file is saved in a folder called "generated_files", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files'
+        # the file is saved in a folder called "generated_files_in", located in the same folder as this script
+        dir_path = f'{script_path}{os_sep}generated_files_in'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -830,8 +843,8 @@ class Generator:
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}prover9.in'
 
-        # the file is saved in a folder called "generated_files", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files'
+        # the file is saved in a folder called "generated_files_in", located in the same folder as this script
+        dir_path = f'{script_path}{os_sep}generated_files_in'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -1030,8 +1043,8 @@ class Generator:
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}spass.in'
         
-        # the file is saved in a folder called "generated_files", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files'
+        # the file is saved in a folder called "generated_files_in", located in the same folder as this script
+        dir_path = f'{script_path}{os_sep}generated_files_in'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -1200,8 +1213,8 @@ class Generator:
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}z3.py'
 
-        # the file is saved in a folder called "generated_files", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files'
+        # the file is saved in a folder called "generated_files_in", located in the same folder as this script
+        dir_path = f'{script_path}{os_sep}generated_files_in'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -1363,7 +1376,7 @@ class Generator:
                 elif token_type == 'IMP':
                     # the implication tuple appears after all the atoms tuples,
                     # so the current clause string is ready to be encapsulated in 'implies()' operator
-                    print(clause_str)
+                    # print(clause_str)
                     clause_str = f'(implies {clause_str})'
                 elif token_type in ['FORALL', 'EXISTS']:
                     # the quantifier tuple appears at the end of the queue
@@ -1404,8 +1417,8 @@ class Generator:
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}cvc4.in'
 
-        # the file is saved in a folder called "generated_files", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files'
+        # the file is saved in a folder called "generated_files_in", located in the same folder as this script
+        dir_path = f'{script_path}{os_sep}generated_files_in'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -1674,28 +1687,28 @@ class Generator:
         # for each generated formula create a seperate file and
         # write each clause as list of tokens separated by spaces, encapsulated in square brackets
         if self.formula:
-            with open(f'{os.path.dirname(__file__)}{os.sep}generated_files{os.sep}{self.output_file_name}_F1_generated.txt', "w") as file:
+            with open(f'{os.path.dirname(__file__)}{os.sep}generated_files_in{os.sep}{self.output_file_name}_F1_generated.txt', "w") as file:
                 for clause in self.formula:
                     file.write('[ ')
                     for token in clause:
                         file.write(str(token) + ' ')
                     file.write(']\n')
         if self.formula2:
-            with open(f'{os.path.dirname(__file__)}{os.sep}generated_files{os.sep}{self.output_file_name}_F2_generated.txt', "w") as file:
+            with open(f'{os.path.dirname(__file__)}{os.sep}generated_files_in{os.sep}{self.output_file_name}_F2_generated.txt', "w") as file:
                 for clause in self.formula2:
                     file.write('[ ')
                     for token in clause:
                         file.write(str(token) + ' ')
                     file.write(']\n')
         if self.formula3:
-            with open(f'{os.path.dirname(__file__)}{os.sep}generated_files{os.sep}{self.output_file_name}_F3_generated.txt', "w") as file:
+            with open(f'{os.path.dirname(__file__)}{os.sep}generated_files_in{os.sep}{self.output_file_name}_F3_generated.txt', "w") as file:
                 for clause in self.formula3:
                     file.write('[ ')
                     for token in clause:
                         file.write(str(token) + ' ')
                     file.write(']\n')
         if self.formulaR:
-            with open(f'{os.path.dirname(__file__)}{os.sep}generated_files{os.sep}{self.output_file_name}_FR_generated.txt', "w") as file:
+            with open(f'{os.path.dirname(__file__)}{os.sep}generated_files_in{os.sep}{self.output_file_name}_FR_generated.txt', "w") as file:
                 for clause in self.formulaR:
                     file.write('[ ')
                     for token in clause:

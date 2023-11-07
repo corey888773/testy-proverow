@@ -2,203 +2,203 @@
 fof(gte_relation,axiom,(
 	gte(X,X1))).
 fof(clause0,axiom,(
-	! [X] : (~(~var35(X) | var31(X))))).
+	! [X] : (~(var306(X) | ~var33(X))))).
 fof(clause1,axiom,(
-	! [X] : (~(var155(X) | ~var184(X))))).
+	! [X] : (~(var16(X) | var274(X))))).
 fof(clause2,axiom,(
-	! [X] : (~(var341(X) | ~var53(X))))).
+	! [X] : (~(var74(X) | var17(X))))).
 fof(clause3,axiom,(
-	! [X] : (~(var6(X) | var299(X))))).
+	! [X] : (~(var70(X) | ~var370(X))))).
 fof(clause4,axiom,(
-	! [X] : (~(var164(X) | ~var192(X))))).
+	! [X] : (~(~var320(X) | var85(X))))).
 fof(clause5,axiom,(
-	! [X] : (~(~var169(X) | var42(X))))).
+	! [X] : (~(var40(X) | var132(X))))).
 fof(clause6,axiom,(
-	! [X] : (~(var157(X) | ~var108(X))))).
+	! [X] : (~(~var248(X) | ~var25(X))))).
 fof(clause7,axiom,(
-	! [X] : (~(~var68(X) | var47(X))))).
+	! [X] : (~(~var101(X) | ~var357(X))))).
 fof(clause8,axiom,(
-	! [X] : (~(~var51(X) | ~var397(X))))).
+	! [X] : (~(var62(X) | var207(X))))).
 fof(clause9,axiom,(
-	! [X] : (~(~var244(X) | ~var241(X))))).
+	! [X] : (~(~var65(X) | ~var262(X))))).
 fof(clause10,axiom,(
-	! [X] : (~(var142(X) | ~var396(X))))).
+	! [X] : (~(~var50(X) | var226(X))))).
 fof(clause11,axiom,(
-	! [X] : (~(var91(X) | var40(X))))).
+	! [X] : (~(~var96(X) | ~var359(X))))).
 fof(clause12,axiom,(
-	! [X] : (~(~var5(X) | ~var20(X))))).
+	! [X] : (~(~var287(X) | ~var71(X))))).
 fof(clause13,axiom,(
-	! [X] : (~(~var340(X) | var139(X))))).
+	! [X] : (~(~var115(X) | var82(X))))).
 fof(clause14,axiom,(
-	! [X] : (~(var291(X) | ~var117(X))))).
+	! [X] : (~(var144(X) | ~var59(X))))).
 fof(clause15,axiom,(
-	! [X] : (~(~var93(X) | ~var160(X))))).
+	! [X] : (~(var48(X) | ~var64(X))))).
 fof(clause16,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var79(X1)) => (~var10(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var164(X1)) => (~var272(X)))))).
 fof(clause17,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var33(X1)) => (var134(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var347(X1)) => (~var27(X)))))).
 fof(clause18,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var395(X1)) => (~var161(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var173(X1)) => (~var1(X)))))).
 fof(clause19,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var335(X1)) => (~var137(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var152(X1)) => (~var31(X)))))).
 fof(clause20,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var72(X1)) => (var125(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var203(X1)) => (~var158(X)))))).
 fof(clause21,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var12(X1)) => (~var290(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var133(X1)) => (~var30(X)))))).
 fof(clause22,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var167(X1)) => (~var181(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var154(X1)) => (var131(X)))))).
 fof(clause23,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var180(X1)) => (var168(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var104(X1)) => (~var245(X)))))).
 fof(clause24,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var55(X1)) => (var133(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var14(X1)) => (var236(X)))))).
 fof(clause25,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var100(X1)) => (~var66(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var141(X1)) => (~var214(X)))))).
 fof(clause26,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var14(X1)) => (~var345(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var54(X1)) => (~var178(X)))))).
 fof(clause27,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var2(X1)) => (~var28(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var60(X1)) => (~var66(X)))))).
 fof(clause28,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var222(X1)) => (~var103(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var103(X1)) => (~var305(X)))))).
 fof(clause29,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var293(X1)) => (var281(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var196(X1)) => (var91(X)))))).
 fof(clause30,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var21(X1)) => (~var135(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var4(X1)) => (var26(X)))))).
 fof(clause31,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var81(X1)) => (~var52(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var107(X1)) => (~var69(X)))))).
 fof(clause32,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var78(X1)) => (var110(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var360(X1)) => (var21(X)))))).
 fof(clause33,axiom,(
-	! [X] : (~(~var76(X) | var92(X) | var90(X))))).
+	! [X] : (~(~var128(X) | var114(X) | var87(X))))).
 fof(clause34,axiom,(
-	! [X] : (~(var38(X) | ~var56(X) | ~var120(X))))).
+	! [X] : (~(~var161(X) | var125(X) | ~var165(X))))).
 fof(clause35,axiom,(
-	! [X] : (~(var319(X) | ~var95(X) | var151(X))))).
+	! [X] : (~(~var182(X) | var29(X) | ~var258(X))))).
 fof(clause36,axiom,(
-	! [X] : (~(~var300(X) | var46(X) | var372(X))))).
+	! [X] : (~(var143(X) | ~var201(X) | var38(X))))).
 fof(clause37,axiom,(
-	! [X] : (~(var172(X) | var248(X) | var382(X))))).
+	! [X] : (~(~var221(X) | var282(X) | ~var32(X))))).
 fof(clause38,axiom,(
-	! [X] : (~(~var179(X) | var251(X) | ~var311(X))))).
+	! [X] : (~(~var220(X) | ~var147(X) | ~var148(X))))).
 fof(clause39,axiom,(
-	! [X] : (~(~var364(X) | var63(X) | var75(X))))).
+	! [X] : (~(~var75(X) | ~var127(X) | var22(X))))).
 fof(clause40,axiom,(
-	! [X] : (~(~var85(X) | ~var153(X) | ~var399(X))))).
+	! [X] : (~(var119(X) | var241(X) | ~var95(X))))).
 fof(clause41,axiom,(
-	! [X] : (~(var97(X) | ~var318(X) | var375(X))))).
+	! [X] : (~(~var126(X) | ~var10(X) | ~var151(X))))).
 fof(clause42,axiom,(
-	! [X] : (~(var255(X) | var69(X) | ~var343(X))))).
+	! [X] : (~(~var23(X) | ~var108(X) | var362(X))))).
 fof(clause43,axiom,(
-	! [X] : (~(~var150(X) | ~var158(X) | ~var145(X))))).
+	! [X] : (~(var39(X) | var229(X) | var117(X))))).
 fof(clause44,axiom,(
-	! [X] : (~(var9(X) | var177(X) | ~var338(X))))).
+	! [X] : (~(~var227(X) | ~var67(X) | var6(X))))).
 fof(clause45,axiom,(
-	! [X] : (~(~var282(X) | ~var171(X) | var124(X))))).
+	! [X] : (~(var37(X) | ~var116(X) | ~var169(X))))).
 fof(clause46,axiom,(
-	! [X] : (~(var163(X) | ~var7(X) | ~var394(X))))).
+	! [X] : (~(var129(X) | var293(X) | ~var53(X))))).
 fof(clause47,axiom,(
-	! [X] : (~(~var331(X) | var272(X) | var8(X))))).
+	! [X] : (~(~var34(X) | var113(X) | ~var294(X))))).
 fof(clause48,axiom,(
-	! [X] : (~(~var3(X) | var57(X) | var11(X))))).
+	! [X] : (~(~var180(X) | var98(X) | var118(X))))).
 fof(clause49,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var118(X1)) => (~var25(X) | ~var127(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var329(X1) | ~var123(X1)) => (~var24(X)))))).
 fof(clause50,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var36(X1)) => (var370(X) | var253(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var338(X1) | var42(X1)) => (~var2(X)))))).
 fof(clause51,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var58(X1) | var99(X1)) => (var210(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var217(X1) | var73(X1)) => (~var80(X)))))).
 fof(clause52,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var352(X1) | var73(X1)) => (~var326(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var170(X1) | var92(X1)) => (var160(X)))))).
 fof(clause53,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var67(X1)) => (~var149(X) | var227(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var46(X1) | ~var84(X1)) => (var35(X)))))).
 fof(clause54,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var45(X1) | ~var152(X1)) => (var176(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var52(X1)) => (~var137(X) | var356(X)))))).
 fof(clause55,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var18(X1) | ~var126(X1)) => (var156(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var197(X1)) => (var124(X) | ~var111(X)))))).
 fof(clause56,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var111(X1)) => (var94(X) | var198(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var246(X1) | var41(X1)) => (var146(X)))))).
 fof(clause57,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var22(X1) | ~var60(X1)) => (var143(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var304(X1) | ~var51(X1)) => (~var102(X)))))).
 fof(clause58,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var366(X1) | ~var277(X1)) => (var16(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var150(X1) | var18(X1)) => (var5(X)))))).
 fof(clause59,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var140(X1)) => (~var183(X) | ~var325(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var369(X1) | var138(X1)) => (var234(X)))))).
 fof(clause60,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var284(X1)) => (var304(X) | var74(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var270(X1)) => (var136(X) | ~var88(X)))))).
 fof(clause61,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var292(X1)) => (~var223(X) | ~var129(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var72(X1) | var135(X1)) => (~var309(X)))))).
 fof(clause62,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var114(X1)) => (~var44(X) | var39(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var200(X1) | ~var45(X1)) => (var322(X)))))).
 fof(clause63,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var112(X1) | var144(X1)) => (var26(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var76(X1)) => (~var63(X) | ~var19(X)))))).
 fof(clause64,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var196(X1)) => (~var84(X) | var96(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var168(X1)) => (~var183(X) | var261(X)))))).
 fof(clause65,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var1(X1) | var101(X1)) => (~var109(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var120(X1)) => (~var343(X) | ~var264(X)))))).
 fof(clause66,axiom,(
-	! [X] : (~(var173(X) | var54(X) | var104(X) | ~var238(X))))).
+	! [X] : (~(~var310(X) | var157(X) | var172(X) | var142(X))))).
 fof(clause67,axiom,(
-	! [X] : (~(var342(X) | var64(X) | ~var128(X) | var228(X))))).
+	! [X] : (~(~var266(X) | ~var330(X) | ~var166(X) | ~var89(X))))).
 fof(clause68,axiom,(
-	! [X] : (~(var224(X) | ~var24(X) | var65(X) | ~var59(X))))).
+	! [X] : (~(~var171(X) | var8(X) | var289(X) | ~var273(X))))).
 fof(clause69,axiom,(
-	! [X] : (~(~var355(X) | ~var257(X) | var130(X) | var19(X))))).
+	! [X] : (~(~var212(X) | ~var175(X) | ~var225(X) | var20(X))))).
 fof(clause70,axiom,(
-	! [X] : (~(~var141(X) | ~var295(X) | var136(X) | var87(X))))).
+	! [X] : (~(~var83(X) | var185(X) | var392(X) | ~var174(X))))).
 fof(clause71,axiom,(
-	! [X] : (~(~var146(X) | var374(X) | var213(X) | ~var32(X))))).
+	! [X] : (~(~var109(X) | ~var121(X) | var122(X) | ~var167(X))))).
 fof(clause72,axiom,(
-	! [X] : (~(~var246(X) | var193(X) | var170(X) | ~var199(X))))).
+	! [X] : (~(var163(X) | ~var15(X) | ~var99(X) | var90(X))))).
 fof(clause73,axiom,(
-	! [X] : (~(~var363(X) | var88(X) | var50(X) | var201(X))))).
+	! [X] : (~(~var331(X) | ~var247(X) | ~var235(X) | var105(X))))).
 fof(clause74,axiom,(
-	! [X] : (~(~var17(X) | ~var43(X) | ~var154(X) | var368(X))))).
+	! [X] : (~(~var134(X) | var363(X) | var253(X) | var376(X))))).
 fof(clause75,axiom,(
-	! [X] : (~(~var308(X) | ~var49(X) | var361(X) | var131(X))))).
+	! [X] : (~(~var78(X) | var288(X) | var162(X) | ~var312(X))))).
 fof(clause76,axiom,(
-	! [X] : (~(~var98(X) | ~var132(X) | ~var71(X) | ~var122(X))))).
+	! [X] : (~(var68(X) | var327(X) | var337(X) | var13(X))))).
 fof(clause77,axiom,(
-	! [X] : (~(var256(X) | var15(X) | var83(X) | ~var369(X))))).
+	! [X] : (~(var269(X) | var176(X) | var106(X) | ~var81(X))))).
 fof(clause78,axiom,(
-	! [X] : (~(var267(X) | ~var377(X) | ~var174(X) | var207(X))))).
+	! [X] : (~(var344(X) | var206(X) | var159(X) | var222(X))))).
 fof(clause79,axiom,(
-	! [X] : (~(var185(X) | ~var27(X) | ~var165(X) | ~var216(X))))).
+	! [X] : (~(var208(X) | ~var321(X) | ~var393(X) | ~var366(X))))).
 fof(clause80,axiom,(
-	! [X] : (~(~var119(X) | var231(X) | ~var148(X) | ~var80(X))))).
+	! [X] : (~(var368(X) | var355(X) | ~var388(X) | var139(X))))).
 fof(clause81,axiom,(
-	! [X] : (~(var113(X) | var77(X) | var225(X) | var86(X))))).
+	! [X] : (~(var100(X) | ~var145(X) | var202(X) | ~var77(X))))).
 fof(clause82,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var307(X1) | var381(X1)) => (var106(X) | var286(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var314(X1) | var365(X1) | var193(X1)) => (var94(X)))))).
 fof(clause83,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var82(X1) | ~var357(X1) | ~var29(X1)) => (var37(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var291(X1) | ~var358(X1)) => (~var140(X) | var49(X)))))).
 fof(clause84,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var287(X1)) => (var138(X) | var360(X) | var302(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var213(X1)) => (var44(X) | var374(X) | var179(X)))))).
 fof(clause85,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var62(X1) | var321(X1) | var105(X1)) => (var203(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var177(X1)) => (var297(X) | var28(X) | var228(X)))))).
 fof(clause86,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var166(X1) | var240(X1) | var365(X1)) => (~var297(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var110(X1) | var181(X1) | ~var56(X1)) => (~var11(X)))))).
 fof(clause87,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var400(X1) | ~var23(X1)) => (var147(X) | var115(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var36(X1) | ~var351(X1)) => (var97(X) | var397(X)))))).
 fof(clause88,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var187(X1)) => (~var13(X) | ~var314(X) | var41(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var295(X1) | ~var3(X1)) => (~var155(X) | var280(X)))))).
 fof(clause89,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var285(X1) | ~var221(X1)) => (~var388(X) | var188(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var375(X1) | var232(X1)) => (var209(X) | var198(X)))))).
 fof(clause90,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((var275(X1) | ~var262(X1)) => (var358(X) | ~var116(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var231(X1) | ~var153(X1) | ~var319(X1)) => (~var237(X)))))).
 fof(clause91,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var89(X1) | var327(X1)) => (var301(X) | var34(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var210(X1)) => (~var184(X) | ~var382(X) | ~var296(X)))))).
 fof(clause92,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var175(X1) | var48(X1) | ~var189(X1)) => (~var347(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var86(X1) | ~var112(X1)) => (var342(X) | ~var353(X)))))).
 fof(clause93,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var30(X1) | ~var212(X1) | ~var159(X1)) => (var182(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var255(X1) | ~var348(X1) | ~var219(X1)) => (~var57(X)))))).
 fof(clause94,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var70(X1)) => (var123(X) | var178(X) | var288(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var55(X1)) => (~var303(X) | var379(X) | var211(X)))))).
 fof(clause95,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var4(X1) | ~var298(X1) | var339(X1)) => (var61(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var130(X1) | var58(X1) | ~var7(X1)) => (var286(X)))))).
 fof(clause96,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var162(X1) | ~var121(X1)) => (~var344(X) | ~var209(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var79(X1)) => (~var192(X) | var149(X) | var371(X)))))).
 fof(clause97,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var204(X1)) => (var259(X) | var202(X) | ~var323(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((var43(X1) | ~var61(X1)) => (~var156(X) | var47(X)))))).
 fof(clause98,axiom,(
-	! [X] : ? [X1] : (gte(X,X1) & ((~var320(X1)) => (~var328(X) | ~var329(X) | ~var107(X)))))).
+	! [X] : ? [X1] : (gte(X,X1) & ((~var373(X1) | var93(X1)) => (var278(X) | var9(X)))))).
 fof(clause99,axiom,(
-	! [X] : (~(~var102(X) | var359(X) | ~var252(X))))).
+	! [X] : (~(~var345(X) | var12(X))))).
 %------------------------------------------------------------------------ 

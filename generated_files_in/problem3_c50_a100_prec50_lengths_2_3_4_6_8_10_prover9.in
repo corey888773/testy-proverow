@@ -1,0 +1,56 @@
+assign(max_megs, 1024).
+
+formulas(sos).
+
+all u (-(-Var55(u) | Var59(u))).
+all u (-(-Var67(u) | Var91(u))).
+all u (-(Var34(u) | Var25(u))).
+all u (-(-Var84(u) | -Var64(u))).
+all u (-(Var83(u) | -Var22(u))).
+all u (-(Var2(u) | Var53(u))).
+all u (-(-Var11(u) | Var68(u))).
+all u (-(-Var94(u) | Var19(u))).
+all u (-(Var48(u) | -Var44(u))).
+all u (-(Var43(u) | Var45(u))).
+all u (-(Var27(u) | Var81(u))).
+all u (-(Var26(u) | Var95(u))).
+all u (-(-Var47(u) | -Var7(u))).
+all u (-(-Var92(u) | -Var38(u))).
+all u (-(Var62(u) | Var15(u))).
+all u (-(-Var99(u) | Var18(u))).
+all u (-(-Var46(u) | -Var42(u))).
+all u (-(Var33(u) | -Var60(u))).
+all u (-(-Var20(u) | -Var73(u))).
+all u (-(-Var69(u) | Var82(u))).
+all u (-(Var51(u) | Var37(u))).
+all u (-(-Var1(u) | -Var39(u))).
+all u (-(-Var40(u) | -Var35(u))).
+all u (-(Var31(u) | -Var4(u))).
+all u (-(-Var80(u) | Var57(u))).
+all u exists u1 ((u >= u1) & ((Var72(u1)) -> (Var89(u)))).
+all u exists u1 ((u >= u1) & ((-Var85(u1)) -> (Var70(u)))).
+all u exists u1 ((u >= u1) & ((Var65(u1)) -> (Var13(u)))).
+all u exists u1 ((u >= u1) & ((Var63(u1)) -> (Var12(u)))).
+all u exists u1 ((u >= u1) & ((-Var74(u1)) -> (Var29(u)))).
+all u exists u1 ((u >= u1) & ((Var100(u1)) -> (-Var52(u)))).
+all u exists u1 ((u >= u1) & ((Var30(u1)) -> (Var36(u)))).
+all u exists u1 ((u >= u1) & ((Var41(u1)) -> (-Var21(u)))).
+all u exists u1 ((u >= u1) & ((-Var75(u1)) -> (Var58(u)))).
+all u exists u1 ((u >= u1) & ((Var9(u1)) -> (Var17(u)))).
+all u exists u1 ((u >= u1) & ((Var98(u1)) -> (-Var54(u)))).
+all u exists u1 ((u >= u1) & ((-Var77(u1)) -> (-Var87(u)))).
+all u exists u1 ((u >= u1) & ((-Var3(u1)) -> (Var10(u)))).
+all u exists u1 ((u >= u1) & ((-Var16(u1)) -> (Var86(u)))).
+all u exists u1 ((u >= u1) & ((Var56(u1)) -> (-Var79(u)))).
+all u exists u1 ((u >= u1) & ((-Var23(u1)) -> (-Var96(u)))).
+all u exists u1 ((u >= u1) & ((Var88(u1)) -> (Var24(u)))).
+all u exists u1 ((u >= u1) & ((Var71(u1)) -> (Var50(u)))).
+all u exists u1 ((u >= u1) & ((-Var6(u1)) -> (Var8(u)))).
+all u exists u1 ((u >= u1) & ((Var61(u1)) -> (-Var93(u)))).
+all u exists u1 ((u >= u1) & ((Var76(u1)) -> (-Var49(u)))).
+all u exists u1 ((u >= u1) & ((Var14(u1)) -> (-Var66(u)))).
+all u exists u1 ((u >= u1) & ((-Var32(u1)) -> (-Var78(u)))).
+all u exists u1 ((u >= u1) & ((-Var90(u1)) -> (Var5(u)))).
+all u exists u1 ((u >= u1) & ((-Var97(u1)) -> (Var28(u)))).
+
+end_of_list.

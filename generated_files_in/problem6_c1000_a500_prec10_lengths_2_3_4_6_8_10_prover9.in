@@ -1,0 +1,1006 @@
+assign(max_megs, 1024).
+
+formulas(sos).
+
+all u (-(-Var500(u) | -Var380(u))).
+all u (-(Var190(u) | Var336(u))).
+all u (-(Var268(u) | -Var223(u))).
+all u (-(Var347(u) | -Var168(u))).
+all u (-(Var152(u) | -Var493(u))).
+all u (-(Var63(u) | Var239(u))).
+all u (-(-Var400(u) | -Var93(u))).
+all u (-(Var177(u) | Var417(u))).
+all u (-(Var217(u) | Var61(u))).
+all u (-(Var153(u) | Var271(u))).
+all u (-(-Var63(u) | -Var301(u))).
+all u (-(Var93(u) | -Var240(u))).
+all u (-(Var364(u) | Var451(u))).
+all u (-(-Var221(u) | -Var210(u))).
+all u (-(-Var243(u) | -Var350(u))).
+all u (-(-Var366(u) | Var132(u))).
+all u (-(-Var109(u) | -Var81(u))).
+all u exists u1 ((u >= u1) & ((-Var40(u1)) -> (Var380(u)))).
+all u exists u1 ((u >= u1) & ((Var83(u1)) -> (-Var392(u)))).
+all u exists u1 ((u >= u1) & ((-Var107(u1)) -> (Var393(u)))).
+all u exists u1 ((u >= u1) & ((Var228(u1)) -> (-Var267(u)))).
+all u exists u1 ((u >= u1) & ((Var395(u1)) -> (Var497(u)))).
+all u exists u1 ((u >= u1) & ((Var235(u1)) -> (Var471(u)))).
+all u exists u1 ((u >= u1) & ((Var292(u1)) -> (-Var374(u)))).
+all u exists u1 ((u >= u1) & ((Var51(u1)) -> (Var94(u)))).
+all u exists u1 ((u >= u1) & ((Var407(u1)) -> (-Var484(u)))).
+all u exists u1 ((u >= u1) & ((Var488(u1)) -> (Var215(u)))).
+all u exists u1 ((u >= u1) & ((-Var294(u1)) -> (-Var301(u)))).
+all u exists u1 ((u >= u1) & ((Var393(u1)) -> (Var382(u)))).
+all u exists u1 ((u >= u1) & ((Var472(u1)) -> (-Var454(u)))).
+all u exists u1 ((u >= u1) & ((-Var292(u1)) -> (Var197(u)))).
+all u exists u1 ((u >= u1) & ((Var217(u1)) -> (Var165(u)))).
+all u exists u1 ((u >= u1) & ((-Var354(u1)) -> (Var328(u)))).
+all u exists u1 ((u >= u1) & ((-Var192(u1)) -> (Var305(u)))).
+all u exists u1 ((u >= u1) & ((Var382(u1)) -> (-Var42(u)))).
+all u exists u1 ((u >= u1) & ((Var381(u1)) -> (-Var31(u)))).
+all u exists u1 ((u >= u1) & ((-Var196(u1)) -> (Var376(u)))).
+all u exists u1 ((u >= u1) & ((Var51(u1)) -> (Var193(u)))).
+all u exists u1 ((u >= u1) & ((-Var375(u1)) -> (Var210(u)))).
+all u exists u1 ((u >= u1) & ((-Var309(u1)) -> (-Var264(u)))).
+all u exists u1 ((u >= u1) & ((Var161(u1)) -> (-Var159(u)))).
+all u exists u1 ((u >= u1) & ((Var80(u1)) -> (-Var274(u)))).
+all u exists u1 ((u >= u1) & ((Var31(u1)) -> (-Var122(u)))).
+all u exists u1 ((u >= u1) & ((-Var376(u1)) -> (Var285(u)))).
+all u exists u1 ((u >= u1) & ((-Var7(u1)) -> (-Var18(u)))).
+all u exists u1 ((u >= u1) & ((Var377(u1)) -> (-Var190(u)))).
+all u exists u1 ((u >= u1) & ((Var235(u1)) -> (Var463(u)))).
+all u exists u1 ((u >= u1) & ((-Var214(u1)) -> (Var249(u)))).
+all u exists u1 ((u >= u1) & ((Var248(u1)) -> (-Var461(u)))).
+all u exists u1 ((u >= u1) & ((-Var93(u1)) -> (-Var493(u)))).
+all u exists u1 ((u >= u1) & ((-Var319(u1)) -> (-Var159(u)))).
+all u exists u1 ((u >= u1) & ((Var132(u1)) -> (Var190(u)))).
+all u exists u1 ((u >= u1) & ((Var232(u1)) -> (-Var256(u)))).
+all u exists u1 ((u >= u1) & ((Var232(u1)) -> (-Var247(u)))).
+all u exists u1 ((u >= u1) & ((-Var244(u1)) -> (-Var350(u)))).
+all u exists u1 ((u >= u1) & ((-Var122(u1)) -> (-Var481(u)))).
+all u exists u1 ((u >= u1) & ((-Var352(u1)) -> (-Var418(u)))).
+all u exists u1 ((u >= u1) & ((-Var213(u1)) -> (-Var375(u)))).
+all u exists u1 ((u >= u1) & ((-Var144(u1)) -> (-Var320(u)))).
+all u exists u1 ((u >= u1) & ((Var174(u1)) -> (-Var204(u)))).
+all u exists u1 ((u >= u1) & ((-Var348(u1)) -> (-Var369(u)))).
+all u exists u1 ((u >= u1) & ((-Var204(u1)) -> (Var485(u)))).
+all u exists u1 ((u >= u1) & ((-Var274(u1)) -> (-Var44(u)))).
+all u exists u1 ((u >= u1) & ((-Var286(u1)) -> (-Var334(u)))).
+all u exists u1 ((u >= u1) & ((-Var336(u1)) -> (-Var197(u)))).
+all u exists u1 ((u >= u1) & ((-Var418(u1)) -> (-Var179(u)))).
+all u exists u1 ((u >= u1) & ((-Var479(u1)) -> (Var32(u)))).
+all u exists u1 ((u >= u1) & ((Var498(u1)) -> (Var301(u)))).
+all u exists u1 ((u >= u1) & ((Var228(u1)) -> (-Var124(u)))).
+all u exists u1 ((u >= u1) & ((-Var184(u1)) -> (-Var234(u)))).
+all u exists u1 ((u >= u1) & ((Var157(u1)) -> (-Var87(u)))).
+all u exists u1 ((u >= u1) & ((-Var406(u1)) -> (-Var75(u)))).
+all u exists u1 ((u >= u1) & ((-Var298(u1)) -> (Var6(u)))).
+all u exists u1 ((u >= u1) & ((-Var159(u1)) -> (-Var411(u)))).
+all u exists u1 ((u >= u1) & ((Var173(u1)) -> (-Var147(u)))).
+all u exists u1 ((u >= u1) & ((-Var376(u1)) -> (Var310(u)))).
+all u exists u1 ((u >= u1) & ((-Var96(u1)) -> (-Var370(u)))).
+all u exists u1 ((u >= u1) & ((-Var132(u1)) -> (Var315(u)))).
+all u exists u1 ((u >= u1) & ((-Var418(u1)) -> (-Var487(u)))).
+all u exists u1 ((u >= u1) & ((-Var336(u1)) -> (Var285(u)))).
+all u exists u1 ((u >= u1) & ((Var318(u1)) -> (-Var268(u)))).
+all u exists u1 ((u >= u1) & ((Var227(u1)) -> (Var144(u)))).
+all u exists u1 ((u >= u1) & ((Var185(u1)) -> (-Var244(u)))).
+all u exists u1 ((u >= u1) & ((Var347(u1)) -> (Var339(u)))).
+all u exists u1 ((u >= u1) & ((-Var119(u1)) -> (-Var129(u)))).
+all u exists u1 ((u >= u1) & ((-Var160(u1)) -> (-Var259(u)))).
+all u exists u1 ((u >= u1) & ((Var392(u1)) -> (-Var344(u)))).
+all u exists u1 ((u >= u1) & ((-Var336(u1)) -> (-Var145(u)))).
+all u exists u1 ((u >= u1) & ((Var157(u1)) -> (-Var470(u)))).
+all u exists u1 ((u >= u1) & ((-Var254(u1)) -> (-Var218(u)))).
+all u exists u1 ((u >= u1) & ((Var282(u1)) -> (Var424(u)))).
+all u exists u1 ((u >= u1) & ((-Var87(u1)) -> (Var69(u)))).
+all u exists u1 ((u >= u1) & ((-Var477(u1)) -> (-Var250(u)))).
+all u exists u1 ((u >= u1) & ((Var459(u1)) -> (Var205(u)))).
+all u exists u1 ((u >= u1) & ((Var436(u1)) -> (-Var149(u)))).
+all u exists u1 ((u >= u1) & ((-Var368(u1)) -> (Var283(u)))).
+all u exists u1 ((u >= u1) & ((Var486(u1)) -> (Var223(u)))).
+all u exists u1 ((u >= u1) & ((Var401(u1)) -> (Var138(u)))).
+all u exists u1 ((u >= u1) & ((Var437(u1)) -> (Var388(u)))).
+all u exists u1 ((u >= u1) & ((Var170(u1)) -> (Var290(u)))).
+all u exists u1 ((u >= u1) & ((-Var449(u1)) -> (-Var282(u)))).
+all u exists u1 ((u >= u1) & ((Var480(u1)) -> (Var400(u)))).
+all u exists u1 ((u >= u1) & ((-Var260(u1)) -> (Var33(u)))).
+all u exists u1 ((u >= u1) & ((Var147(u1)) -> (-Var335(u)))).
+all u exists u1 ((u >= u1) & ((-Var302(u1)) -> (Var9(u)))).
+all u exists u1 ((u >= u1) & ((Var117(u1)) -> (Var316(u)))).
+all u exists u1 ((u >= u1) & ((Var424(u1)) -> (-Var360(u)))).
+all u exists u1 ((u >= u1) & ((Var101(u1)) -> (-Var109(u)))).
+all u exists u1 ((u >= u1) & ((-Var248(u1)) -> (-Var221(u)))).
+all u exists u1 ((u >= u1) & ((Var57(u1)) -> (Var59(u)))).
+all u exists u1 ((u >= u1) & ((-Var29(u1)) -> (-Var127(u)))).
+all u exists u1 ((u >= u1) & ((Var305(u1)) -> (Var423(u)))).
+all u exists u1 ((u >= u1) & ((-Var420(u1)) -> (-Var140(u)))).
+all u exists u1 ((u >= u1) & ((Var480(u1)) -> (Var319(u)))).
+all u exists u1 ((u >= u1) & ((Var334(u1)) -> (-Var346(u)))).
+all u exists u1 ((u >= u1) & ((Var161(u1)) -> (Var159(u)))).
+all u exists u1 ((u >= u1) & ((Var432(u1)) -> (Var24(u)))).
+all u exists u1 ((u >= u1) & ((-Var53(u1)) -> (-Var248(u)))).
+all u exists u1 ((u >= u1) & ((-Var462(u1)) -> (Var365(u)))).
+all u exists u1 ((u >= u1) & ((Var185(u1)) -> (-Var337(u)))).
+all u exists u1 ((u >= u1) & ((Var83(u1)) -> (-Var406(u)))).
+all u exists u1 ((u >= u1) & ((-Var500(u1)) -> (-Var453(u)))).
+all u exists u1 ((u >= u1) & ((Var354(u1)) -> (-Var375(u)))).
+all u exists u1 ((u >= u1) & ((-Var14(u1)) -> (-Var189(u)))).
+all u exists u1 ((u >= u1) & ((Var89(u1)) -> (-Var146(u)))).
+all u exists u1 ((u >= u1) & ((-Var348(u1)) -> (-Var453(u)))).
+all u exists u1 ((u >= u1) & ((Var234(u1)) -> (Var358(u)))).
+all u exists u1 ((u >= u1) & ((-Var304(u1)) -> (Var71(u)))).
+all u exists u1 ((u >= u1) & ((Var210(u1)) -> (Var263(u)))).
+all u exists u1 ((u >= u1) & ((Var29(u1)) -> (Var37(u)))).
+all u exists u1 ((u >= u1) & ((-Var273(u1)) -> (Var407(u)))).
+all u exists u1 ((u >= u1) & ((Var29(u1)) -> (-Var495(u)))).
+all u exists u1 ((u >= u1) & ((Var341(u1)) -> (-Var328(u)))).
+all u exists u1 ((u >= u1) & ((-Var339(u1)) -> (-Var4(u)))).
+all u exists u1 ((u >= u1) & ((Var392(u1)) -> (-Var467(u)))).
+all u exists u1 ((u >= u1) & ((-Var221(u1)) -> (Var154(u)))).
+all u exists u1 ((u >= u1) & ((Var120(u1)) -> (Var122(u)))).
+all u exists u1 ((u >= u1) & ((Var161(u1)) -> (-Var235(u)))).
+all u exists u1 ((u >= u1) & ((Var128(u1)) -> (Var487(u)))).
+all u exists u1 ((u >= u1) & ((-Var48(u1)) -> (Var17(u)))).
+all u exists u1 ((u >= u1) & ((Var50(u1)) -> (-Var19(u)))).
+all u exists u1 ((u >= u1) & ((-Var393(u1)) -> (-Var303(u)))).
+all u exists u1 ((u >= u1) & ((-Var297(u1)) -> (-Var246(u)))).
+all u exists u1 ((u >= u1) & ((-Var185(u1)) -> (Var463(u)))).
+all u exists u1 ((u >= u1) & ((-Var95(u1)) -> (Var354(u)))).
+all u exists u1 ((u >= u1) & ((Var76(u1)) -> (Var231(u)))).
+all u exists u1 ((u >= u1) & ((Var72(u1)) -> (Var406(u)))).
+all u exists u1 ((u >= u1) & ((-Var248(u1)) -> (Var91(u)))).
+all u exists u1 ((u >= u1) & ((Var341(u1)) -> (Var9(u)))).
+all u exists u1 ((u >= u1) & ((Var22(u1)) -> (Var342(u)))).
+all u exists u1 ((u >= u1) & ((Var220(u1)) -> (-Var114(u)))).
+all u exists u1 ((u >= u1) & ((-Var100(u1)) -> (-Var464(u)))).
+all u exists u1 ((u >= u1) & ((-Var357(u1)) -> (-Var322(u)))).
+all u exists u1 ((u >= u1) & ((-Var154(u1)) -> (Var364(u)))).
+all u exists u1 ((u >= u1) & ((-Var348(u1)) -> (-Var286(u)))).
+all u exists u1 ((u >= u1) & ((-Var493(u1)) -> (-Var320(u)))).
+all u exists u1 ((u >= u1) & ((Var100(u1)) -> (Var368(u)))).
+all u exists u1 ((u >= u1) & ((Var179(u1)) -> (Var156(u)))).
+all u exists u1 ((u >= u1) & ((-Var5(u1)) -> (-Var192(u)))).
+all u exists u1 ((u >= u1) & ((-Var406(u1)) -> (Var217(u)))).
+all u exists u1 ((u >= u1) & ((Var328(u1)) -> (-Var8(u)))).
+all u exists u1 ((u >= u1) & ((Var297(u1)) -> (-Var244(u)))).
+all u exists u1 ((u >= u1) & ((Var180(u1)) -> (Var228(u)))).
+all u exists u1 ((u >= u1) & ((-Var479(u1)) -> (Var270(u)))).
+all u exists u1 ((u >= u1) & ((-Var488(u1)) -> (Var245(u)))).
+all u exists u1 ((u >= u1) & ((Var303(u1)) -> (Var93(u)))).
+all u exists u1 ((u >= u1) & ((Var472(u1)) -> (Var358(u)))).
+all u (-(-Var400(u) | Var424(u) | -Var478(u))).
+all u (-(-Var271(u) | -Var458(u) | Var157(u))).
+all u (-(-Var201(u) | -Var380(u) | Var308(u))).
+all u (-(Var189(u) | Var355(u) | -Var225(u))).
+all u (-(-Var196(u) | -Var406(u) | -Var350(u))).
+all u (-(-Var242(u) | Var344(u) | Var32(u))).
+all u (-(Var413(u) | Var16(u) | -Var234(u))).
+all u (-(-Var260(u) | Var127(u) | -Var311(u))).
+all u (-(-Var122(u) | -Var271(u) | Var38(u))).
+all u (-(Var188(u) | Var153(u) | Var103(u))).
+all u (-(Var391(u) | Var33(u) | -Var288(u))).
+all u (-(Var5(u) | -Var313(u) | -Var280(u))).
+all u (-(-Var357(u) | Var487(u) | -Var495(u))).
+all u (-(Var235(u) | Var314(u) | -Var61(u))).
+all u (-(Var314(u) | -Var208(u) | -Var458(u))).
+all u (-(-Var395(u) | Var379(u) | Var205(u))).
+all u (-(-Var259(u) | Var76(u) | -Var263(u))).
+all u exists u1 ((u >= u1) & ((Var193(u1) | -Var331(u1)) -> (-Var139(u)))).
+all u exists u1 ((u >= u1) & ((Var272(u1) | Var372(u1)) -> (-Var53(u)))).
+all u exists u1 ((u >= u1) & ((Var480(u1)) -> (-Var204(u) | Var275(u)))).
+all u exists u1 ((u >= u1) & ((Var282(u1) | Var472(u1)) -> (Var184(u)))).
+all u exists u1 ((u >= u1) & ((Var195(u1)) -> (Var137(u) | -Var443(u)))).
+all u exists u1 ((u >= u1) & ((-Var255(u1) | -Var369(u1)) -> (Var443(u)))).
+all u exists u1 ((u >= u1) & ((-Var403(u1) | -Var319(u1)) -> (Var258(u)))).
+all u exists u1 ((u >= u1) & ((-Var377(u1)) -> (Var361(u) | Var328(u)))).
+all u exists u1 ((u >= u1) & ((Var325(u1)) -> (Var328(u) | Var372(u)))).
+all u exists u1 ((u >= u1) & ((Var352(u1) | Var161(u1)) -> (-Var239(u)))).
+all u exists u1 ((u >= u1) & ((Var144(u1)) -> (Var13(u) | Var209(u)))).
+all u exists u1 ((u >= u1) & ((Var233(u1) | -Var2(u1)) -> (-Var87(u)))).
+all u exists u1 ((u >= u1) & ((-Var433(u1) | Var8(u1)) -> (-Var283(u)))).
+all u exists u1 ((u >= u1) & ((Var461(u1)) -> (Var469(u) | -Var107(u)))).
+all u exists u1 ((u >= u1) & ((-Var398(u1) | -Var159(u1)) -> (Var411(u)))).
+all u exists u1 ((u >= u1) & ((Var37(u1)) -> (Var116(u) | -Var469(u)))).
+all u exists u1 ((u >= u1) & ((-Var351(u1)) -> (-Var301(u) | -Var405(u)))).
+all u exists u1 ((u >= u1) & ((-Var420(u1)) -> (Var172(u) | -Var46(u)))).
+all u exists u1 ((u >= u1) & ((-Var368(u1)) -> (-Var54(u) | -Var484(u)))).
+all u exists u1 ((u >= u1) & ((Var473(u1)) -> (-Var176(u) | -Var289(u)))).
+all u exists u1 ((u >= u1) & ((Var3(u1)) -> (-Var388(u) | -Var92(u)))).
+all u exists u1 ((u >= u1) & ((-Var110(u1) | Var162(u1)) -> (-Var67(u)))).
+all u exists u1 ((u >= u1) & ((-Var238(u1) | Var306(u1)) -> (Var204(u)))).
+all u exists u1 ((u >= u1) & ((-Var308(u1) | -Var430(u1)) -> (-Var326(u)))).
+all u exists u1 ((u >= u1) & ((-Var253(u1) | Var412(u1)) -> (-Var349(u)))).
+all u exists u1 ((u >= u1) & ((-Var70(u1) | Var168(u1)) -> (Var190(u)))).
+all u exists u1 ((u >= u1) & ((Var492(u1) | -Var221(u1)) -> (Var228(u)))).
+all u exists u1 ((u >= u1) & ((Var285(u1)) -> (Var89(u) | -Var293(u)))).
+all u exists u1 ((u >= u1) & ((-Var347(u1)) -> (-Var450(u) | Var139(u)))).
+all u exists u1 ((u >= u1) & ((Var103(u1)) -> (-Var90(u) | Var423(u)))).
+all u exists u1 ((u >= u1) & ((Var394(u1) | Var213(u1)) -> (Var271(u)))).
+all u exists u1 ((u >= u1) & ((Var428(u1) | Var416(u1)) -> (Var65(u)))).
+all u exists u1 ((u >= u1) & ((Var326(u1)) -> (-Var349(u) | Var238(u)))).
+all u exists u1 ((u >= u1) & ((-Var499(u1)) -> (-Var235(u) | -Var357(u)))).
+all u exists u1 ((u >= u1) & ((Var71(u1) | Var435(u1)) -> (-Var480(u)))).
+all u exists u1 ((u >= u1) & ((-Var177(u1)) -> (-Var107(u) | -Var458(u)))).
+all u exists u1 ((u >= u1) & ((Var68(u1) | -Var452(u1)) -> (-Var500(u)))).
+all u exists u1 ((u >= u1) & ((-Var329(u1) | Var104(u1)) -> (-Var233(u)))).
+all u exists u1 ((u >= u1) & ((Var146(u1) | Var382(u1)) -> (Var174(u)))).
+all u exists u1 ((u >= u1) & ((Var214(u1)) -> (Var198(u) | -Var117(u)))).
+all u exists u1 ((u >= u1) & ((Var72(u1) | -Var236(u1)) -> (Var389(u)))).
+all u exists u1 ((u >= u1) & ((-Var57(u1) | Var489(u1)) -> (-Var290(u)))).
+all u exists u1 ((u >= u1) & ((Var123(u1)) -> (-Var356(u) | Var292(u)))).
+all u exists u1 ((u >= u1) & ((Var64(u1) | -Var320(u1)) -> (-Var167(u)))).
+all u exists u1 ((u >= u1) & ((-Var359(u1) | Var334(u1)) -> (Var11(u)))).
+all u exists u1 ((u >= u1) & ((-Var365(u1)) -> (Var277(u) | Var57(u)))).
+all u exists u1 ((u >= u1) & ((-Var82(u1) | Var80(u1)) -> (Var496(u)))).
+all u exists u1 ((u >= u1) & ((Var259(u1) | -Var289(u1)) -> (-Var389(u)))).
+all u exists u1 ((u >= u1) & ((-Var242(u1) | -Var354(u1)) -> (-Var319(u)))).
+all u exists u1 ((u >= u1) & ((Var152(u1)) -> (-Var313(u) | -Var455(u)))).
+all u exists u1 ((u >= u1) & ((Var165(u1) | Var58(u1)) -> (-Var89(u)))).
+all u exists u1 ((u >= u1) & ((Var158(u1)) -> (Var114(u) | Var118(u)))).
+all u exists u1 ((u >= u1) & ((Var425(u1)) -> (Var82(u) | Var248(u)))).
+all u exists u1 ((u >= u1) & ((Var204(u1)) -> (-Var278(u) | Var126(u)))).
+all u exists u1 ((u >= u1) & ((Var77(u1) | Var446(u1)) -> (-Var165(u)))).
+all u exists u1 ((u >= u1) & ((Var327(u1) | -Var97(u1)) -> (Var417(u)))).
+all u exists u1 ((u >= u1) & ((-Var382(u1) | -Var353(u1)) -> (Var310(u)))).
+all u exists u1 ((u >= u1) & ((-Var135(u1) | Var257(u1)) -> (Var321(u)))).
+all u exists u1 ((u >= u1) & ((-Var230(u1) | Var100(u1)) -> (-Var65(u)))).
+all u exists u1 ((u >= u1) & ((-Var176(u1)) -> (Var173(u) | Var435(u)))).
+all u exists u1 ((u >= u1) & ((-Var453(u1)) -> (Var242(u) | -Var56(u)))).
+all u exists u1 ((u >= u1) & ((-Var219(u1)) -> (-Var402(u) | -Var249(u)))).
+all u exists u1 ((u >= u1) & ((-Var275(u1) | -Var456(u1)) -> (Var208(u)))).
+all u exists u1 ((u >= u1) & ((-Var124(u1)) -> (-Var54(u) | Var442(u)))).
+all u exists u1 ((u >= u1) & ((-Var161(u1) | Var8(u1)) -> (-Var441(u)))).
+all u exists u1 ((u >= u1) & ((Var261(u1)) -> (Var498(u) | Var50(u)))).
+all u exists u1 ((u >= u1) & ((-Var471(u1)) -> (Var371(u) | -Var57(u)))).
+all u exists u1 ((u >= u1) & ((-Var409(u1)) -> (Var424(u) | -Var425(u)))).
+all u exists u1 ((u >= u1) & ((Var437(u1)) -> (-Var132(u) | Var191(u)))).
+all u exists u1 ((u >= u1) & ((-Var162(u1)) -> (Var22(u) | Var242(u)))).
+all u exists u1 ((u >= u1) & ((-Var254(u1)) -> (Var306(u) | Var118(u)))).
+all u exists u1 ((u >= u1) & ((-Var158(u1) | -Var368(u1)) -> (Var394(u)))).
+all u exists u1 ((u >= u1) & ((Var239(u1)) -> (Var471(u) | -Var167(u)))).
+all u exists u1 ((u >= u1) & ((Var448(u1)) -> (-Var128(u) | -Var126(u)))).
+all u exists u1 ((u >= u1) & ((Var431(u1) | -Var190(u1)) -> (-Var354(u)))).
+all u exists u1 ((u >= u1) & ((-Var82(u1) | Var81(u1)) -> (Var497(u)))).
+all u exists u1 ((u >= u1) & ((Var289(u1)) -> (Var290(u) | Var301(u)))).
+all u exists u1 ((u >= u1) & ((-Var322(u1)) -> (Var46(u) | Var224(u)))).
+all u exists u1 ((u >= u1) & ((-Var248(u1)) -> (-Var41(u) | Var302(u)))).
+all u exists u1 ((u >= u1) & ((-Var45(u1) | -Var244(u1)) -> (Var315(u)))).
+all u exists u1 ((u >= u1) & ((Var456(u1) | Var75(u1)) -> (-Var152(u)))).
+all u exists u1 ((u >= u1) & ((Var280(u1) | Var445(u1)) -> (-Var266(u)))).
+all u exists u1 ((u >= u1) & ((Var324(u1)) -> (-Var466(u) | Var448(u)))).
+all u exists u1 ((u >= u1) & ((-Var269(u1)) -> (Var221(u) | -Var226(u)))).
+all u exists u1 ((u >= u1) & ((Var382(u1)) -> (Var182(u) | -Var138(u)))).
+all u exists u1 ((u >= u1) & ((-Var465(u1) | Var149(u1)) -> (Var36(u)))).
+all u exists u1 ((u >= u1) & ((-Var141(u1)) -> (-Var100(u) | Var109(u)))).
+all u exists u1 ((u >= u1) & ((Var113(u1) | Var161(u1)) -> (-Var292(u)))).
+all u exists u1 ((u >= u1) & ((Var205(u1) | Var425(u1)) -> (Var107(u)))).
+all u exists u1 ((u >= u1) & ((-Var312(u1) | -Var384(u1)) -> (Var124(u)))).
+all u exists u1 ((u >= u1) & ((Var411(u1) | Var354(u1)) -> (Var100(u)))).
+all u exists u1 ((u >= u1) & ((Var388(u1) | Var165(u1)) -> (Var341(u)))).
+all u exists u1 ((u >= u1) & ((-Var188(u1) | Var190(u1)) -> (Var220(u)))).
+all u exists u1 ((u >= u1) & ((-Var391(u1) | Var171(u1)) -> (Var312(u)))).
+all u exists u1 ((u >= u1) & ((-Var195(u1)) -> (Var263(u) | -Var338(u)))).
+all u exists u1 ((u >= u1) & ((-Var352(u1) | Var427(u1)) -> (-Var161(u)))).
+all u exists u1 ((u >= u1) & ((-Var232(u1) | Var278(u1)) -> (-Var80(u)))).
+all u exists u1 ((u >= u1) & ((Var225(u1)) -> (-Var229(u) | Var207(u)))).
+all u exists u1 ((u >= u1) & ((-Var352(u1) | -Var376(u1)) -> (Var363(u)))).
+all u exists u1 ((u >= u1) & ((-Var25(u1)) -> (Var447(u) | Var357(u)))).
+all u exists u1 ((u >= u1) & ((Var252(u1)) -> (Var174(u) | Var369(u)))).
+all u exists u1 ((u >= u1) & ((Var66(u1) | Var494(u1)) -> (-Var7(u)))).
+all u exists u1 ((u >= u1) & ((Var9(u1) | -Var62(u1)) -> (Var90(u)))).
+all u exists u1 ((u >= u1) & ((Var193(u1) | Var353(u1)) -> (-Var158(u)))).
+all u exists u1 ((u >= u1) & ((Var204(u1) | Var335(u1)) -> (Var299(u)))).
+all u exists u1 ((u >= u1) & ((-Var463(u1) | -Var467(u1)) -> (-Var282(u)))).
+all u exists u1 ((u >= u1) & ((-Var43(u1) | -Var133(u1)) -> (-Var412(u)))).
+all u exists u1 ((u >= u1) & ((Var214(u1)) -> (Var455(u) | -Var18(u)))).
+all u exists u1 ((u >= u1) & ((Var327(u1)) -> (-Var146(u) | Var400(u)))).
+all u exists u1 ((u >= u1) & ((-Var145(u1) | Var42(u1)) -> (Var230(u)))).
+all u exists u1 ((u >= u1) & ((Var1(u1) | Var133(u1)) -> (Var437(u)))).
+all u exists u1 ((u >= u1) & ((-Var47(u1) | Var279(u1)) -> (-Var359(u)))).
+all u exists u1 ((u >= u1) & ((-Var210(u1)) -> (-Var252(u) | -Var373(u)))).
+all u exists u1 ((u >= u1) & ((-Var219(u1)) -> (Var27(u) | Var291(u)))).
+all u exists u1 ((u >= u1) & ((-Var461(u1)) -> (Var419(u) | Var240(u)))).
+all u exists u1 ((u >= u1) & ((-Var307(u1) | Var53(u1)) -> (Var426(u)))).
+all u exists u1 ((u >= u1) & ((Var85(u1)) -> (-Var498(u) | Var469(u)))).
+all u exists u1 ((u >= u1) & ((Var229(u1)) -> (-Var233(u) | Var91(u)))).
+all u exists u1 ((u >= u1) & ((-Var162(u1) | Var176(u1)) -> (-Var216(u)))).
+all u exists u1 ((u >= u1) & ((-Var302(u1)) -> (-Var268(u) | Var44(u)))).
+all u exists u1 ((u >= u1) & ((Var54(u1) | -Var295(u1)) -> (-Var56(u)))).
+all u exists u1 ((u >= u1) & ((Var223(u1)) -> (-Var264(u) | -Var492(u)))).
+all u exists u1 ((u >= u1) & ((-Var356(u1) | -Var302(u1)) -> (-Var2(u)))).
+all u exists u1 ((u >= u1) & ((-Var422(u1) | Var330(u1)) -> (Var369(u)))).
+all u exists u1 ((u >= u1) & ((Var285(u1) | Var392(u1)) -> (-Var333(u)))).
+all u exists u1 ((u >= u1) & ((-Var324(u1)) -> (-Var117(u) | -Var466(u)))).
+all u exists u1 ((u >= u1) & ((Var103(u1) | -Var208(u1)) -> (-Var318(u)))).
+all u exists u1 ((u >= u1) & ((-Var199(u1) | Var415(u1)) -> (-Var264(u)))).
+all u exists u1 ((u >= u1) & ((-Var369(u1)) -> (Var359(u) | Var295(u)))).
+all u exists u1 ((u >= u1) & ((Var345(u1) | -Var271(u1)) -> (Var463(u)))).
+all u exists u1 ((u >= u1) & ((-Var360(u1)) -> (-Var164(u) | Var59(u)))).
+all u exists u1 ((u >= u1) & ((-Var325(u1)) -> (Var119(u) | Var52(u)))).
+all u exists u1 ((u >= u1) & ((Var285(u1) | Var401(u1)) -> (-Var250(u)))).
+all u exists u1 ((u >= u1) & ((-Var226(u1) | Var338(u1)) -> (Var366(u)))).
+all u exists u1 ((u >= u1) & ((-Var156(u1)) -> (-Var107(u) | -Var136(u)))).
+all u exists u1 ((u >= u1) & ((Var235(u1) | Var366(u1)) -> (-Var421(u)))).
+all u exists u1 ((u >= u1) & ((-Var243(u1) | -Var259(u1)) -> (Var190(u)))).
+all u exists u1 ((u >= u1) & ((-Var222(u1) | Var412(u1)) -> (-Var57(u)))).
+all u exists u1 ((u >= u1) & ((-Var86(u1)) -> (Var459(u) | -Var46(u)))).
+all u exists u1 ((u >= u1) & ((Var105(u1)) -> (Var293(u) | Var436(u)))).
+all u exists u1 ((u >= u1) & ((Var451(u1)) -> (-Var304(u) | Var465(u)))).
+all u exists u1 ((u >= u1) & ((-Var4(u1)) -> (Var311(u) | Var424(u)))).
+all u exists u1 ((u >= u1) & ((Var290(u1)) -> (-Var133(u) | Var4(u)))).
+all u exists u1 ((u >= u1) & ((-Var414(u1) | Var77(u1)) -> (Var146(u)))).
+all u exists u1 ((u >= u1) & ((-Var191(u1)) -> (Var423(u) | -Var245(u)))).
+all u exists u1 ((u >= u1) & ((Var42(u1)) -> (-Var254(u) | Var27(u)))).
+all u exists u1 ((u >= u1) & ((Var249(u1)) -> (-Var403(u) | Var222(u)))).
+all u exists u1 ((u >= u1) & ((Var209(u1)) -> (-Var69(u) | -Var377(u)))).
+all u exists u1 ((u >= u1) & ((Var12(u1) | -Var317(u1)) -> (Var337(u)))).
+all u exists u1 ((u >= u1) & ((Var73(u1) | -Var56(u1)) -> (-Var86(u)))).
+all u (-(-Var434(u) | Var49(u) | Var223(u) | -Var405(u))).
+all u (-(Var366(u) | Var276(u) | Var416(u) | -Var160(u))).
+all u (-(-Var458(u) | -Var38(u) | Var208(u) | -Var17(u))).
+all u (-(Var480(u) | Var302(u) | -Var26(u) | -Var372(u))).
+all u (-(-Var53(u) | Var446(u) | -Var349(u) | Var175(u))).
+all u (-(-Var185(u) | Var475(u) | Var122(u) | -Var197(u))).
+all u (-(-Var256(u) | Var246(u) | Var364(u) | Var156(u))).
+all u (-(Var90(u) | Var52(u) | -Var482(u) | Var310(u))).
+all u (-(Var376(u) | -Var231(u) | -Var161(u) | Var318(u))).
+all u (-(Var430(u) | Var276(u) | Var243(u) | Var39(u))).
+all u (-(Var435(u) | -Var15(u) | Var179(u) | Var193(u))).
+all u (-(Var485(u) | -Var309(u) | -Var279(u) | -Var307(u))).
+all u (-(-Var45(u) | Var323(u) | Var10(u) | -Var314(u))).
+all u (-(Var424(u) | -Var190(u) | -Var103(u) | -Var267(u))).
+all u (-(-Var95(u) | -Var277(u) | Var27(u) | -Var362(u))).
+all u (-(-Var142(u) | -Var119(u) | -Var26(u) | -Var25(u))).
+all u (-(Var495(u) | -Var45(u) | -Var383(u) | -Var55(u))).
+all u exists u1 ((u >= u1) & ((Var377(u1) | Var88(u1) | Var310(u1)) -> (Var216(u)))).
+all u exists u1 ((u >= u1) & ((Var487(u1) | Var176(u1)) -> (Var159(u) | -Var458(u)))).
+all u exists u1 ((u >= u1) & ((-Var294(u1)) -> (-Var366(u) | Var10(u) | -Var372(u)))).
+all u exists u1 ((u >= u1) & ((Var406(u1)) -> (Var427(u) | Var354(u) | -Var321(u)))).
+all u exists u1 ((u >= u1) & ((-Var394(u1) | Var61(u1)) -> (Var326(u) | Var32(u)))).
+all u exists u1 ((u >= u1) & ((Var192(u1) | Var380(u1) | Var348(u1)) -> (Var112(u)))).
+all u exists u1 ((u >= u1) & ((-Var369(u1) | Var395(u1) | -Var183(u1)) -> (Var355(u)))).
+all u exists u1 ((u >= u1) & ((Var452(u1)) -> (-Var112(u) | -Var390(u) | -Var77(u)))).
+all u exists u1 ((u >= u1) & ((Var173(u1) | Var211(u1) | Var383(u1)) -> (-Var258(u)))).
+all u exists u1 ((u >= u1) & ((-Var437(u1) | Var389(u1)) -> (-Var302(u) | Var470(u)))).
+all u exists u1 ((u >= u1) & ((Var469(u1)) -> (Var379(u) | -Var289(u) | -Var464(u)))).
+all u exists u1 ((u >= u1) & ((-Var24(u1) | Var365(u1) | -Var307(u1)) -> (Var175(u)))).
+all u exists u1 ((u >= u1) & ((-Var195(u1) | Var346(u1) | -Var3(u1)) -> (-Var31(u)))).
+all u exists u1 ((u >= u1) & ((Var432(u1) | -Var75(u1) | -Var480(u1)) -> (-Var278(u)))).
+all u exists u1 ((u >= u1) & ((Var14(u1) | -Var103(u1)) -> (Var5(u) | Var281(u)))).
+all u exists u1 ((u >= u1) & ((-Var65(u1) | -Var102(u1)) -> (Var305(u) | Var396(u)))).
+all u exists u1 ((u >= u1) & ((Var149(u1) | -Var296(u1)) -> (Var290(u) | Var77(u)))).
+all u exists u1 ((u >= u1) & ((Var92(u1) | -Var316(u1) | Var323(u1)) -> (-Var9(u)))).
+all u exists u1 ((u >= u1) & ((-Var165(u1) | -Var217(u1) | Var12(u1)) -> (-Var180(u)))).
+all u exists u1 ((u >= u1) & ((-Var11(u1)) -> (-Var229(u) | Var177(u) | -Var24(u)))).
+all u exists u1 ((u >= u1) & ((-Var410(u1)) -> (-Var225(u) | Var244(u) | -Var251(u)))).
+all u exists u1 ((u >= u1) & ((-Var253(u1) | Var25(u1)) -> (Var402(u) | Var3(u)))).
+all u exists u1 ((u >= u1) & ((Var32(u1) | -Var129(u1)) -> (Var481(u) | Var184(u)))).
+all u exists u1 ((u >= u1) & ((Var470(u1) | Var9(u1) | -Var174(u1)) -> (-Var173(u)))).
+all u exists u1 ((u >= u1) & ((-Var205(u1)) -> (-Var243(u) | Var104(u) | -Var159(u)))).
+all u exists u1 ((u >= u1) & ((-Var270(u1) | -Var196(u1) | -Var436(u1)) -> (Var81(u)))).
+all u exists u1 ((u >= u1) & ((-Var244(u1) | Var290(u1) | -Var429(u1)) -> (Var32(u)))).
+all u exists u1 ((u >= u1) & ((Var112(u1) | Var1(u1)) -> (Var385(u) | Var65(u)))).
+all u exists u1 ((u >= u1) & ((-Var267(u1)) -> (Var309(u) | Var123(u) | -Var373(u)))).
+all u exists u1 ((u >= u1) & ((Var219(u1) | Var61(u1)) -> (Var72(u) | Var391(u)))).
+all u exists u1 ((u >= u1) & ((Var416(u1) | Var7(u1) | -Var465(u1)) -> (Var132(u)))).
+all u exists u1 ((u >= u1) & ((-Var51(u1) | Var277(u1)) -> (-Var79(u) | Var325(u)))).
+all u exists u1 ((u >= u1) & ((-Var300(u1)) -> (Var181(u) | Var231(u) | -Var221(u)))).
+all u exists u1 ((u >= u1) & ((-Var123(u1)) -> (-Var281(u) | Var315(u) | -Var160(u)))).
+all u exists u1 ((u >= u1) & ((Var145(u1) | Var251(u1)) -> (-Var70(u) | Var71(u)))).
+all u exists u1 ((u >= u1) & ((-Var346(u1) | Var105(u1)) -> (-Var153(u) | Var354(u)))).
+all u exists u1 ((u >= u1) & ((-Var405(u1) | -Var120(u1) | -Var290(u1)) -> (Var334(u)))).
+all u exists u1 ((u >= u1) & ((-Var397(u1) | Var77(u1)) -> (-Var43(u) | -Var185(u)))).
+all u exists u1 ((u >= u1) & ((-Var295(u1) | Var275(u1) | -Var424(u1)) -> (Var184(u)))).
+all u exists u1 ((u >= u1) & ((-Var163(u1) | -Var293(u1)) -> (-Var87(u) | Var394(u)))).
+all u exists u1 ((u >= u1) & ((-Var182(u1) | -Var306(u1)) -> (-Var462(u) | -Var447(u)))).
+all u exists u1 ((u >= u1) & ((-Var167(u1)) -> (Var194(u) | Var93(u) | Var205(u)))).
+all u exists u1 ((u >= u1) & ((Var105(u1) | -Var418(u1) | -Var467(u1)) -> (-Var72(u)))).
+all u exists u1 ((u >= u1) & ((-Var39(u1) | Var350(u1) | Var54(u1)) -> (Var2(u)))).
+all u exists u1 ((u >= u1) & ((-Var50(u1) | -Var175(u1) | -Var12(u1)) -> (Var172(u)))).
+all u exists u1 ((u >= u1) & ((Var72(u1)) -> (-Var149(u) | Var500(u) | Var166(u)))).
+all u exists u1 ((u >= u1) & ((Var124(u1)) -> (Var233(u) | -Var145(u) | Var133(u)))).
+all u exists u1 ((u >= u1) & ((-Var393(u1) | -Var66(u1)) -> (Var270(u) | -Var92(u)))).
+all u exists u1 ((u >= u1) & ((Var250(u1) | Var291(u1)) -> (Var53(u) | Var85(u)))).
+all u exists u1 ((u >= u1) & ((Var213(u1) | -Var200(u1) | Var12(u1)) -> (-Var405(u)))).
+all u exists u1 ((u >= u1) & ((-Var78(u1)) -> (Var203(u) | -Var314(u) | -Var191(u)))).
+all u exists u1 ((u >= u1) & ((-Var411(u1)) -> (Var208(u) | -Var11(u) | Var222(u)))).
+all u exists u1 ((u >= u1) & ((Var227(u1) | -Var395(u1) | Var243(u1)) -> (-Var183(u)))).
+all u exists u1 ((u >= u1) & ((-Var54(u1)) -> (-Var230(u) | -Var140(u) | Var277(u)))).
+all u exists u1 ((u >= u1) & ((Var460(u1)) -> (Var85(u) | -Var497(u) | Var191(u)))).
+all u exists u1 ((u >= u1) & ((-Var206(u1)) -> (Var283(u) | -Var33(u) | -Var391(u)))).
+all u exists u1 ((u >= u1) & ((-Var182(u1)) -> (Var211(u) | Var461(u) | Var147(u)))).
+all u exists u1 ((u >= u1) & ((-Var70(u1)) -> (Var224(u) | -Var4(u) | Var243(u)))).
+all u exists u1 ((u >= u1) & ((Var429(u1) | -Var487(u1) | Var102(u1)) -> (Var141(u)))).
+all u exists u1 ((u >= u1) & ((-Var456(u1) | Var271(u1) | Var487(u1)) -> (Var202(u)))).
+all u exists u1 ((u >= u1) & ((Var55(u1)) -> (Var156(u) | -Var349(u) | Var162(u)))).
+all u exists u1 ((u >= u1) & ((Var351(u1)) -> (-Var52(u) | Var326(u) | -Var87(u)))).
+all u exists u1 ((u >= u1) & ((Var87(u1) | Var198(u1)) -> (-Var93(u) | Var226(u)))).
+all u exists u1 ((u >= u1) & ((Var238(u1)) -> (-Var237(u) | -Var93(u) | Var487(u)))).
+all u exists u1 ((u >= u1) & ((-Var414(u1) | Var222(u1)) -> (Var370(u) | Var28(u)))).
+all u exists u1 ((u >= u1) & ((Var157(u1) | -Var388(u1)) -> (Var15(u) | Var294(u)))).
+all u exists u1 ((u >= u1) & ((Var307(u1) | Var83(u1)) -> (Var451(u) | Var115(u)))).
+all u exists u1 ((u >= u1) & ((Var116(u1)) -> (Var315(u) | Var76(u) | -Var105(u)))).
+all u exists u1 ((u >= u1) & ((Var315(u1) | Var44(u1) | Var122(u1)) -> (-Var357(u)))).
+all u exists u1 ((u >= u1) & ((-Var17(u1) | -Var461(u1)) -> (-Var11(u) | -Var93(u)))).
+all u exists u1 ((u >= u1) & ((-Var268(u1) | Var413(u1)) -> (-Var490(u) | Var417(u)))).
+all u exists u1 ((u >= u1) & ((Var359(u1)) -> (Var121(u) | -Var237(u) | Var195(u)))).
+all u exists u1 ((u >= u1) & ((Var419(u1) | -Var300(u1)) -> (Var347(u) | Var426(u)))).
+all u exists u1 ((u >= u1) & ((-Var283(u1) | Var238(u1) | Var457(u1)) -> (Var143(u)))).
+all u exists u1 ((u >= u1) & ((Var481(u1)) -> (-Var216(u) | -Var294(u) | Var273(u)))).
+all u exists u1 ((u >= u1) & ((-Var307(u1)) -> (-Var98(u) | -Var95(u) | -Var347(u)))).
+all u exists u1 ((u >= u1) & ((-Var87(u1)) -> (Var278(u) | Var264(u) | -Var200(u)))).
+all u exists u1 ((u >= u1) & ((-Var113(u1) | -Var378(u1)) -> (Var322(u) | -Var352(u)))).
+all u exists u1 ((u >= u1) & ((Var451(u1) | Var109(u1) | -Var416(u1)) -> (Var128(u)))).
+all u exists u1 ((u >= u1) & ((Var17(u1)) -> (Var498(u) | Var481(u) | Var132(u)))).
+all u exists u1 ((u >= u1) & ((-Var405(u1) | Var104(u1) | Var123(u1)) -> (Var188(u)))).
+all u exists u1 ((u >= u1) & ((-Var7(u1) | Var58(u1)) -> (-Var207(u) | -Var217(u)))).
+all u exists u1 ((u >= u1) & ((-Var369(u1) | Var158(u1)) -> (Var92(u) | Var8(u)))).
+all u exists u1 ((u >= u1) & ((Var150(u1) | Var409(u1)) -> (-Var156(u) | Var35(u)))).
+all u exists u1 ((u >= u1) & ((Var113(u1)) -> (-Var288(u) | -Var23(u) | -Var297(u)))).
+all u exists u1 ((u >= u1) & ((-Var308(u1) | Var153(u1) | -Var385(u1)) -> (-Var156(u)))).
+all u exists u1 ((u >= u1) & ((-Var159(u1)) -> (Var73(u) | Var83(u) | Var141(u)))).
+all u exists u1 ((u >= u1) & ((Var122(u1) | Var99(u1)) -> (-Var304(u) | Var300(u)))).
+all u exists u1 ((u >= u1) & ((Var476(u1) | Var457(u1) | -Var296(u1)) -> (Var25(u)))).
+all u exists u1 ((u >= u1) & ((-Var435(u1)) -> (Var141(u) | -Var449(u) | -Var186(u)))).
+all u exists u1 ((u >= u1) & ((-Var437(u1) | Var443(u1) | Var361(u1)) -> (-Var291(u)))).
+all u exists u1 ((u >= u1) & ((Var147(u1) | -Var448(u1) | Var494(u1)) -> (Var279(u)))).
+all u exists u1 ((u >= u1) & ((Var443(u1) | Var326(u1) | Var348(u1)) -> (Var248(u)))).
+all u exists u1 ((u >= u1) & ((Var202(u1) | Var459(u1) | -Var395(u1)) -> (-Var249(u)))).
+all u exists u1 ((u >= u1) & ((-Var432(u1) | Var196(u1) | -Var394(u1)) -> (-Var450(u)))).
+all u exists u1 ((u >= u1) & ((Var344(u1)) -> (-Var324(u) | -Var111(u) | -Var106(u)))).
+all u exists u1 ((u >= u1) & ((-Var28(u1) | Var3(u1) | Var84(u1)) -> (-Var405(u)))).
+all u exists u1 ((u >= u1) & ((Var214(u1) | -Var434(u1) | Var74(u1)) -> (Var458(u)))).
+all u exists u1 ((u >= u1) & ((-Var128(u1)) -> (Var36(u) | -Var454(u) | Var276(u)))).
+all u exists u1 ((u >= u1) & ((-Var396(u1)) -> (-Var7(u) | -Var23(u) | Var87(u)))).
+all u exists u1 ((u >= u1) & ((Var56(u1)) -> (-Var94(u) | -Var493(u) | -Var208(u)))).
+all u exists u1 ((u >= u1) & ((Var243(u1)) -> (-Var374(u) | -Var78(u) | Var327(u)))).
+all u exists u1 ((u >= u1) & ((Var448(u1) | Var221(u1)) -> (Var474(u) | -Var287(u)))).
+all u exists u1 ((u >= u1) & ((Var362(u1) | Var366(u1) | Var4(u1)) -> (Var191(u)))).
+all u exists u1 ((u >= u1) & ((-Var481(u1) | -Var272(u1) | Var219(u1)) -> (-Var145(u)))).
+all u exists u1 ((u >= u1) & ((-Var102(u1) | Var71(u1)) -> (-Var170(u) | -Var319(u)))).
+all u exists u1 ((u >= u1) & ((-Var258(u1)) -> (Var22(u) | Var63(u) | Var325(u)))).
+all u exists u1 ((u >= u1) & ((Var104(u1) | -Var213(u1)) -> (Var271(u) | Var19(u)))).
+all u exists u1 ((u >= u1) & ((-Var292(u1) | -Var268(u1) | Var125(u1)) -> (Var368(u)))).
+all u exists u1 ((u >= u1) & ((Var217(u1)) -> (Var85(u) | -Var41(u) | Var80(u)))).
+all u exists u1 ((u >= u1) & ((-Var482(u1)) -> (Var417(u) | Var79(u) | Var382(u)))).
+all u exists u1 ((u >= u1) & ((Var310(u1) | Var319(u1) | Var492(u1)) -> (Var471(u)))).
+all u exists u1 ((u >= u1) & ((Var336(u1)) -> (-Var397(u) | Var500(u) | -Var498(u)))).
+all u exists u1 ((u >= u1) & ((-Var178(u1) | Var243(u1)) -> (-Var134(u) | -Var431(u)))).
+all u exists u1 ((u >= u1) & ((Var26(u1) | Var69(u1)) -> (Var16(u) | -Var329(u)))).
+all u exists u1 ((u >= u1) & ((-Var250(u1) | Var428(u1)) -> (-Var346(u) | -Var189(u)))).
+all u exists u1 ((u >= u1) & ((-Var482(u1)) -> (-Var277(u) | Var490(u) | -Var59(u)))).
+all u exists u1 ((u >= u1) & ((Var123(u1)) -> (-Var455(u) | -Var471(u) | Var279(u)))).
+all u exists u1 ((u >= u1) & ((-Var263(u1) | Var355(u1) | -Var279(u1)) -> (Var280(u)))).
+all u exists u1 ((u >= u1) & ((-Var10(u1) | Var271(u1)) -> (Var256(u) | -Var31(u)))).
+all u exists u1 ((u >= u1) & ((Var483(u1) | Var484(u1) | -Var200(u1)) -> (Var241(u)))).
+all u exists u1 ((u >= u1) & ((Var184(u1)) -> (-Var108(u) | -Var44(u) | Var352(u)))).
+all u exists u1 ((u >= u1) & ((Var245(u1) | -Var238(u1)) -> (-Var71(u) | Var39(u)))).
+all u exists u1 ((u >= u1) & ((-Var175(u1)) -> (-Var200(u) | Var246(u) | -Var272(u)))).
+all u exists u1 ((u >= u1) & ((-Var125(u1)) -> (Var337(u) | Var105(u) | Var85(u)))).
+all u exists u1 ((u >= u1) & ((-Var227(u1) | -Var144(u1)) -> (Var77(u) | -Var463(u)))).
+all u exists u1 ((u >= u1) & ((Var278(u1) | -Var224(u1) | Var290(u1)) -> (-Var491(u)))).
+all u exists u1 ((u >= u1) & ((Var62(u1)) -> (-Var22(u) | Var35(u) | Var473(u)))).
+all u exists u1 ((u >= u1) & ((Var54(u1)) -> (-Var279(u) | -Var285(u) | -Var208(u)))).
+all u exists u1 ((u >= u1) & ((Var302(u1)) -> (-Var31(u) | -Var280(u) | Var33(u)))).
+all u exists u1 ((u >= u1) & ((Var27(u1)) -> (Var499(u) | Var437(u) | Var95(u)))).
+all u exists u1 ((u >= u1) & ((-Var156(u1) | Var141(u1)) -> (-Var42(u) | Var281(u)))).
+all u exists u1 ((u >= u1) & ((-Var8(u1) | -Var249(u1)) -> (-Var36(u) | Var285(u)))).
+all u exists u1 ((u >= u1) & ((Var104(u1) | -Var353(u1) | -Var127(u1)) -> (-Var64(u)))).
+all u exists u1 ((u >= u1) & ((Var196(u1)) -> (-Var56(u) | -Var64(u) | -Var386(u)))).
+all u exists u1 ((u >= u1) & ((-Var390(u1)) -> (-Var286(u) | -Var375(u) | -Var396(u)))).
+all u exists u1 ((u >= u1) & ((Var451(u1)) -> (-Var231(u) | Var120(u) | -Var164(u)))).
+all u exists u1 ((u >= u1) & ((-Var247(u1) | Var307(u1)) -> (Var500(u) | Var153(u)))).
+all u exists u1 ((u >= u1) & ((-Var30(u1) | Var299(u1)) -> (Var469(u) | -Var412(u)))).
+all u exists u1 ((u >= u1) & ((-Var240(u1)) -> (Var90(u) | Var301(u) | Var282(u)))).
+all u exists u1 ((u >= u1) & ((-Var108(u1)) -> (-Var126(u) | Var152(u) | Var343(u)))).
+all u exists u1 ((u >= u1) & ((-Var69(u1) | -Var439(u1) | -Var463(u1)) -> (Var31(u)))).
+all u exists u1 ((u >= u1) & ((-Var346(u1)) -> (Var167(u) | Var144(u) | Var140(u)))).
+all u exists u1 ((u >= u1) & ((-Var301(u1) | -Var29(u1) | Var295(u1)) -> (-Var56(u)))).
+all u exists u1 ((u >= u1) & ((-Var44(u1) | Var385(u1) | Var382(u1)) -> (-Var443(u)))).
+all u exists u1 ((u >= u1) & ((-Var194(u1)) -> (-Var434(u) | Var93(u) | Var284(u)))).
+all u exists u1 ((u >= u1) & ((Var24(u1) | -Var135(u1) | -Var322(u1)) -> (Var221(u)))).
+all u exists u1 ((u >= u1) & ((-Var487(u1) | Var437(u1)) -> (Var142(u) | Var43(u)))).
+all u exists u1 ((u >= u1) & ((-Var144(u1) | -Var424(u1) | -Var215(u1)) -> (Var7(u)))).
+all u exists u1 ((u >= u1) & ((-Var114(u1)) -> (Var351(u) | -Var496(u) | Var121(u)))).
+all u (-(Var142(u) | -Var141(u) | Var387(u) | -Var380(u) | Var242(u) | Var363(u))).
+all u (-(Var317(u) | Var395(u) | -Var466(u) | -Var281(u) | -Var279(u) | -Var386(u))).
+all u (-(-Var252(u) | -Var162(u) | Var190(u) | -Var378(u) | Var395(u) | Var80(u))).
+all u (-(-Var229(u) | -Var143(u) | Var189(u) | Var368(u) | -Var168(u) | Var303(u))).
+all u (-(-Var174(u) | Var274(u) | -Var300(u) | -Var311(u) | -Var155(u) | Var354(u))).
+all u (-(Var465(u) | Var182(u) | -Var189(u) | Var61(u) | -Var396(u) | -Var487(u))).
+all u (-(Var363(u) | Var494(u) | Var179(u) | Var11(u) | Var28(u) | -Var492(u))).
+all u (-(Var347(u) | -Var271(u) | Var480(u) | Var185(u) | -Var42(u) | Var172(u))).
+all u (-(-Var150(u) | -Var293(u) | Var488(u) | Var390(u) | -Var387(u) | -Var325(u))).
+all u (-(-Var11(u) | Var145(u) | Var292(u) | -Var82(u) | Var29(u) | Var483(u))).
+all u (-(Var238(u) | Var279(u) | Var380(u) | -Var93(u) | -Var437(u) | -Var167(u))).
+all u (-(Var439(u) | -Var216(u) | Var326(u) | Var36(u) | Var291(u) | Var159(u))).
+all u (-(-Var142(u) | Var82(u) | -Var72(u) | -Var318(u) | Var120(u) | Var342(u))).
+all u (-(Var72(u) | -Var93(u) | -Var114(u) | -Var199(u) | Var151(u) | Var165(u))).
+all u (-(Var54(u) | Var441(u) | -Var395(u) | -Var372(u) | -Var156(u) | Var494(u))).
+all u (-(-Var180(u) | Var125(u) | -Var430(u) | Var191(u) | Var426(u) | -Var488(u))).
+all u (-(Var217(u) | Var397(u) | Var222(u) | -Var195(u) | -Var50(u) | Var240(u))).
+all u exists u1 ((u >= u1) & ((Var40(u1) | -Var300(u1) | -Var244(u1)) -> (Var71(u) | Var373(u) | Var164(u)))).
+all u exists u1 ((u >= u1) & ((-Var117(u1)) -> (Var232(u) | -Var48(u) | -Var225(u) | -Var458(u) | -Var107(u)))).
+all u exists u1 ((u >= u1) & ((-Var11(u1) | Var16(u1) | Var397(u1) | -Var103(u1) | -Var299(u1)) -> (-Var401(u)))).
+all u exists u1 ((u >= u1) & ((-Var467(u1) | -Var279(u1) | -Var12(u1) | Var397(u1) | Var318(u1)) -> (Var371(u)))).
+all u exists u1 ((u >= u1) & ((-Var483(u1) | -Var359(u1) | -Var421(u1)) -> (-Var41(u) | -Var366(u) | -Var365(u)))).
+all u exists u1 ((u >= u1) & ((Var20(u1)) -> (Var264(u) | -Var402(u) | Var249(u) | -Var196(u) | -Var96(u)))).
+all u exists u1 ((u >= u1) & ((Var390(u1) | Var456(u1) | Var309(u1) | Var376(u1)) -> (Var225(u) | -Var77(u)))).
+all u exists u1 ((u >= u1) & ((-Var54(u1) | -Var120(u1) | -Var281(u1) | -Var351(u1) | -Var140(u1)) -> (-Var27(u)))).
+all u exists u1 ((u >= u1) & ((-Var171(u1)) -> (-Var13(u) | Var133(u) | Var312(u) | -Var347(u) | Var152(u)))).
+all u exists u1 ((u >= u1) & ((Var320(u1)) -> (Var162(u) | -Var2(u) | Var103(u) | -Var152(u) | -Var143(u)))).
+all u exists u1 ((u >= u1) & ((-Var104(u1)) -> (-Var209(u) | Var496(u) | Var435(u) | -Var318(u) | -Var66(u)))).
+all u exists u1 ((u >= u1) & ((Var205(u1) | -Var109(u1) | Var281(u1)) -> (Var460(u) | Var442(u) | Var305(u)))).
+all u exists u1 ((u >= u1) & ((Var32(u1) | -Var119(u1)) -> (-Var111(u) | -Var283(u) | Var18(u) | Var247(u)))).
+all u exists u1 ((u >= u1) & ((-Var26(u1) | -Var327(u1)) -> (-Var349(u) | Var250(u) | -Var474(u) | -Var47(u)))).
+all u exists u1 ((u >= u1) & ((-Var127(u1) | Var271(u1)) -> (-Var217(u) | -Var261(u) | Var310(u) | Var7(u)))).
+all u exists u1 ((u >= u1) & ((Var261(u1)) -> (Var175(u) | Var406(u) | Var97(u) | -Var36(u) | -Var426(u)))).
+all u exists u1 ((u >= u1) & ((Var371(u1) | -Var422(u1) | -Var208(u1) | -Var258(u1)) -> (Var64(u) | -Var140(u)))).
+all u exists u1 ((u >= u1) & ((Var150(u1) | -Var293(u1) | -Var350(u1) | -Var470(u1) | -Var330(u1)) -> (-Var367(u)))).
+all u exists u1 ((u >= u1) & ((-Var19(u1) | -Var446(u1)) -> (Var37(u) | -Var2(u) | Var58(u) | Var472(u)))).
+all u exists u1 ((u >= u1) & ((-Var189(u1) | Var313(u1) | -Var211(u1) | Var368(u1)) -> (-Var217(u) | Var34(u)))).
+all u exists u1 ((u >= u1) & ((-Var149(u1) | Var290(u1)) -> (Var424(u) | -Var5(u) | Var359(u) | -Var475(u)))).
+all u exists u1 ((u >= u1) & ((-Var418(u1) | -Var428(u1) | Var329(u1) | Var59(u1) | Var156(u1)) -> (Var277(u)))).
+all u exists u1 ((u >= u1) & ((Var454(u1)) -> (Var346(u) | Var111(u) | Var178(u) | Var274(u) | -Var90(u)))).
+all u exists u1 ((u >= u1) & ((-Var388(u1) | -Var349(u1)) -> (Var469(u) | Var414(u) | Var100(u) | -Var455(u)))).
+all u exists u1 ((u >= u1) & ((Var426(u1) | -Var214(u1) | Var189(u1)) -> (-Var269(u) | Var495(u) | -Var168(u)))).
+all u exists u1 ((u >= u1) & ((Var55(u1) | Var223(u1) | -Var321(u1) | -Var179(u1)) -> (Var401(u) | -Var490(u)))).
+all u exists u1 ((u >= u1) & ((Var147(u1) | Var356(u1) | Var256(u1) | Var179(u1) | -Var347(u1)) -> (Var28(u)))).
+all u exists u1 ((u >= u1) & ((-Var422(u1) | Var165(u1) | Var227(u1) | -Var293(u1) | Var476(u1)) -> (-Var172(u)))).
+all u exists u1 ((u >= u1) & ((Var444(u1)) -> (Var388(u) | Var459(u) | -Var324(u) | Var325(u) | Var369(u)))).
+all u exists u1 ((u >= u1) & ((-Var449(u1) | -Var278(u1) | Var368(u1) | Var402(u1)) -> (-Var223(u) | Var97(u)))).
+all u exists u1 ((u >= u1) & ((-Var243(u1) | Var253(u1) | -Var71(u1) | Var434(u1) | -Var405(u1)) -> (Var382(u)))).
+all u exists u1 ((u >= u1) & ((Var111(u1)) -> (-Var187(u) | Var235(u) | Var231(u) | Var314(u) | -Var424(u)))).
+all u exists u1 ((u >= u1) & ((Var490(u1) | Var160(u1) | -Var52(u1) | Var269(u1)) -> (Var13(u) | -Var145(u)))).
+all u exists u1 ((u >= u1) & ((-Var485(u1) | -Var242(u1)) -> (Var377(u) | -Var75(u) | Var375(u) | -Var317(u)))).
+all u exists u1 ((u >= u1) & ((-Var400(u1) | Var86(u1)) -> (-Var32(u) | Var396(u) | -Var111(u) | -Var313(u)))).
+all u exists u1 ((u >= u1) & ((-Var260(u1) | -Var68(u1) | Var458(u1) | Var415(u1)) -> (-Var172(u) | Var423(u)))).
+all u exists u1 ((u >= u1) & ((Var156(u1) | -Var194(u1) | Var380(u1)) -> (-Var42(u) | -Var66(u) | Var388(u)))).
+all u exists u1 ((u >= u1) & ((-Var156(u1) | -Var139(u1) | Var457(u1) | Var229(u1)) -> (-Var53(u) | -Var163(u)))).
+all u exists u1 ((u >= u1) & ((-Var20(u1) | Var159(u1)) -> (Var419(u) | Var322(u) | -Var279(u) | -Var286(u)))).
+all u exists u1 ((u >= u1) & ((Var445(u1) | Var427(u1) | Var459(u1) | -Var93(u1)) -> (-Var485(u) | -Var384(u)))).
+all u exists u1 ((u >= u1) & ((-Var350(u1) | -Var419(u1) | -Var423(u1) | -Var473(u1)) -> (-Var125(u) | -Var280(u)))).
+all u exists u1 ((u >= u1) & ((Var388(u1) | Var430(u1) | Var147(u1) | Var328(u1)) -> (-Var173(u) | Var330(u)))).
+all u exists u1 ((u >= u1) & ((Var390(u1) | -Var414(u1) | -Var445(u1) | Var5(u1) | Var37(u1)) -> (-Var129(u)))).
+all u exists u1 ((u >= u1) & ((-Var63(u1) | Var178(u1) | -Var346(u1)) -> (-Var212(u) | -Var275(u) | Var273(u)))).
+all u exists u1 ((u >= u1) & ((Var259(u1) | -Var492(u1) | Var303(u1) | Var383(u1)) -> (Var452(u) | Var3(u)))).
+all u exists u1 ((u >= u1) & ((Var148(u1) | -Var364(u1) | -Var197(u1) | Var13(u1) | Var476(u1)) -> (-Var344(u)))).
+all u exists u1 ((u >= u1) & ((-Var281(u1) | -Var430(u1) | -Var350(u1) | Var65(u1) | Var411(u1)) -> (Var468(u)))).
+all u exists u1 ((u >= u1) & ((-Var282(u1) | Var249(u1) | Var348(u1) | Var153(u1) | Var276(u1)) -> (-Var442(u)))).
+all u exists u1 ((u >= u1) & ((Var45(u1) | -Var215(u1) | Var403(u1)) -> (-Var34(u) | -Var33(u) | Var170(u)))).
+all u exists u1 ((u >= u1) & ((-Var457(u1) | -Var145(u1) | -Var368(u1) | Var164(u1)) -> (Var441(u) | -Var360(u)))).
+all u exists u1 ((u >= u1) & ((Var377(u1)) -> (-Var436(u) | Var473(u) | -Var127(u) | -Var161(u) | -Var5(u)))).
+all u exists u1 ((u >= u1) & ((Var83(u1)) -> (Var215(u) | Var249(u) | Var437(u) | -Var344(u) | Var177(u)))).
+all u exists u1 ((u >= u1) & ((-Var1(u1) | -Var269(u1) | -Var220(u1) | Var227(u1) | -Var490(u1)) -> (-Var473(u)))).
+all u exists u1 ((u >= u1) & ((-Var176(u1)) -> (Var365(u) | -Var472(u) | -Var360(u) | -Var402(u) | Var155(u)))).
+all u exists u1 ((u >= u1) & ((Var274(u1)) -> (-Var279(u) | -Var448(u) | Var247(u) | Var49(u) | Var261(u)))).
+all u exists u1 ((u >= u1) & ((-Var244(u1) | Var313(u1)) -> (Var350(u) | Var154(u) | -Var282(u) | -Var416(u)))).
+all u exists u1 ((u >= u1) & ((-Var462(u1) | Var26(u1) | Var455(u1) | -Var494(u1)) -> (-Var336(u) | Var250(u)))).
+all u exists u1 ((u >= u1) & ((Var223(u1) | -Var327(u1)) -> (Var92(u) | Var437(u) | Var307(u) | Var185(u)))).
+all u exists u1 ((u >= u1) & ((Var301(u1)) -> (Var100(u) | -Var191(u) | -Var40(u) | Var67(u) | Var198(u)))).
+all u exists u1 ((u >= u1) & ((-Var308(u1)) -> (Var272(u) | Var128(u) | Var193(u) | -Var274(u) | -Var349(u)))).
+all u exists u1 ((u >= u1) & ((Var371(u1)) -> (-Var284(u) | Var276(u) | Var57(u) | Var14(u) | Var403(u)))).
+all u exists u1 ((u >= u1) & ((-Var265(u1) | Var235(u1) | Var83(u1) | Var82(u1) | -Var124(u1)) -> (Var42(u)))).
+all u exists u1 ((u >= u1) & ((Var204(u1) | Var466(u1)) -> (Var221(u) | Var238(u) | -Var366(u) | -Var309(u)))).
+all u exists u1 ((u >= u1) & ((Var378(u1)) -> (Var493(u) | -Var282(u) | -Var14(u) | Var382(u) | -Var249(u)))).
+all u exists u1 ((u >= u1) & ((-Var242(u1) | Var177(u1) | -Var283(u1)) -> (-Var277(u) | Var133(u) | -Var468(u)))).
+all u exists u1 ((u >= u1) & ((Var69(u1) | Var177(u1) | Var195(u1) | Var351(u1)) -> (-Var367(u) | Var242(u)))).
+all u exists u1 ((u >= u1) & ((-Var231(u1) | Var313(u1) | Var454(u1) | -Var400(u1)) -> (-Var342(u) | Var170(u)))).
+all u exists u1 ((u >= u1) & ((Var458(u1) | -Var119(u1)) -> (Var271(u) | -Var312(u) | -Var76(u) | Var214(u)))).
+all u exists u1 ((u >= u1) & ((Var106(u1)) -> (-Var267(u) | Var383(u) | -Var96(u) | Var380(u) | Var107(u)))).
+all u exists u1 ((u >= u1) & ((-Var300(u1) | -Var465(u1) | -Var476(u1) | -Var192(u1)) -> (-Var221(u) | -Var43(u)))).
+all u exists u1 ((u >= u1) & ((-Var210(u1) | -Var120(u1) | Var114(u1) | Var173(u1) | -Var363(u1)) -> (-Var390(u)))).
+all u exists u1 ((u >= u1) & ((Var249(u1) | -Var9(u1) | -Var173(u1) | Var289(u1)) -> (-Var473(u) | Var337(u)))).
+all u exists u1 ((u >= u1) & ((Var186(u1) | Var472(u1) | -Var497(u1)) -> (-Var483(u) | Var438(u) | -Var145(u)))).
+all u exists u1 ((u >= u1) & ((-Var281(u1) | -Var445(u1) | -Var418(u1) | Var393(u1)) -> (Var390(u) | Var181(u)))).
+all u exists u1 ((u >= u1) & ((-Var53(u1) | Var273(u1) | Var294(u1)) -> (Var236(u) | -Var458(u) | -Var167(u)))).
+all u exists u1 ((u >= u1) & ((Var116(u1)) -> (-Var305(u) | Var226(u) | -Var341(u) | Var465(u) | Var98(u)))).
+all u exists u1 ((u >= u1) & ((Var449(u1) | Var6(u1)) -> (Var32(u) | -Var156(u) | -Var297(u) | Var395(u)))).
+all u exists u1 ((u >= u1) & ((-Var444(u1) | Var118(u1)) -> (Var31(u) | -Var185(u) | -Var93(u) | Var326(u)))).
+all u exists u1 ((u >= u1) & ((-Var129(u1) | Var396(u1) | Var242(u1)) -> (-Var151(u) | -Var313(u) | -Var15(u)))).
+all u exists u1 ((u >= u1) & ((-Var352(u1) | -Var12(u1) | Var174(u1)) -> (Var106(u) | -Var79(u) | -Var94(u)))).
+all u exists u1 ((u >= u1) & ((Var156(u1) | -Var180(u1) | Var60(u1) | -Var70(u1)) -> (-Var495(u) | -Var257(u)))).
+all u exists u1 ((u >= u1) & ((-Var173(u1) | -Var188(u1) | Var294(u1)) -> (Var423(u) | -Var57(u) | Var462(u)))).
+all u exists u1 ((u >= u1) & ((-Var389(u1) | Var442(u1) | -Var178(u1) | -Var258(u1) | Var292(u1)) -> (-Var64(u)))).
+all u exists u1 ((u >= u1) & ((-Var453(u1) | Var469(u1) | Var377(u1) | -Var206(u1) | -Var407(u1)) -> (Var173(u)))).
+all u exists u1 ((u >= u1) & ((Var89(u1) | Var323(u1) | -Var417(u1) | -Var219(u1) | Var301(u1)) -> (Var128(u)))).
+all u exists u1 ((u >= u1) & ((Var183(u1) | Var455(u1) | Var451(u1)) -> (Var175(u) | Var67(u) | -Var378(u)))).
+all u exists u1 ((u >= u1) & ((Var173(u1) | Var417(u1) | -Var451(u1) | Var128(u1)) -> (-Var318(u) | Var370(u)))).
+all u exists u1 ((u >= u1) & ((Var64(u1) | Var448(u1)) -> (-Var276(u) | Var120(u) | -Var238(u) | Var467(u)))).
+all u exists u1 ((u >= u1) & ((Var338(u1) | Var368(u1) | Var452(u1) | -Var469(u1) | Var252(u1)) -> (-Var55(u)))).
+all u exists u1 ((u >= u1) & ((-Var224(u1) | -Var168(u1) | -Var135(u1) | -Var444(u1) | Var488(u1)) -> (Var216(u)))).
+all u exists u1 ((u >= u1) & ((-Var62(u1) | -Var382(u1) | Var374(u1) | Var157(u1)) -> (-Var284(u) | Var271(u)))).
+all u exists u1 ((u >= u1) & ((Var205(u1) | Var363(u1) | -Var160(u1) | -Var325(u1) | -Var110(u1)) -> (-Var469(u)))).
+all u exists u1 ((u >= u1) & ((Var349(u1) | Var113(u1) | Var235(u1)) -> (Var276(u) | Var199(u) | Var473(u)))).
+all u exists u1 ((u >= u1) & ((Var139(u1) | -Var116(u1) | Var95(u1) | Var349(u1)) -> (-Var336(u) | Var433(u)))).
+all u exists u1 ((u >= u1) & ((-Var139(u1) | -Var353(u1) | -Var169(u1) | Var157(u1) | Var152(u1)) -> (-Var417(u)))).
+all u exists u1 ((u >= u1) & ((Var309(u1) | -Var346(u1)) -> (Var427(u) | -Var170(u) | -Var499(u) | -Var351(u)))).
+all u exists u1 ((u >= u1) & ((Var44(u1)) -> (Var372(u) | -Var139(u) | -Var285(u) | Var161(u) | Var265(u)))).
+all u exists u1 ((u >= u1) & ((-Var57(u1) | Var58(u1) | Var490(u1) | -Var226(u1)) -> (Var366(u) | Var171(u)))).
+all u exists u1 ((u >= u1) & ((Var225(u1) | Var54(u1) | -Var126(u1)) -> (Var412(u) | Var65(u) | Var360(u)))).
+all u exists u1 ((u >= u1) & ((Var112(u1)) -> (Var383(u) | Var234(u) | Var249(u) | -Var61(u) | Var218(u)))).
+all u exists u1 ((u >= u1) & ((-Var447(u1) | -Var81(u1) | -Var396(u1)) -> (Var369(u) | -Var48(u) | -Var93(u)))).
+all u exists u1 ((u >= u1) & ((-Var196(u1) | Var169(u1) | Var183(u1)) -> (-Var181(u) | -Var229(u) | -Var440(u)))).
+all u exists u1 ((u >= u1) & ((Var150(u1)) -> (Var41(u) | Var266(u) | Var56(u) | Var495(u) | Var324(u)))).
+all u exists u1 ((u >= u1) & ((Var454(u1)) -> (Var66(u) | Var306(u) | -Var381(u) | Var490(u) | -Var1(u)))).
+all u exists u1 ((u >= u1) & ((Var367(u1) | -Var296(u1) | -Var431(u1) | Var23(u1)) -> (-Var188(u) | -Var55(u)))).
+all u exists u1 ((u >= u1) & ((Var463(u1) | Var101(u1) | Var432(u1) | -Var459(u1)) -> (-Var296(u) | Var340(u)))).
+all u exists u1 ((u >= u1) & ((Var98(u1) | -Var267(u1) | Var276(u1)) -> (Var348(u) | Var277(u) | Var361(u)))).
+all u exists u1 ((u >= u1) & ((-Var498(u1) | -Var198(u1) | Var69(u1)) -> (Var331(u) | -Var98(u) | -Var163(u)))).
+all u exists u1 ((u >= u1) & ((Var473(u1) | -Var150(u1) | -Var481(u1)) -> (-Var351(u) | -Var500(u) | Var270(u)))).
+all u exists u1 ((u >= u1) & ((-Var73(u1) | -Var360(u1) | Var274(u1) | Var57(u1)) -> (Var25(u) | Var283(u)))).
+all u exists u1 ((u >= u1) & ((-Var42(u1)) -> (Var215(u) | -Var440(u) | Var195(u) | -Var326(u) | Var125(u)))).
+all u exists u1 ((u >= u1) & ((Var325(u1) | Var479(u1) | Var235(u1)) -> (Var171(u) | Var154(u) | -Var391(u)))).
+all u exists u1 ((u >= u1) & ((-Var340(u1) | Var461(u1) | -Var403(u1)) -> (-Var400(u) | -Var449(u) | -Var44(u)))).
+all u exists u1 ((u >= u1) & ((Var405(u1) | -Var52(u1) | -Var168(u1)) -> (-Var377(u) | -Var486(u) | -Var171(u)))).
+all u exists u1 ((u >= u1) & ((Var321(u1) | Var442(u1) | Var176(u1) | -Var219(u1)) -> (Var472(u) | Var143(u)))).
+all u exists u1 ((u >= u1) & ((-Var373(u1) | -Var447(u1) | -Var239(u1)) -> (Var283(u) | Var131(u) | Var429(u)))).
+all u exists u1 ((u >= u1) & ((-Var66(u1) | -Var300(u1)) -> (Var271(u) | -Var231(u) | Var473(u) | -Var154(u)))).
+all u exists u1 ((u >= u1) & ((Var458(u1) | Var131(u1) | Var371(u1) | -Var395(u1) | -Var241(u1)) -> (-Var426(u)))).
+all u exists u1 ((u >= u1) & ((Var480(u1)) -> (-Var133(u) | -Var231(u) | Var193(u) | -Var78(u) | -Var110(u)))).
+all u exists u1 ((u >= u1) & ((Var340(u1) | -Var272(u1) | Var93(u1) | -Var231(u1)) -> (-Var452(u) | -Var431(u)))).
+all u exists u1 ((u >= u1) & ((Var273(u1) | Var262(u1) | -Var467(u1) | Var145(u1)) -> (Var413(u) | Var472(u)))).
+all u exists u1 ((u >= u1) & ((-Var455(u1) | -Var238(u1) | -Var379(u1)) -> (Var189(u) | Var425(u) | -Var316(u)))).
+all u exists u1 ((u >= u1) & ((Var62(u1) | -Var372(u1) | Var64(u1) | Var343(u1) | -Var262(u1)) -> (-Var217(u)))).
+all u exists u1 ((u >= u1) & ((-Var98(u1) | -Var125(u1) | Var416(u1) | Var150(u1)) -> (Var141(u) | Var16(u)))).
+all u exists u1 ((u >= u1) & ((Var117(u1) | -Var1(u1) | -Var419(u1)) -> (Var486(u) | Var176(u) | Var347(u)))).
+all u exists u1 ((u >= u1) & ((Var455(u1) | -Var128(u1) | Var381(u1) | -Var200(u1)) -> (-Var486(u) | Var353(u)))).
+all u exists u1 ((u >= u1) & ((-Var449(u1) | Var327(u1) | Var466(u1) | Var71(u1)) -> (-Var381(u) | Var192(u)))).
+all u exists u1 ((u >= u1) & ((Var46(u1) | -Var297(u1) | -Var460(u1)) -> (-Var207(u) | Var84(u) | -Var314(u)))).
+all u exists u1 ((u >= u1) & ((Var88(u1) | Var184(u1) | -Var201(u1) | Var15(u1)) -> (-Var38(u) | Var458(u)))).
+all u exists u1 ((u >= u1) & ((-Var284(u1) | Var482(u1) | Var422(u1) | Var412(u1)) -> (-Var196(u) | -Var29(u)))).
+all u exists u1 ((u >= u1) & ((-Var444(u1) | -Var299(u1)) -> (Var452(u) | Var236(u) | Var123(u) | Var258(u)))).
+all u exists u1 ((u >= u1) & ((-Var348(u1) | -Var232(u1) | Var105(u1) | -Var274(u1) | Var97(u1)) -> (-Var156(u)))).
+all u exists u1 ((u >= u1) & ((-Var100(u1) | -Var47(u1)) -> (Var163(u) | -Var59(u) | Var285(u) | -Var362(u)))).
+all u exists u1 ((u >= u1) & ((-Var178(u1) | -Var271(u1)) -> (-Var179(u) | Var462(u) | Var259(u) | -Var175(u)))).
+all u exists u1 ((u >= u1) & ((Var148(u1) | Var103(u1) | -Var280(u1) | -Var286(u1) | -Var327(u1)) -> (Var191(u)))).
+all u exists u1 ((u >= u1) & ((Var75(u1)) -> (-Var40(u) | Var388(u) | -Var299(u) | -Var212(u) | Var78(u)))).
+all u exists u1 ((u >= u1) & ((Var446(u1)) -> (Var215(u) | -Var261(u) | -Var192(u) | Var268(u) | -Var217(u)))).
+all u exists u1 ((u >= u1) & ((Var387(u1) | Var179(u1) | Var153(u1)) -> (Var418(u) | -Var95(u) | Var63(u)))).
+all u exists u1 ((u >= u1) & ((-Var454(u1) | Var120(u1) | -Var420(u1) | -Var368(u1)) -> (-Var460(u) | Var87(u)))).
+all u exists u1 ((u >= u1) & ((-Var110(u1)) -> (Var473(u) | Var129(u) | Var63(u) | -Var410(u) | -Var227(u)))).
+all u exists u1 ((u >= u1) & ((-Var402(u1)) -> (-Var411(u) | -Var298(u) | Var160(u) | -Var72(u) | Var377(u)))).
+all u exists u1 ((u >= u1) & ((-Var137(u1) | -Var395(u1) | Var186(u1)) -> (-Var474(u) | Var79(u) | Var83(u)))).
+all u exists u1 ((u >= u1) & ((-Var56(u1)) -> (-Var379(u) | Var299(u) | -Var82(u) | -Var186(u) | -Var104(u)))).
+all u exists u1 ((u >= u1) & ((Var22(u1) | -Var235(u1) | Var458(u1)) -> (-Var324(u) | -Var200(u) | -Var21(u)))).
+all u exists u1 ((u >= u1) & ((-Var445(u1) | Var298(u1) | Var299(u1)) -> (Var308(u) | Var253(u) | -Var63(u)))).
+all u exists u1 ((u >= u1) & ((-Var331(u1) | -Var476(u1) | -Var166(u1) | Var135(u1)) -> (-Var302(u) | -Var272(u)))).
+all u exists u1 ((u >= u1) & ((-Var181(u1) | -Var485(u1) | Var461(u1) | Var320(u1)) -> (Var19(u) | Var191(u)))).
+all u exists u1 ((u >= u1) & ((-Var290(u1)) -> (Var109(u) | -Var181(u) | Var255(u) | Var205(u) | -Var43(u)))).
+all u exists u1 ((u >= u1) & ((-Var167(u1) | -Var333(u1) | Var163(u1) | Var413(u1)) -> (Var85(u) | -Var239(u)))).
+all u exists u1 ((u >= u1) & ((Var493(u1) | Var111(u1) | Var466(u1) | -Var137(u1) | -Var161(u1)) -> (Var184(u)))).
+all u (-(Var201(u) | -Var149(u) | -Var294(u) | Var118(u) | -Var329(u) | Var284(u) | Var287(u) | -Var220(u))).
+all u (-(-Var327(u) | Var497(u) | Var177(u) | -Var38(u) | -Var87(u) | Var227(u) | Var441(u) | -Var474(u))).
+all u (-(-Var347(u) | Var170(u) | Var24(u) | -Var497(u) | Var435(u) | Var315(u) | Var160(u) | -Var104(u))).
+all u (-(Var419(u) | Var151(u) | Var183(u) | Var230(u) | Var438(u) | Var453(u) | Var120(u) | Var422(u))).
+all u (-(-Var401(u) | -Var19(u) | Var95(u) | Var462(u) | Var360(u) | -Var40(u) | -Var494(u) | Var471(u))).
+all u (-(Var496(u) | Var381(u) | -Var153(u) | -Var340(u) | Var208(u) | Var161(u) | Var211(u) | -Var488(u))).
+all u (-(Var171(u) | -Var178(u) | Var374(u) | -Var76(u) | -Var282(u) | -Var97(u) | Var120(u) | Var339(u))).
+all u (-(Var355(u) | -Var5(u) | -Var200(u) | Var339(u) | -Var117(u) | -Var85(u) | -Var284(u) | Var341(u))).
+all u (-(-Var317(u) | Var434(u) | -Var92(u) | -Var239(u) | Var481(u) | Var4(u) | Var216(u) | -Var400(u))).
+all u (-(Var156(u) | -Var360(u) | Var11(u) | -Var443(u) | Var68(u) | Var141(u) | -Var236(u) | -Var98(u))).
+all u (-(-Var377(u) | -Var196(u) | -Var406(u) | -Var129(u) | -Var282(u) | -Var25(u) | -Var289(u) | -Var211(u))).
+all u (-(Var228(u) | -Var20(u) | -Var368(u) | -Var405(u) | Var489(u) | -Var101(u) | -Var217(u) | Var387(u))).
+all u (-(-Var103(u) | -Var31(u) | -Var2(u) | -Var374(u) | -Var180(u) | -Var33(u) | Var487(u) | -Var500(u))).
+all u (-(Var412(u) | Var277(u) | Var294(u) | -Var319(u) | Var427(u) | Var495(u) | -Var446(u) | Var256(u))).
+all u (-(Var86(u) | -Var297(u) | Var88(u) | Var480(u) | -Var335(u) | -Var68(u) | Var245(u) | Var414(u))).
+all u (-(Var3(u) | -Var482(u) | Var276(u) | -Var312(u) | -Var187(u) | Var470(u) | Var243(u) | -Var252(u))).
+all u (-(Var185(u) | -Var413(u) | -Var4(u) | -Var225(u) | -Var81(u) | Var261(u) | Var359(u) | Var477(u))).
+all u exists u1 ((u >= u1) & ((Var136(u1)) -> (Var318(u) | Var27(u) | -Var357(u) | -Var148(u) | -Var279(u) | Var278(u) | -Var469(u)))).
+all u exists u1 ((u >= u1) & ((-Var65(u1) | Var191(u1) | Var273(u1) | Var62(u1) | -Var283(u1) | Var20(u1)) -> (Var407(u) | Var175(u)))).
+all u exists u1 ((u >= u1) & ((Var441(u1) | -Var370(u1)) -> (Var265(u) | -Var229(u) | -Var194(u) | Var287(u) | -Var192(u) | -Var249(u)))).
+all u exists u1 ((u >= u1) & ((Var463(u1) | Var260(u1)) -> (Var315(u) | Var397(u) | -Var388(u) | Var488(u) | Var106(u) | -Var181(u)))).
+all u exists u1 ((u >= u1) & ((-Var382(u1)) -> (Var241(u) | -Var57(u) | Var168(u) | -Var144(u) | -Var147(u) | -Var233(u) | -Var178(u)))).
+all u exists u1 ((u >= u1) & ((-Var284(u1) | Var352(u1) | Var410(u1) | Var481(u1)) -> (-Var126(u) | Var317(u) | -Var61(u) | Var168(u)))).
+all u exists u1 ((u >= u1) & ((Var280(u1) | Var212(u1) | Var210(u1)) -> (-Var461(u) | -Var54(u) | -Var13(u) | Var207(u) | Var234(u)))).
+all u exists u1 ((u >= u1) & ((Var333(u1) | Var124(u1) | -Var385(u1)) -> (-Var254(u) | Var78(u) | Var20(u) | -Var204(u) | -Var41(u)))).
+all u exists u1 ((u >= u1) & ((-Var372(u1)) -> (-Var392(u) | -Var285(u) | -Var481(u) | Var75(u) | -Var84(u) | -Var396(u) | -Var4(u)))).
+all u exists u1 ((u >= u1) & ((-Var292(u1) | Var365(u1) | Var167(u1)) -> (-Var456(u) | -Var433(u) | -Var97(u) | Var186(u) | -Var132(u)))).
+all u exists u1 ((u >= u1) & ((-Var385(u1)) -> (Var233(u) | -Var160(u) | -Var224(u) | -Var187(u) | Var138(u) | Var151(u) | -Var136(u)))).
+all u exists u1 ((u >= u1) & ((Var402(u1) | -Var31(u1) | -Var435(u1) | -Var46(u1) | -Var30(u1)) -> (Var1(u) | Var364(u) | Var117(u)))).
+all u exists u1 ((u >= u1) & ((-Var365(u1) | Var63(u1) | -Var282(u1)) -> (-Var187(u) | -Var17(u) | Var219(u) | -Var242(u) | -Var140(u)))).
+all u exists u1 ((u >= u1) & ((Var373(u1)) -> (-Var215(u) | Var293(u) | Var479(u) | -Var49(u) | -Var177(u) | Var308(u) | Var19(u)))).
+all u exists u1 ((u >= u1) & ((-Var426(u1) | -Var56(u1) | -Var410(u1) | Var402(u1)) -> (-Var164(u) | Var151(u) | Var18(u) | Var333(u)))).
+all u exists u1 ((u >= u1) & ((Var124(u1)) -> (-Var166(u) | -Var105(u) | -Var237(u) | -Var484(u) | Var168(u) | Var266(u) | -Var240(u)))).
+all u exists u1 ((u >= u1) & ((Var392(u1) | -Var151(u1) | -Var106(u1) | Var499(u1) | Var357(u1)) -> (-Var228(u) | Var29(u) | Var168(u)))).
+all u exists u1 ((u >= u1) & ((Var463(u1) | -Var107(u1) | -Var79(u1) | -Var219(u1) | -Var238(u1) | -Var142(u1)) -> (-Var306(u) | Var105(u)))).
+all u exists u1 ((u >= u1) & ((Var270(u1) | -Var283(u1) | Var490(u1) | Var236(u1) | -Var79(u1)) -> (Var125(u) | -Var107(u) | -Var62(u)))).
+all u exists u1 ((u >= u1) & ((-Var473(u1) | Var483(u1)) -> (-Var98(u) | Var369(u) | Var411(u) | -Var108(u) | Var340(u) | Var489(u)))).
+all u exists u1 ((u >= u1) & ((-Var351(u1) | -Var495(u1) | Var89(u1) | -Var412(u1) | Var131(u1)) -> (-Var347(u) | -Var337(u) | Var174(u)))).
+all u exists u1 ((u >= u1) & ((Var52(u1)) -> (Var46(u) | -Var221(u) | Var347(u) | -Var219(u) | Var159(u) | Var303(u) | -Var383(u)))).
+all u exists u1 ((u >= u1) & ((Var346(u1) | Var236(u1) | -Var397(u1) | Var222(u1) | -Var162(u1) | Var425(u1)) -> (Var179(u) | Var268(u)))).
+all u exists u1 ((u >= u1) & ((-Var397(u1) | -Var139(u1) | Var400(u1) | -Var492(u1) | Var498(u1) | -Var129(u1)) -> (Var388(u) | -Var333(u)))).
+all u exists u1 ((u >= u1) & ((-Var226(u1) | Var118(u1) | Var298(u1) | Var377(u1) | -Var392(u1) | Var40(u1)) -> (-Var166(u) | -Var188(u)))).
+all u exists u1 ((u >= u1) & ((-Var132(u1) | Var331(u1) | -Var230(u1) | Var258(u1) | -Var268(u1) | -Var59(u1)) -> (Var172(u) | -Var467(u)))).
+all u exists u1 ((u >= u1) & ((Var315(u1) | Var107(u1) | -Var218(u1) | -Var26(u1) | -Var59(u1) | Var322(u1)) -> (Var274(u) | -Var197(u)))).
+all u exists u1 ((u >= u1) & ((-Var483(u1) | Var481(u1) | Var452(u1)) -> (-Var36(u) | Var471(u) | -Var491(u) | -Var249(u) | -Var15(u)))).
+all u exists u1 ((u >= u1) & ((Var352(u1) | Var175(u1) | -Var440(u1) | Var313(u1) | Var356(u1)) -> (Var106(u) | Var104(u) | Var43(u)))).
+all u exists u1 ((u >= u1) & ((-Var24(u1)) -> (Var10(u) | Var75(u) | Var93(u) | -Var281(u) | -Var239(u) | Var158(u) | Var346(u)))).
+all u exists u1 ((u >= u1) & ((Var419(u1)) -> (Var471(u) | Var494(u) | Var359(u) | -Var81(u) | -Var11(u) | -Var169(u) | -Var285(u)))).
+all u exists u1 ((u >= u1) & ((-Var433(u1) | Var142(u1) | -Var91(u1) | -Var483(u1)) -> (Var325(u) | -Var85(u) | -Var219(u) | Var436(u)))).
+all u exists u1 ((u >= u1) & ((-Var150(u1) | Var337(u1) | Var398(u1) | -Var485(u1) | -Var496(u1) | Var43(u1)) -> (Var152(u) | Var435(u)))).
+all u exists u1 ((u >= u1) & ((Var325(u1) | -Var70(u1) | -Var218(u1) | Var392(u1) | Var33(u1)) -> (-Var456(u) | -Var331(u) | -Var309(u)))).
+all u exists u1 ((u >= u1) & ((Var301(u1) | -Var231(u1) | -Var347(u1) | Var259(u1)) -> (Var186(u) | Var286(u) | -Var268(u) | -Var190(u)))).
+all u exists u1 ((u >= u1) & ((Var435(u1) | Var13(u1) | Var135(u1) | -Var107(u1) | Var230(u1) | Var84(u1) | Var444(u1)) -> (-Var308(u)))).
+all u exists u1 ((u >= u1) & ((Var33(u1) | Var361(u1) | -Var221(u1) | -Var34(u1) | Var489(u1)) -> (-Var115(u) | Var335(u) | -Var14(u)))).
+all u exists u1 ((u >= u1) & ((Var38(u1) | Var232(u1)) -> (Var274(u) | -Var73(u) | -Var262(u) | -Var243(u) | -Var62(u) | Var410(u)))).
+all u exists u1 ((u >= u1) & ((-Var44(u1) | -Var231(u1) | Var307(u1) | -Var249(u1) | -Var417(u1)) -> (Var188(u) | Var313(u) | Var260(u)))).
+all u exists u1 ((u >= u1) & ((Var46(u1) | Var317(u1) | Var73(u1) | -Var44(u1) | Var136(u1) | -Var404(u1)) -> (Var112(u) | Var101(u)))).
+all u exists u1 ((u >= u1) & ((-Var249(u1) | Var64(u1) | -Var226(u1) | Var259(u1) | Var448(u1) | Var297(u1) | -Var487(u1)) -> (-Var330(u)))).
+all u exists u1 ((u >= u1) & ((Var146(u1) | Var185(u1) | -Var406(u1) | -Var227(u1) | -Var386(u1) | Var51(u1)) -> (Var323(u) | Var34(u)))).
+all u exists u1 ((u >= u1) & ((-Var309(u1) | Var313(u1) | -Var291(u1) | Var430(u1) | Var32(u1) | Var390(u1)) -> (Var260(u) | Var354(u)))).
+all u exists u1 ((u >= u1) & ((Var485(u1) | -Var59(u1) | -Var188(u1) | -Var409(u1)) -> (Var174(u) | -Var378(u) | Var375(u) | -Var136(u)))).
+all u exists u1 ((u >= u1) & ((-Var113(u1) | Var208(u1) | -Var326(u1) | Var313(u1) | Var15(u1)) -> (Var297(u) | Var92(u) | Var99(u)))).
+all u exists u1 ((u >= u1) & ((Var229(u1) | Var179(u1) | Var446(u1) | Var275(u1) | -Var76(u1) | Var450(u1)) -> (Var281(u) | Var59(u)))).
+all u exists u1 ((u >= u1) & ((-Var413(u1)) -> (Var68(u) | Var390(u) | Var195(u) | -Var44(u) | Var245(u) | -Var30(u) | -Var110(u)))).
+all u exists u1 ((u >= u1) & ((Var284(u1) | Var368(u1) | Var256(u1) | Var123(u1) | Var453(u1) | -Var46(u1) | Var396(u1)) -> (-Var499(u)))).
+all u exists u1 ((u >= u1) & ((-Var156(u1) | -Var243(u1) | -Var17(u1) | Var229(u1)) -> (-Var237(u) | -Var21(u) | Var157(u) | Var451(u)))).
+all u exists u1 ((u >= u1) & ((-Var493(u1) | -Var382(u1) | Var95(u1)) -> (Var270(u) | Var172(u) | -Var304(u) | Var157(u) | Var294(u)))).
+all u exists u1 ((u >= u1) & ((-Var351(u1)) -> (-Var280(u) | Var348(u) | Var500(u) | -Var457(u) | -Var143(u) | -Var318(u) | Var245(u)))).
+all u exists u1 ((u >= u1) & ((-Var136(u1) | -Var307(u1)) -> (-Var442(u) | -Var263(u) | Var438(u) | -Var166(u) | Var375(u) | Var182(u)))).
+all u exists u1 ((u >= u1) & ((Var276(u1)) -> (-Var317(u) | Var65(u) | -Var20(u) | -Var247(u) | -Var119(u) | -Var413(u) | -Var102(u)))).
+all u exists u1 ((u >= u1) & ((Var101(u1) | -Var183(u1)) -> (-Var72(u) | -Var328(u) | Var482(u) | Var414(u) | Var410(u) | -Var283(u)))).
+all u exists u1 ((u >= u1) & ((-Var158(u1) | -Var260(u1) | Var2(u1) | Var240(u1) | -Var165(u1) | Var264(u1) | -Var221(u1)) -> (Var122(u)))).
+all u exists u1 ((u >= u1) & ((Var224(u1) | Var144(u1) | -Var385(u1) | Var403(u1) | Var490(u1)) -> (Var128(u) | -Var36(u) | -Var293(u)))).
+all u exists u1 ((u >= u1) & ((-Var21(u1) | Var133(u1) | Var252(u1)) -> (-Var26(u) | -Var169(u) | -Var3(u) | Var311(u) | Var405(u)))).
+all u exists u1 ((u >= u1) & ((Var166(u1) | -Var377(u1) | -Var190(u1) | -Var310(u1) | Var280(u1) | Var95(u1)) -> (Var370(u) | Var264(u)))).
+all u exists u1 ((u >= u1) & ((Var224(u1) | Var383(u1) | Var192(u1) | -Var386(u1)) -> (Var341(u) | -Var204(u) | -Var87(u) | Var323(u)))).
+all u exists u1 ((u >= u1) & ((Var183(u1) | Var177(u1) | -Var308(u1) | Var490(u1) | Var273(u1) | Var261(u1)) -> (-Var305(u) | -Var352(u)))).
+all u exists u1 ((u >= u1) & ((Var323(u1) | -Var404(u1) | Var37(u1) | Var346(u1) | -Var43(u1) | Var351(u1) | -Var322(u1)) -> (Var433(u)))).
+all u exists u1 ((u >= u1) & ((-Var215(u1) | Var447(u1) | -Var464(u1) | -Var423(u1) | -Var326(u1) | -Var405(u1)) -> (Var39(u) | Var342(u)))).
+all u exists u1 ((u >= u1) & ((Var242(u1) | Var386(u1) | -Var466(u1) | -Var61(u1)) -> (Var7(u) | -Var301(u) | Var30(u) | Var158(u)))).
+all u exists u1 ((u >= u1) & ((-Var93(u1) | Var414(u1) | Var67(u1) | Var491(u1) | -Var346(u1) | Var342(u1)) -> (Var25(u) | -Var162(u)))).
+all u exists u1 ((u >= u1) & ((-Var68(u1) | Var148(u1)) -> (-Var229(u) | -Var307(u) | -Var451(u) | Var239(u) | Var365(u) | -Var12(u)))).
+all u exists u1 ((u >= u1) & ((Var70(u1) | Var206(u1) | Var289(u1) | Var344(u1)) -> (-Var182(u) | Var425(u) | -Var462(u) | Var168(u)))).
+all u exists u1 ((u >= u1) & ((Var189(u1) | Var154(u1) | -Var55(u1)) -> (-Var219(u) | -Var327(u) | Var175(u) | Var208(u) | -Var242(u)))).
+all u exists u1 ((u >= u1) & ((Var349(u1) | Var216(u1) | -Var220(u1) | Var435(u1)) -> (Var190(u) | -Var345(u) | Var342(u) | Var384(u)))).
+all u exists u1 ((u >= u1) & ((-Var334(u1) | Var188(u1) | -Var439(u1) | Var175(u1) | -Var105(u1)) -> (-Var223(u) | Var377(u) | -Var86(u)))).
+all u exists u1 ((u >= u1) & ((Var261(u1) | Var141(u1) | Var151(u1) | -Var260(u1) | -Var488(u1)) -> (Var182(u) | Var147(u) | -Var258(u)))).
+all u exists u1 ((u >= u1) & ((Var329(u1) | Var323(u1) | Var371(u1) | -Var218(u1) | -Var178(u1) | -Var483(u1) | -Var104(u1)) -> (-Var499(u)))).
+all u exists u1 ((u >= u1) & ((Var300(u1) | Var306(u1)) -> (-Var108(u) | -Var241(u) | Var87(u) | Var390(u) | Var70(u) | Var5(u)))).
+all u exists u1 ((u >= u1) & ((-Var199(u1) | Var113(u1) | -Var246(u1) | -Var28(u1) | -Var272(u1) | Var151(u1) | -Var329(u1)) -> (Var393(u)))).
+all u exists u1 ((u >= u1) & ((Var292(u1) | Var16(u1) | Var48(u1) | Var44(u1) | -Var376(u1) | -Var298(u1) | -Var1(u1)) -> (Var186(u)))).
+all u exists u1 ((u >= u1) & ((Var415(u1) | Var206(u1) | -Var203(u1)) -> (Var387(u) | -Var406(u) | Var228(u) | -Var474(u) | -Var10(u)))).
+all u exists u1 ((u >= u1) & ((-Var141(u1) | Var436(u1) | Var441(u1)) -> (-Var99(u) | -Var331(u) | Var253(u) | Var261(u) | -Var464(u)))).
+all u exists u1 ((u >= u1) & ((Var81(u1)) -> (-Var247(u) | Var460(u) | Var286(u) | Var478(u) | -Var284(u) | Var171(u) | Var401(u)))).
+all u exists u1 ((u >= u1) & ((Var416(u1) | Var345(u1) | -Var404(u1) | -Var224(u1) | -Var356(u1) | -Var446(u1) | -Var48(u1)) -> (-Var118(u)))).
+all u exists u1 ((u >= u1) & ((-Var29(u1)) -> (-Var231(u) | Var113(u) | Var373(u) | -Var138(u) | Var296(u) | -Var480(u) | -Var41(u)))).
+all u exists u1 ((u >= u1) & ((Var27(u1) | Var406(u1) | -Var365(u1) | -Var46(u1) | Var430(u1) | -Var247(u1) | -Var60(u1)) -> (Var88(u)))).
+all u exists u1 ((u >= u1) & ((-Var205(u1) | Var170(u1) | Var344(u1) | -Var65(u1) | Var107(u1) | Var103(u1)) -> (-Var174(u) | Var210(u)))).
+all u exists u1 ((u >= u1) & ((Var292(u1)) -> (-Var279(u) | Var386(u) | -Var427(u) | Var252(u) | Var177(u) | Var118(u) | Var397(u)))).
+all u exists u1 ((u >= u1) & ((-Var195(u1) | -Var266(u1) | Var279(u1) | -Var285(u1) | Var88(u1)) -> (Var267(u) | -Var483(u) | -Var251(u)))).
+all u exists u1 ((u >= u1) & ((-Var463(u1) | Var426(u1)) -> (-Var203(u) | -Var1(u) | -Var275(u) | -Var406(u) | Var272(u) | -Var371(u)))).
+all u exists u1 ((u >= u1) & ((Var106(u1) | -Var469(u1) | Var314(u1) | -Var177(u1)) -> (-Var312(u) | Var220(u) | -Var451(u) | -Var293(u)))).
+all u exists u1 ((u >= u1) & ((Var353(u1) | -Var33(u1)) -> (Var87(u) | -Var419(u) | -Var192(u) | Var204(u) | Var300(u) | Var165(u)))).
+all u exists u1 ((u >= u1) & ((Var353(u1)) -> (Var90(u) | Var417(u) | Var477(u) | -Var445(u) | -Var197(u) | Var303(u) | Var86(u)))).
+all u exists u1 ((u >= u1) & ((-Var65(u1) | Var144(u1) | -Var424(u1)) -> (-Var59(u) | Var421(u) | Var264(u) | -Var402(u) | -Var326(u)))).
+all u exists u1 ((u >= u1) & ((Var68(u1) | -Var195(u1) | -Var328(u1) | -Var127(u1) | -Var449(u1) | Var25(u1) | Var399(u1)) -> (-Var281(u)))).
+all u exists u1 ((u >= u1) & ((Var128(u1) | Var279(u1) | Var87(u1) | Var40(u1)) -> (-Var16(u) | -Var253(u) | Var350(u) | -Var277(u)))).
+all u exists u1 ((u >= u1) & ((Var240(u1) | Var80(u1) | -Var114(u1)) -> (-Var201(u) | -Var348(u) | Var317(u) | -Var222(u) | -Var127(u)))).
+all u exists u1 ((u >= u1) & ((-Var52(u1) | -Var50(u1) | Var404(u1) | Var274(u1) | -Var179(u1) | Var245(u1)) -> (-Var251(u) | -Var310(u)))).
+all u exists u1 ((u >= u1) & ((-Var479(u1) | -Var474(u1) | Var219(u1) | Var392(u1) | -Var70(u1)) -> (Var397(u) | Var141(u) | Var214(u)))).
+all u exists u1 ((u >= u1) & ((Var216(u1) | -Var489(u1) | Var70(u1) | -Var127(u1) | -Var260(u1) | -Var498(u1) | Var317(u1)) -> (-Var311(u)))).
+all u exists u1 ((u >= u1) & ((-Var305(u1) | -Var322(u1) | Var386(u1)) -> (Var55(u) | Var478(u) | Var294(u) | Var13(u) | -Var83(u)))).
+all u exists u1 ((u >= u1) & ((-Var309(u1) | Var57(u1)) -> (Var245(u) | Var106(u) | -Var343(u) | -Var480(u) | Var328(u) | Var499(u)))).
+all u exists u1 ((u >= u1) & ((-Var117(u1) | Var499(u1) | Var303(u1) | -Var75(u1) | Var373(u1)) -> (-Var258(u) | -Var331(u) | -Var332(u)))).
+all u exists u1 ((u >= u1) & ((Var382(u1) | -Var127(u1) | -Var73(u1) | -Var336(u1) | Var412(u1) | -Var11(u1) | -Var189(u1)) -> (Var398(u)))).
+all u exists u1 ((u >= u1) & ((-Var88(u1)) -> (-Var306(u) | -Var462(u) | Var382(u) | Var484(u) | Var48(u) | -Var374(u) | Var365(u)))).
+all u exists u1 ((u >= u1) & ((-Var106(u1) | -Var157(u1) | -Var36(u1) | -Var202(u1) | -Var372(u1)) -> (Var337(u) | Var416(u) | Var433(u)))).
+all u exists u1 ((u >= u1) & ((Var184(u1) | -Var207(u1) | -Var495(u1) | -Var237(u1) | Var431(u1) | Var25(u1)) -> (Var456(u) | -Var370(u)))).
+all u exists u1 ((u >= u1) & ((Var372(u1) | -Var274(u1) | -Var159(u1)) -> (-Var412(u) | -Var481(u) | Var206(u) | Var423(u) | Var252(u)))).
+all u exists u1 ((u >= u1) & ((Var410(u1) | -Var391(u1) | Var103(u1) | -Var208(u1)) -> (Var295(u) | -Var372(u) | -Var451(u) | -Var306(u)))).
+all u exists u1 ((u >= u1) & ((Var25(u1) | Var224(u1) | -Var219(u1) | Var359(u1) | Var223(u1) | -Var60(u1) | -Var465(u1)) -> (-Var421(u)))).
+all u exists u1 ((u >= u1) & ((-Var376(u1)) -> (Var144(u) | Var127(u) | -Var356(u) | Var87(u) | -Var443(u) | Var391(u) | -Var396(u)))).
+all u exists u1 ((u >= u1) & ((-Var55(u1) | Var67(u1) | -Var350(u1) | -Var130(u1)) -> (-Var192(u) | Var466(u) | Var366(u) | -Var236(u)))).
+all u exists u1 ((u >= u1) & ((Var457(u1) | Var300(u1) | -Var239(u1) | Var497(u1)) -> (-Var93(u) | Var337(u) | -Var214(u) | -Var122(u)))).
+all u exists u1 ((u >= u1) & ((Var245(u1) | -Var179(u1) | -Var187(u1) | Var405(u1) | -Var55(u1) | -Var154(u1) | -Var291(u1)) -> (Var136(u)))).
+all u exists u1 ((u >= u1) & ((Var393(u1) | Var244(u1) | Var118(u1) | Var362(u1) | Var54(u1) | -Var183(u1)) -> (Var308(u) | Var131(u)))).
+all u exists u1 ((u >= u1) & ((Var463(u1) | Var65(u1) | -Var19(u1) | -Var263(u1) | Var89(u1) | -Var465(u1) | Var471(u1)) -> (Var2(u)))).
+all u exists u1 ((u >= u1) & ((-Var206(u1) | -Var104(u1)) -> (Var330(u) | -Var32(u) | -Var379(u) | Var327(u) | Var276(u) | Var183(u)))).
+all u exists u1 ((u >= u1) & ((Var426(u1) | Var14(u1) | -Var42(u1) | -Var470(u1) | -Var439(u1) | Var122(u1) | Var240(u1)) -> (Var70(u)))).
+all u exists u1 ((u >= u1) & ((-Var17(u1) | -Var495(u1) | Var360(u1)) -> (-Var284(u) | -Var2(u) | Var145(u) | Var6(u) | Var294(u)))).
+all u exists u1 ((u >= u1) & ((-Var357(u1) | -Var219(u1) | -Var15(u1) | -Var90(u1) | -Var273(u1)) -> (-Var85(u) | -Var214(u) | -Var132(u)))).
+all u exists u1 ((u >= u1) & ((-Var14(u1) | -Var401(u1)) -> (Var270(u) | -Var55(u) | -Var327(u) | -Var284(u) | Var372(u) | -Var33(u)))).
+all u exists u1 ((u >= u1) & ((Var60(u1) | Var461(u1) | -Var329(u1) | Var446(u1) | -Var114(u1) | -Var308(u1)) -> (-Var407(u) | -Var278(u)))).
+all u exists u1 ((u >= u1) & ((-Var72(u1) | -Var117(u1) | Var368(u1) | -Var409(u1) | Var189(u1)) -> (-Var299(u) | Var309(u) | -Var209(u)))).
+all u exists u1 ((u >= u1) & ((-Var173(u1) | -Var300(u1) | -Var421(u1) | -Var88(u1) | Var44(u1) | Var434(u1)) -> (-Var22(u) | Var476(u)))).
+all u exists u1 ((u >= u1) & ((-Var275(u1)) -> (-Var432(u) | Var84(u) | -Var101(u) | Var497(u) | Var441(u) | Var132(u) | Var374(u)))).
+all u exists u1 ((u >= u1) & ((-Var189(u1) | Var269(u1) | Var479(u1) | Var307(u1)) -> (-Var127(u) | -Var43(u) | -Var441(u) | -Var406(u)))).
+all u exists u1 ((u >= u1) & ((Var92(u1) | -Var494(u1) | Var190(u1) | -Var461(u1)) -> (-Var249(u) | Var284(u) | Var216(u) | Var388(u)))).
+all u exists u1 ((u >= u1) & ((Var166(u1) | -Var290(u1) | -Var60(u1) | -Var497(u1)) -> (-Var340(u) | Var264(u) | -Var366(u) | Var74(u)))).
+all u exists u1 ((u >= u1) & ((Var394(u1)) -> (Var338(u) | Var376(u) | -Var384(u) | -Var440(u) | -Var80(u) | Var375(u) | Var20(u)))).
+all u exists u1 ((u >= u1) & ((Var427(u1)) -> (-Var355(u) | -Var437(u) | Var67(u) | Var414(u) | Var241(u) | Var11(u) | -Var358(u)))).
+all u exists u1 ((u >= u1) & ((Var311(u1) | -Var187(u1)) -> (-Var302(u) | Var335(u) | -Var136(u) | Var102(u) | -Var305(u) | -Var301(u)))).
+all u exists u1 ((u >= u1) & ((Var305(u1) | Var196(u1) | -Var67(u1) | Var60(u1) | Var216(u1) | Var495(u1) | -Var264(u1)) -> (Var441(u)))).
+all u exists u1 ((u >= u1) & ((-Var110(u1) | Var333(u1)) -> (Var316(u) | Var79(u) | -Var236(u) | -Var380(u) | -Var256(u) | Var157(u)))).
+all u exists u1 ((u >= u1) & ((Var155(u1) | Var30(u1) | -Var269(u1) | Var247(u1) | -Var156(u1) | -Var399(u1)) -> (-Var492(u) | Var11(u)))).
+all u exists u1 ((u >= u1) & ((-Var386(u1) | -Var495(u1) | Var71(u1) | -Var190(u1) | Var155(u1) | Var341(u1)) -> (-Var312(u) | Var169(u)))).
+all u exists u1 ((u >= u1) & ((Var362(u1) | -Var316(u1) | Var464(u1) | -Var193(u1)) -> (Var219(u) | Var68(u) | -Var162(u) | -Var276(u)))).
+all u exists u1 ((u >= u1) & ((Var439(u1) | Var130(u1) | -Var431(u1) | Var312(u1)) -> (Var76(u) | -Var401(u) | Var132(u) | Var238(u)))).
+all u exists u1 ((u >= u1) & ((Var205(u1)) -> (-Var313(u) | Var168(u) | -Var164(u) | -Var77(u) | -Var369(u) | -Var384(u) | -Var402(u)))).
+all u exists u1 ((u >= u1) & ((-Var321(u1) | Var13(u1) | Var86(u1) | Var23(u1) | -Var353(u1) | Var417(u1)) -> (Var171(u) | Var159(u)))).
+all u exists u1 ((u >= u1) & ((Var482(u1) | -Var385(u1) | Var479(u1) | Var356(u1) | -Var445(u1)) -> (-Var408(u) | -Var161(u) | -Var28(u)))).
+all u exists u1 ((u >= u1) & ((-Var39(u1) | -Var247(u1) | Var11(u1) | Var308(u1) | -Var42(u1)) -> (-Var471(u) | Var407(u) | Var487(u)))).
+all u exists u1 ((u >= u1) & ((Var417(u1) | Var428(u1) | -Var242(u1) | -Var101(u1) | -Var97(u1)) -> (-Var147(u) | Var247(u) | Var322(u)))).
+all u exists u1 ((u >= u1) & ((-Var2(u1) | Var11(u1) | Var342(u1) | Var158(u1) | -Var319(u1) | -Var179(u1)) -> (-Var254(u) | Var326(u)))).
+all u exists u1 ((u >= u1) & ((Var134(u1) | -Var474(u1) | Var329(u1) | -Var322(u1)) -> (-Var300(u) | Var204(u) | -Var225(u) | -Var489(u)))).
+all u exists u1 ((u >= u1) & ((Var193(u1) | Var318(u1)) -> (Var215(u) | -Var350(u) | -Var493(u) | -Var467(u) | Var212(u) | -Var140(u)))).
+all u exists u1 ((u >= u1) & ((Var114(u1) | -Var465(u1) | Var147(u1) | Var180(u1) | Var199(u1) | Var417(u1) | Var25(u1)) -> (Var68(u)))).
+all u exists u1 ((u >= u1) & ((-Var385(u1) | -Var478(u1) | -Var432(u1) | Var204(u1) | -Var247(u1)) -> (Var354(u) | Var138(u) | Var394(u)))).
+all u exists u1 ((u >= u1) & ((-Var220(u1) | Var142(u1) | -Var326(u1) | -Var350(u1)) -> (-Var43(u) | Var104(u) | Var72(u) | -Var412(u)))).
+all u exists u1 ((u >= u1) & ((-Var267(u1) | -Var406(u1) | -Var416(u1) | Var421(u1) | Var256(u1) | Var317(u1)) -> (-Var229(u) | Var138(u)))).
+all u exists u1 ((u >= u1) & ((-Var214(u1) | -Var19(u1) | -Var445(u1) | -Var395(u1) | Var165(u1) | Var199(u1)) -> (-Var146(u) | -Var118(u)))).
+all u exists u1 ((u >= u1) & ((Var152(u1) | Var22(u1) | Var197(u1) | -Var324(u1)) -> (Var30(u) | -Var358(u) | Var212(u) | -Var79(u)))).
+all u exists u1 ((u >= u1) & ((-Var348(u1) | Var87(u1) | Var281(u1) | Var461(u1) | -Var191(u1)) -> (-Var110(u) | -Var243(u) | Var440(u)))).
+all u exists u1 ((u >= u1) & ((-Var154(u1) | Var372(u1) | Var473(u1)) -> (Var270(u) | Var423(u) | -Var153(u) | Var408(u) | -Var27(u)))).
+all u exists u1 ((u >= u1) & ((-Var363(u1) | -Var21(u1)) -> (-Var185(u) | -Var122(u) | -Var359(u) | -Var95(u) | -Var223(u) | -Var306(u)))).
+all u exists u1 ((u >= u1) & ((Var30(u1) | -Var208(u1) | Var50(u1) | -Var411(u1) | -Var51(u1) | -Var236(u1)) -> (Var155(u) | -Var164(u)))).
+all u exists u1 ((u >= u1) & ((Var241(u1) | Var220(u1) | Var326(u1) | -Var14(u1) | -Var97(u1)) -> (-Var193(u) | -Var132(u) | -Var317(u)))).
+all u (-(Var451(u) | Var155(u) | -Var28(u) | Var260(u) | Var335(u) | Var389(u) | Var37(u) | -Var458(u) | -Var116(u) | Var248(u))).
+all u (-(-Var327(u) | -Var196(u) | Var265(u) | Var345(u) | Var38(u) | Var198(u) | Var13(u) | -Var360(u) | -Var47(u) | -Var411(u))).
+all u (-(Var309(u) | Var31(u) | -Var396(u) | -Var308(u) | -Var335(u) | Var468(u) | -Var387(u) | Var24(u) | -Var286(u) | -Var366(u))).
+all u (-(-Var376(u) | -Var140(u) | -Var254(u) | Var436(u) | Var253(u) | -Var305(u) | Var307(u) | Var500(u) | Var482(u) | Var91(u))).
+all u (-(-Var358(u) | Var138(u) | -Var122(u) | Var459(u) | Var174(u) | -Var353(u) | Var264(u) | -Var420(u) | Var251(u) | -Var500(u))).
+all u (-(Var361(u) | Var482(u) | Var305(u) | Var262(u) | Var135(u) | Var178(u) | Var316(u) | -Var37(u) | -Var309(u) | Var470(u))).
+all u (-(Var207(u) | -Var66(u) | -Var475(u) | Var8(u) | -Var7(u) | -Var79(u) | Var325(u) | -Var110(u) | -Var407(u) | Var344(u))).
+all u (-(-Var475(u) | Var408(u) | Var172(u) | -Var426(u) | Var390(u) | -Var250(u) | Var186(u) | Var95(u) | Var85(u) | Var356(u))).
+all u (-(-Var476(u) | -Var433(u) | -Var307(u) | -Var370(u) | -Var425(u) | -Var107(u) | -Var15(u) | Var419(u) | -Var77(u) | -Var31(u))).
+all u (-(-Var93(u) | Var172(u) | Var225(u) | Var47(u) | -Var442(u) | Var224(u) | -Var242(u) | -Var431(u) | -Var64(u) | Var395(u))).
+all u (-(Var432(u) | Var490(u) | -Var352(u) | Var299(u) | -Var423(u) | Var369(u) | -Var134(u) | -Var198(u) | Var149(u) | Var139(u))).
+all u (-(-Var268(u) | Var51(u) | -Var494(u) | Var275(u) | Var419(u) | Var16(u) | -Var436(u) | -Var134(u) | -Var337(u) | Var222(u))).
+all u (-(Var338(u) | Var326(u) | Var362(u) | Var448(u) | -Var492(u) | Var232(u) | -Var426(u) | -Var7(u) | -Var465(u) | -Var190(u))).
+all u (-(Var218(u) | Var443(u) | -Var276(u) | -Var330(u) | Var474(u) | -Var71(u) | -Var459(u) | Var236(u) | Var66(u) | Var397(u))).
+all u (-(Var1(u) | Var432(u) | -Var96(u) | Var246(u) | Var252(u) | -Var71(u) | -Var169(u) | -Var154(u) | -Var20(u) | Var438(u))).
+all u (-(-Var102(u) | -Var299(u) | -Var152(u) | -Var189(u) | Var244(u) | Var413(u) | -Var128(u) | Var164(u) | Var422(u) | -Var284(u))).
+all u (-(-Var220(u) | -Var208(u) | Var132(u) | Var338(u) | Var363(u) | Var265(u) | Var443(u) | -Var73(u) | Var180(u) | Var213(u))).
+all u exists u1 ((u >= u1) & ((Var287(u1) | Var256(u1) | -Var121(u1) | -Var208(u1) | -Var185(u1) | Var319(u1) | -Var283(u1) | Var378(u1)) -> (-Var453(u) | -Var412(u)))).
+all u exists u1 ((u >= u1) & ((Var365(u1) | -Var196(u1) | -Var119(u1) | -Var412(u1) | -Var326(u1) | -Var95(u1)) -> (-Var417(u) | -Var440(u) | -Var122(u) | -Var121(u)))).
+all u exists u1 ((u >= u1) & ((Var17(u1) | -Var32(u1) | Var328(u1) | Var391(u1)) -> (-Var485(u) | Var317(u) | -Var16(u) | -Var4(u) | -Var467(u) | Var433(u)))).
+all u exists u1 ((u >= u1) & ((-Var223(u1) | Var94(u1) | -Var216(u1) | Var249(u1) | -Var196(u1) | -Var243(u1) | -Var473(u1) | Var65(u1) | Var297(u1)) -> (Var154(u)))).
+all u exists u1 ((u >= u1) & ((Var182(u1) | -Var324(u1) | -Var342(u1) | Var283(u1)) -> (Var51(u) | Var28(u) | -Var307(u) | -Var70(u) | -Var398(u) | -Var403(u)))).
+all u exists u1 ((u >= u1) & ((Var150(u1) | -Var272(u1) | -Var130(u1) | Var486(u1) | -Var146(u1) | -Var143(u1)) -> (-Var110(u) | Var76(u) | -Var118(u) | Var27(u)))).
+all u exists u1 ((u >= u1) & ((Var493(u1) | Var77(u1) | -Var28(u1) | -Var119(u1) | -Var363(u1) | Var458(u1)) -> (-Var277(u) | -Var361(u) | Var7(u) | Var454(u)))).
+all u exists u1 ((u >= u1) & ((-Var382(u1) | Var392(u1) | -Var335(u1)) -> (-Var361(u) | -Var327(u) | -Var129(u) | -Var269(u) | -Var437(u) | Var116(u) | Var18(u)))).
+all u exists u1 ((u >= u1) & ((Var16(u1) | -Var276(u1) | Var338(u1) | -Var339(u1) | -Var29(u1) | Var112(u1) | -Var438(u1)) -> (Var447(u) | -Var491(u) | Var342(u)))).
+all u exists u1 ((u >= u1) & ((-Var359(u1) | -Var443(u1) | Var287(u1) | Var135(u1) | -Var455(u1)) -> (-Var96(u) | Var65(u) | Var323(u) | Var270(u) | -Var235(u)))).
+all u exists u1 ((u >= u1) & ((-Var13(u1) | -Var151(u1) | Var493(u1)) -> (-Var115(u) | Var161(u) | -Var150(u) | Var135(u) | -Var330(u) | Var427(u) | Var179(u)))).
+all u exists u1 ((u >= u1) & ((Var410(u1) | -Var291(u1) | Var323(u1) | -Var129(u1) | Var481(u1) | -Var228(u1) | -Var265(u1) | -Var402(u1) | -Var59(u1)) -> (Var307(u)))).
+all u exists u1 ((u >= u1) & ((Var118(u1) | -Var328(u1) | -Var384(u1) | -Var451(u1) | Var438(u1) | -Var480(u1)) -> (-Var191(u) | Var467(u) | -Var235(u) | -Var378(u)))).
+all u exists u1 ((u >= u1) & ((Var402(u1) | -Var70(u1) | Var198(u1) | -Var5(u1) | Var235(u1) | Var286(u1) | Var313(u1) | Var77(u1)) -> (Var193(u) | Var40(u)))).
+all u exists u1 ((u >= u1) & ((Var435(u1) | Var79(u1) | Var194(u1) | -Var2(u1) | Var330(u1) | Var54(u1) | -Var212(u1)) -> (Var236(u) | -Var368(u) | -Var354(u)))).
+all u exists u1 ((u >= u1) & ((-Var276(u1) | Var410(u1) | -Var20(u1) | -Var212(u1)) -> (-Var326(u) | -Var302(u) | -Var270(u) | -Var99(u) | Var86(u) | Var429(u)))).
+all u exists u1 ((u >= u1) & ((Var393(u1) | -Var29(u1) | -Var43(u1) | -Var410(u1) | Var221(u1) | -Var126(u1)) -> (-Var11(u) | Var150(u) | -Var233(u) | Var190(u)))).
+all u exists u1 ((u >= u1) & ((-Var404(u1) | -Var32(u1) | -Var337(u1) | -Var375(u1) | Var446(u1) | -Var313(u1) | Var229(u1) | -Var308(u1)) -> (Var497(u) | Var117(u)))).
+all u exists u1 ((u >= u1) & ((Var249(u1) | -Var14(u1) | -Var7(u1)) -> (Var233(u) | Var111(u) | -Var175(u) | Var58(u) | Var463(u) | -Var426(u) | -Var443(u)))).
+all u exists u1 ((u >= u1) & ((Var28(u1) | -Var81(u1) | Var190(u1)) -> (-Var292(u) | -Var394(u) | -Var335(u) | -Var138(u) | -Var10(u) | -Var106(u) | -Var42(u)))).
+all u exists u1 ((u >= u1) & ((Var357(u1) | -Var39(u1) | Var327(u1) | Var183(u1) | -Var219(u1) | Var423(u1) | Var460(u1)) -> (Var369(u) | -Var285(u) | Var26(u)))).
+all u exists u1 ((u >= u1) & ((Var459(u1) | Var434(u1) | Var466(u1) | -Var312(u1)) -> (-Var353(u) | -Var87(u) | Var295(u) | Var99(u) | -Var57(u) | -Var499(u)))).
+all u exists u1 ((u >= u1) & ((Var362(u1) | -Var112(u1) | -Var377(u1) | -Var500(u1) | Var376(u1) | -Var23(u1) | Var168(u1) | Var39(u1) | Var473(u1)) -> (-Var297(u)))).
+all u exists u1 ((u >= u1) & ((Var344(u1) | -Var229(u1) | -Var234(u1) | -Var172(u1) | -Var381(u1) | Var210(u1)) -> (Var457(u) | -Var92(u) | Var154(u) | -Var281(u)))).
+all u exists u1 ((u >= u1) & ((-Var255(u1) | Var211(u1) | Var42(u1) | -Var275(u1)) -> (Var286(u) | -Var420(u) | Var70(u) | Var69(u) | -Var297(u) | Var354(u)))).
+all u exists u1 ((u >= u1) & ((Var413(u1) | Var98(u1) | -Var239(u1) | -Var128(u1) | Var362(u1) | Var224(u1) | Var42(u1) | -Var422(u1)) -> (-Var148(u) | Var104(u)))).
+all u exists u1 ((u >= u1) & ((Var425(u1) | -Var226(u1)) -> (-Var397(u) | -Var70(u) | Var107(u) | Var95(u) | Var284(u) | Var68(u) | Var452(u) | Var413(u)))).
+all u exists u1 ((u >= u1) & ((Var154(u1) | -Var434(u1) | Var95(u1) | Var492(u1) | Var140(u1) | Var436(u1)) -> (-Var208(u) | -Var444(u) | -Var116(u) | -Var151(u)))).
+all u exists u1 ((u >= u1) & ((-Var128(u1) | -Var230(u1) | Var210(u1) | -Var99(u1)) -> (-Var94(u) | -Var101(u) | -Var437(u) | -Var312(u) | -Var478(u) | -Var323(u)))).
+all u exists u1 ((u >= u1) & ((-Var243(u1) | Var21(u1)) -> (Var110(u) | Var416(u) | -Var20(u) | -Var471(u) | Var345(u) | Var277(u) | -Var144(u) | -Var137(u)))).
+all u exists u1 ((u >= u1) & ((Var498(u1) | -Var86(u1) | -Var456(u1) | Var52(u1)) -> (Var337(u) | Var418(u) | Var171(u) | -Var480(u) | Var211(u) | -Var479(u)))).
+all u exists u1 ((u >= u1) & ((-Var156(u1) | Var189(u1)) -> (Var456(u) | Var312(u) | -Var178(u) | -Var421(u) | -Var127(u) | Var80(u) | -Var179(u) | -Var481(u)))).
+all u exists u1 ((u >= u1) & ((Var30(u1) | -Var263(u1) | -Var37(u1) | -Var363(u1) | Var347(u1)) -> (Var286(u) | -Var23(u) | -Var59(u) | -Var153(u) | Var151(u)))).
+all u exists u1 ((u >= u1) & ((-Var354(u1) | Var1(u1) | Var58(u1) | -Var346(u1) | Var360(u1) | -Var378(u1) | -Var365(u1)) -> (-Var24(u) | Var288(u) | Var223(u)))).
+all u exists u1 ((u >= u1) & ((Var22(u1) | Var221(u1) | Var245(u1) | -Var66(u1) | -Var35(u1) | Var177(u1)) -> (Var55(u) | -Var418(u) | Var239(u) | -Var432(u)))).
+all u exists u1 ((u >= u1) & ((-Var369(u1) | Var374(u1) | -Var170(u1) | Var208(u1) | -Var309(u1) | -Var417(u1) | -Var207(u1) | -Var285(u1)) -> (-Var474(u) | -Var475(u)))).
+all u exists u1 ((u >= u1) & ((-Var142(u1) | -Var426(u1) | -Var179(u1) | -Var72(u1) | Var221(u1) | -Var439(u1) | -Var229(u1) | Var68(u1)) -> (Var396(u) | -Var268(u)))).
+all u exists u1 ((u >= u1) & ((Var62(u1) | -Var114(u1) | Var427(u1) | -Var94(u1)) -> (Var127(u) | Var351(u) | -Var33(u) | Var499(u) | -Var1(u) | Var370(u)))).
+all u exists u1 ((u >= u1) & ((Var72(u1) | -Var44(u1) | Var280(u1) | Var200(u1) | -Var232(u1) | -Var435(u1) | -Var241(u1) | -Var178(u1)) -> (Var452(u) | -Var108(u)))).
+all u exists u1 ((u >= u1) & ((-Var100(u1) | Var230(u1) | Var470(u1)) -> (Var428(u) | -Var111(u) | -Var234(u) | Var227(u) | Var77(u) | -Var61(u) | Var363(u)))).
+all u exists u1 ((u >= u1) & ((Var273(u1) | Var76(u1) | Var233(u1) | Var239(u1) | Var434(u1)) -> (-Var313(u) | Var66(u) | -Var203(u) | -Var236(u) | -Var142(u)))).
+all u exists u1 ((u >= u1) & ((Var250(u1) | Var54(u1) | Var470(u1) | -Var6(u1) | -Var1(u1)) -> (-Var422(u) | -Var439(u) | -Var436(u) | -Var92(u) | Var371(u)))).
+all u exists u1 ((u >= u1) & ((-Var23(u1) | Var493(u1) | -Var29(u1) | Var94(u1) | -Var454(u1)) -> (Var95(u) | Var440(u) | Var199(u) | -Var423(u) | -Var455(u)))).
+all u exists u1 ((u >= u1) & ((Var334(u1) | -Var276(u1) | -Var326(u1) | Var127(u1) | Var115(u1) | Var291(u1) | Var262(u1) | Var180(u1)) -> (Var487(u) | -Var352(u)))).
+all u exists u1 ((u >= u1) & ((Var411(u1) | Var399(u1) | -Var404(u1) | -Var438(u1) | -Var386(u1) | Var113(u1) | Var104(u1) | -Var80(u1) | -Var470(u1)) -> (-Var468(u)))).
+all u exists u1 ((u >= u1) & ((-Var470(u1) | Var53(u1) | -Var451(u1) | Var224(u1) | -Var80(u1) | Var282(u1) | Var484(u1) | Var130(u1) | Var225(u1)) -> (Var16(u)))).
+all u exists u1 ((u >= u1) & ((Var456(u1) | Var354(u1) | Var167(u1) | Var462(u1)) -> (-Var383(u) | Var444(u) | -Var291(u) | -Var266(u) | Var234(u) | Var165(u)))).
+all u exists u1 ((u >= u1) & ((Var42(u1) | Var179(u1) | Var347(u1) | -Var305(u1) | -Var53(u1) | Var139(u1) | -Var333(u1) | -Var464(u1)) -> (Var136(u) | -Var201(u)))).
+all u exists u1 ((u >= u1) & ((-Var348(u1) | Var347(u1) | -Var176(u1) | Var335(u1)) -> (Var407(u) | Var98(u) | -Var346(u) | Var265(u) | -Var457(u) | -Var99(u)))).
+all u exists u1 ((u >= u1) & ((-Var363(u1) | Var231(u1) | Var72(u1)) -> (-Var232(u) | -Var187(u) | -Var153(u) | -Var106(u) | Var243(u) | Var154(u) | -Var219(u)))).
+all u exists u1 ((u >= u1) & ((Var497(u1) | -Var499(u1) | -Var11(u1) | Var19(u1) | Var235(u1) | -Var348(u1)) -> (-Var14(u) | -Var259(u) | -Var113(u) | -Var232(u)))).
+all u exists u1 ((u >= u1) & ((-Var374(u1) | Var282(u1) | Var57(u1) | Var433(u1) | -Var89(u1) | Var498(u1) | -Var442(u1)) -> (Var192(u) | -Var416(u) | -Var499(u)))).
+all u exists u1 ((u >= u1) & ((Var84(u1) | -Var7(u1) | -Var204(u1) | Var146(u1) | -Var91(u1) | Var463(u1) | -Var484(u1) | -Var221(u1)) -> (-Var329(u) | -Var390(u)))).
+all u exists u1 ((u >= u1) & ((Var362(u1) | -Var125(u1) | -Var447(u1)) -> (-Var131(u) | -Var256(u) | Var408(u) | -Var419(u) | Var18(u) | -Var357(u) | Var147(u)))).
+all u exists u1 ((u >= u1) & ((Var203(u1) | -Var434(u1) | Var212(u1) | Var169(u1) | Var459(u1) | -Var110(u1) | -Var480(u1) | -Var235(u1)) -> (-Var59(u) | -Var475(u)))).
+all u exists u1 ((u >= u1) & ((Var415(u1) | -Var217(u1) | Var81(u1) | Var46(u1) | Var72(u1) | -Var435(u1) | Var259(u1)) -> (Var158(u) | -Var162(u) | -Var442(u)))).
+all u exists u1 ((u >= u1) & ((-Var182(u1) | Var282(u1) | -Var321(u1) | -Var84(u1) | -Var154(u1) | Var120(u1) | Var111(u1)) -> (Var332(u) | -Var281(u) | -Var438(u)))).
+all u exists u1 ((u >= u1) & ((Var237(u1) | Var308(u1) | Var283(u1) | Var442(u1) | -Var259(u1) | -Var20(u1) | -Var69(u1) | -Var139(u1)) -> (Var37(u) | Var140(u)))).
+all u exists u1 ((u >= u1) & ((Var416(u1) | -Var484(u1) | -Var277(u1) | -Var352(u1) | -Var343(u1) | -Var4(u1) | -Var381(u1) | -Var216(u1)) -> (Var341(u) | Var136(u)))).
+all u exists u1 ((u >= u1) & ((Var98(u1) | Var125(u1) | -Var332(u1) | Var6(u1) | Var254(u1) | Var362(u1) | Var296(u1)) -> (Var460(u) | -Var404(u) | Var273(u)))).
+all u exists u1 ((u >= u1) & ((Var309(u1) | Var189(u1) | -Var317(u1)) -> (Var402(u) | -Var300(u) | Var379(u) | Var109(u) | Var391(u) | Var91(u) | -Var29(u)))).
+all u exists u1 ((u >= u1) & ((Var170(u1) | Var166(u1)) -> (Var242(u) | -Var316(u) | Var110(u) | Var139(u) | Var355(u) | -Var425(u) | Var431(u) | Var449(u)))).
+all u exists u1 ((u >= u1) & ((Var205(u1) | -Var204(u1)) -> (Var54(u) | -Var372(u) | -Var223(u) | Var435(u) | -Var215(u) | Var479(u) | -Var294(u) | -Var309(u)))).
+all u exists u1 ((u >= u1) & ((-Var370(u1)) -> (-Var67(u) | -Var111(u) | Var256(u) | -Var125(u) | Var35(u) | Var434(u) | Var401(u) | Var126(u) | Var484(u)))).
+all u exists u1 ((u >= u1) & ((Var474(u1) | Var470(u1) | Var410(u1) | Var20(u1)) -> (Var388(u) | Var373(u) | Var198(u) | Var290(u) | -Var427(u) | Var351(u)))).
+all u exists u1 ((u >= u1) & ((Var252(u1) | Var79(u1)) -> (-Var356(u) | -Var364(u) | Var113(u) | -Var412(u) | -Var96(u) | Var330(u) | -Var36(u) | Var55(u)))).
+all u exists u1 ((u >= u1) & ((-Var46(u1) | -Var209(u1) | Var425(u1) | -Var451(u1) | Var18(u1) | -Var89(u1) | Var75(u1) | Var430(u1) | -Var353(u1)) -> (Var355(u)))).
+all u exists u1 ((u >= u1) & ((Var148(u1) | -Var207(u1) | -Var446(u1) | Var15(u1) | -Var178(u1) | -Var14(u1) | -Var451(u1)) -> (Var131(u) | Var395(u) | Var105(u)))).
+all u exists u1 ((u >= u1) & ((-Var380(u1) | -Var408(u1) | Var13(u1) | Var186(u1) | -Var342(u1) | Var184(u1) | Var153(u1)) -> (-Var481(u) | -Var235(u) | Var249(u)))).
+all u exists u1 ((u >= u1) & ((-Var328(u1) | Var93(u1) | Var246(u1) | -Var253(u1)) -> (Var380(u) | Var66(u) | Var73(u) | -Var3(u) | -Var24(u) | -Var352(u)))).
+all u exists u1 ((u >= u1) & ((-Var401(u1) | Var481(u1) | -Var30(u1) | -Var203(u1) | -Var65(u1)) -> (Var34(u) | -Var5(u) | Var195(u) | -Var107(u) | -Var183(u)))).
+all u exists u1 ((u >= u1) & ((Var492(u1) | -Var307(u1) | -Var437(u1) | Var365(u1) | Var429(u1) | -Var356(u1) | Var124(u1) | -Var262(u1)) -> (-Var202(u) | -Var12(u)))).
+all u exists u1 ((u >= u1) & ((Var372(u1) | -Var3(u1) | -Var465(u1) | -Var100(u1) | -Var18(u1)) -> (-Var130(u) | -Var251(u) | Var5(u) | Var496(u) | Var103(u)))).
+all u exists u1 ((u >= u1) & ((Var349(u1)) -> (-Var243(u) | -Var455(u) | Var239(u) | Var61(u) | -Var332(u) | Var180(u) | -Var467(u) | -Var266(u) | -Var235(u)))).
+all u exists u1 ((u >= u1) & ((-Var224(u1) | -Var96(u1) | Var273(u1) | -Var38(u1)) -> (Var390(u) | -Var481(u) | Var466(u) | Var422(u) | -Var270(u) | -Var434(u)))).
+all u exists u1 ((u >= u1) & ((Var10(u1) | Var162(u1) | -Var370(u1) | -Var203(u1) | Var124(u1) | -Var500(u1) | -Var216(u1)) -> (Var90(u) | -Var297(u) | -Var81(u)))).
+all u exists u1 ((u >= u1) & ((-Var316(u1) | Var95(u1) | -Var30(u1) | Var16(u1)) -> (Var466(u) | Var295(u) | Var483(u) | Var39(u) | Var477(u) | -Var90(u)))).
+all u exists u1 ((u >= u1) & ((-Var421(u1) | Var497(u1) | Var187(u1) | Var401(u1) | -Var60(u1)) -> (-Var399(u) | -Var153(u) | Var439(u) | -Var34(u) | Var450(u)))).
+all u exists u1 ((u >= u1) & ((-Var186(u1) | Var318(u1) | Var231(u1) | -Var214(u1)) -> (Var195(u) | -Var235(u) | Var369(u) | -Var144(u) | -Var393(u) | Var178(u)))).
+all u exists u1 ((u >= u1) & ((-Var362(u1) | -Var127(u1) | -Var79(u1) | -Var83(u1) | Var432(u1)) -> (Var298(u) | Var477(u) | -Var68(u) | Var459(u) | Var360(u)))).
+all u exists u1 ((u >= u1) & ((Var430(u1) | -Var189(u1) | -Var39(u1) | -Var242(u1) | Var173(u1) | Var256(u1)) -> (Var121(u) | -Var472(u) | -Var90(u) | -Var4(u)))).
+all u exists u1 ((u >= u1) & ((-Var434(u1) | -Var370(u1) | Var177(u1) | -Var423(u1) | -Var211(u1)) -> (Var248(u) | -Var293(u) | Var452(u) | -Var329(u) | -Var183(u)))).
+all u exists u1 ((u >= u1) & ((Var111(u1) | Var303(u1) | Var219(u1) | Var168(u1) | -Var336(u1) | Var377(u1) | -Var84(u1)) -> (Var22(u) | Var184(u) | -Var427(u)))).
+all u exists u1 ((u >= u1) & ((Var396(u1) | -Var43(u1) | Var27(u1) | Var157(u1) | Var332(u1) | Var370(u1) | Var52(u1) | Var360(u1) | -Var59(u1)) -> (Var493(u)))).
+all u exists u1 ((u >= u1) & ((-Var428(u1) | -Var104(u1) | -Var420(u1) | Var113(u1) | Var56(u1) | Var281(u1) | -Var312(u1) | Var385(u1) | Var225(u1)) -> (Var105(u)))).
+all u exists u1 ((u >= u1) & ((-Var276(u1) | Var302(u1) | -Var485(u1) | Var328(u1) | -Var176(u1)) -> (-Var152(u) | Var25(u) | -Var472(u) | -Var219(u) | Var284(u)))).
+all u exists u1 ((u >= u1) & ((Var174(u1) | -Var210(u1) | -Var89(u1)) -> (-Var39(u) | Var80(u) | Var193(u) | -Var317(u) | Var129(u) | Var346(u) | Var431(u)))).
+all u exists u1 ((u >= u1) & ((Var127(u1) | Var174(u1) | -Var485(u1) | Var441(u1) | -Var36(u1) | Var37(u1) | -Var394(u1) | Var169(u1) | -Var82(u1)) -> (-Var320(u)))).
+all u exists u1 ((u >= u1) & ((-Var37(u1) | -Var398(u1) | -Var292(u1) | Var429(u1) | Var127(u1)) -> (-Var40(u) | -Var312(u) | Var173(u) | -Var270(u) | -Var313(u)))).
+all u exists u1 ((u >= u1) & ((Var217(u1) | Var113(u1) | Var454(u1) | -Var196(u1) | -Var11(u1) | -Var232(u1)) -> (-Var464(u) | -Var409(u) | -Var147(u) | -Var285(u)))).
+all u exists u1 ((u >= u1) & ((Var401(u1)) -> (Var102(u) | Var258(u) | -Var31(u) | Var376(u) | -Var344(u) | Var257(u) | -Var212(u) | Var451(u) | -Var162(u)))).
+all u exists u1 ((u >= u1) & ((Var391(u1) | Var160(u1)) -> (-Var262(u) | Var316(u) | -Var366(u) | -Var241(u) | Var232(u) | Var172(u) | -Var377(u) | Var330(u)))).
+all u exists u1 ((u >= u1) & ((-Var470(u1) | Var419(u1) | -Var440(u1) | -Var361(u1) | Var102(u1)) -> (-Var296(u) | -Var192(u) | -Var49(u) | -Var85(u) | Var446(u)))).
+all u exists u1 ((u >= u1) & ((Var492(u1) | Var362(u1) | -Var356(u1) | Var116(u1)) -> (-Var102(u) | -Var56(u) | -Var273(u) | Var44(u) | -Var311(u) | -Var10(u)))).
+all u exists u1 ((u >= u1) & ((-Var276(u1) | Var461(u1)) -> (-Var368(u) | Var38(u) | -Var156(u) | -Var158(u) | -Var332(u) | Var284(u) | Var305(u) | -Var401(u)))).
+all u exists u1 ((u >= u1) & ((-Var117(u1) | -Var378(u1)) -> (-Var373(u) | -Var81(u) | -Var226(u) | Var467(u) | -Var24(u) | Var50(u) | -Var490(u) | -Var407(u)))).
+all u exists u1 ((u >= u1) & ((-Var280(u1) | Var2(u1) | Var211(u1) | -Var82(u1) | Var102(u1) | Var255(u1)) -> (-Var130(u) | -Var218(u) | -Var363(u) | -Var422(u)))).
+all u exists u1 ((u >= u1) & ((Var201(u1) | Var425(u1) | Var119(u1) | -Var74(u1) | Var389(u1) | -Var347(u1) | Var457(u1)) -> (Var464(u) | -Var275(u) | -Var94(u)))).
+all u exists u1 ((u >= u1) & ((-Var452(u1) | Var486(u1) | -Var279(u1) | -Var481(u1) | -Var53(u1) | -Var474(u1) | Var262(u1) | Var93(u1) | -Var286(u1)) -> (Var450(u)))).
+all u exists u1 ((u >= u1) & ((Var484(u1) | Var263(u1) | -Var197(u1) | -Var30(u1) | Var294(u1) | -Var13(u1) | -Var475(u1)) -> (-Var373(u) | Var467(u) | Var51(u)))).
+all u exists u1 ((u >= u1) & ((-Var392(u1) | Var371(u1) | -Var64(u1) | Var51(u1) | -Var171(u1) | -Var210(u1) | Var347(u1)) -> (Var168(u) | -Var116(u) | -Var342(u)))).
+all u exists u1 ((u >= u1) & ((-Var136(u1) | -Var183(u1) | Var459(u1) | Var452(u1) | -Var259(u1) | -Var387(u1) | -Var356(u1) | Var411(u1)) -> (Var213(u) | -Var15(u)))).
+all u exists u1 ((u >= u1) & ((-Var363(u1) | Var156(u1) | -Var5(u1)) -> (Var265(u) | -Var321(u) | Var16(u) | -Var207(u) | Var143(u) | Var229(u) | Var259(u)))).
+all u exists u1 ((u >= u1) & ((-Var149(u1)) -> (Var157(u) | -Var289(u) | -Var435(u) | Var471(u) | -Var119(u) | -Var481(u) | Var95(u) | Var142(u) | Var150(u)))).
+all u exists u1 ((u >= u1) & ((Var471(u1) | -Var326(u1) | -Var414(u1) | Var425(u1) | -Var118(u1) | -Var298(u1) | -Var315(u1)) -> (Var2(u) | Var353(u) | -Var138(u)))).
+all u exists u1 ((u >= u1) & ((Var70(u1)) -> (-Var280(u) | -Var400(u) | Var256(u) | -Var19(u) | Var245(u) | Var240(u) | -Var403(u) | Var331(u) | -Var382(u)))).
+all u exists u1 ((u >= u1) & ((Var462(u1) | -Var333(u1) | Var158(u1) | -Var209(u1) | Var89(u1) | Var463(u1)) -> (-Var21(u) | Var110(u) | Var54(u) | Var412(u)))).
+all u exists u1 ((u >= u1) & ((-Var140(u1) | -Var23(u1) | -Var56(u1)) -> (-Var18(u) | -Var153(u) | -Var355(u) | -Var205(u) | Var348(u) | Var363(u) | -Var191(u)))).
+all u exists u1 ((u >= u1) & ((-Var219(u1) | -Var20(u1) | Var90(u1) | -Var226(u1)) -> (Var228(u) | Var207(u) | -Var395(u) | -Var487(u) | -Var379(u) | Var205(u)))).
+all u exists u1 ((u >= u1) & ((-Var370(u1) | Var473(u1) | Var401(u1) | Var245(u1) | -Var494(u1) | -Var159(u1)) -> (-Var492(u) | Var258(u) | Var476(u) | -Var276(u)))).
+all u exists u1 ((u >= u1) & ((-Var274(u1) | -Var96(u1) | Var429(u1) | Var338(u1) | -Var16(u1) | -Var275(u1)) -> (-Var310(u) | -Var284(u) | Var171(u) | Var35(u)))).
+all u exists u1 ((u >= u1) & ((Var183(u1) | -Var278(u1) | -Var114(u1) | Var185(u1)) -> (-Var124(u) | -Var347(u) | Var328(u) | Var310(u) | -Var113(u) | -Var283(u)))).
+all u exists u1 ((u >= u1) & ((-Var59(u1) | Var70(u1) | Var321(u1) | Var154(u1) | -Var151(u1) | Var466(u1) | Var362(u1) | Var28(u1)) -> (-Var407(u) | Var47(u)))).
+all u exists u1 ((u >= u1) & ((Var121(u1) | Var115(u1) | Var430(u1) | -Var101(u1) | Var183(u1)) -> (Var415(u) | Var198(u) | -Var345(u) | -Var120(u) | -Var366(u)))).
+all u exists u1 ((u >= u1) & ((Var140(u1) | -Var408(u1) | Var449(u1) | -Var320(u1) | Var36(u1) | Var131(u1) | -Var166(u1)) -> (Var304(u) | -Var15(u) | Var11(u)))).
+all u exists u1 ((u >= u1) & ((Var433(u1)) -> (Var401(u) | -Var322(u) | -Var435(u) | -Var318(u) | -Var2(u) | -Var481(u) | Var33(u) | Var390(u) | -Var76(u)))).
+all u exists u1 ((u >= u1) & ((Var354(u1) | -Var378(u1) | -Var19(u1) | -Var128(u1) | Var466(u1) | Var264(u1) | -Var426(u1) | -Var364(u1)) -> (Var345(u) | Var470(u)))).
+all u exists u1 ((u >= u1) & ((-Var303(u1) | Var367(u1) | -Var61(u1) | Var246(u1) | -Var290(u1) | -Var164(u1)) -> (Var267(u) | Var462(u) | -Var39(u) | Var292(u)))).
+all u exists u1 ((u >= u1) & ((Var356(u1) | -Var55(u1) | Var45(u1) | Var447(u1)) -> (Var343(u) | -Var388(u) | -Var296(u) | Var410(u) | Var65(u) | -Var87(u)))).
+all u exists u1 ((u >= u1) & ((Var222(u1) | Var472(u1) | Var239(u1) | Var45(u1)) -> (Var195(u) | Var109(u) | Var484(u) | Var322(u) | Var208(u) | Var292(u)))).
+all u exists u1 ((u >= u1) & ((-Var259(u1) | -Var379(u1)) -> (Var125(u) | Var82(u) | Var191(u) | Var317(u) | -Var20(u) | -Var33(u) | -Var271(u) | -Var50(u)))).
+all u exists u1 ((u >= u1) & ((-Var55(u1) | Var479(u1) | Var318(u1) | Var333(u1) | -Var356(u1) | Var392(u1) | Var38(u1) | -Var210(u1)) -> (Var262(u) | Var498(u)))).
+all u exists u1 ((u >= u1) & ((-Var199(u1)) -> (Var68(u) | -Var273(u) | -Var274(u) | -Var259(u) | Var237(u) | -Var464(u) | -Var420(u) | -Var160(u) | -Var162(u)))).
+all u exists u1 ((u >= u1) & ((Var478(u1) | -Var106(u1) | Var483(u1)) -> (-Var275(u) | -Var85(u) | -Var271(u) | -Var165(u) | Var231(u) | Var486(u) | -Var214(u)))).
+all u exists u1 ((u >= u1) & ((-Var258(u1) | Var212(u1) | -Var138(u1) | Var325(u1) | -Var263(u1) | Var455(u1) | -Var401(u1) | Var178(u1)) -> (Var34(u) | Var456(u)))).
+all u exists u1 ((u >= u1) & ((-Var17(u1) | Var421(u1) | Var105(u1) | -Var449(u1)) -> (-Var160(u) | Var246(u) | Var54(u) | Var355(u) | -Var340(u) | Var368(u)))).
+all u exists u1 ((u >= u1) & ((Var280(u1) | Var237(u1) | -Var8(u1)) -> (-Var206(u) | Var282(u) | Var491(u) | -Var455(u) | -Var90(u) | Var377(u) | Var497(u)))).
+all u exists u1 ((u >= u1) & ((-Var455(u1) | -Var99(u1) | -Var178(u1) | -Var92(u1) | -Var197(u1) | -Var474(u1)) -> (-Var234(u) | -Var80(u) | Var76(u) | Var432(u)))).
+all u exists u1 ((u >= u1) & ((Var265(u1) | Var43(u1)) -> (-Var328(u) | Var188(u) | Var445(u) | -Var173(u) | Var39(u) | Var380(u) | -Var499(u) | -Var157(u)))).
+all u exists u1 ((u >= u1) & ((Var169(u1) | Var371(u1) | Var214(u1) | -Var262(u1) | -Var208(u1) | Var33(u1) | -Var309(u1)) -> (Var406(u) | Var445(u) | -Var50(u)))).
+all u exists u1 ((u >= u1) & ((Var114(u1) | Var278(u1) | Var184(u1) | Var149(u1) | -Var353(u1) | -Var487(u1) | -Var130(u1) | Var121(u1)) -> (Var120(u) | -Var449(u)))).
+all u exists u1 ((u >= u1) & ((Var256(u1) | Var290(u1)) -> (Var135(u) | -Var81(u) | Var255(u) | Var193(u) | -Var303(u) | -Var102(u) | Var492(u) | -Var56(u)))).
+all u exists u1 ((u >= u1) & ((-Var352(u1) | Var103(u1) | -Var316(u1) | Var337(u1) | Var440(u1) | -Var356(u1) | Var386(u1) | -Var367(u1) | Var291(u1)) -> (-Var259(u)))).
+all u exists u1 ((u >= u1) & ((Var56(u1) | -Var18(u1) | -Var340(u1) | Var346(u1)) -> (Var289(u) | -Var370(u) | -Var433(u) | Var183(u) | -Var53(u) | Var368(u)))).
+all u exists u1 ((u >= u1) & ((-Var246(u1) | Var161(u1) | -Var146(u1) | -Var204(u1) | -Var145(u1)) -> (-Var211(u) | Var153(u) | Var138(u) | -Var100(u) | Var237(u)))).
+all u exists u1 ((u >= u1) & ((Var321(u1) | -Var155(u1) | -Var79(u1) | -Var351(u1) | -Var18(u1)) -> (-Var297(u) | Var51(u) | Var83(u) | -Var315(u) | Var487(u)))).
+all u exists u1 ((u >= u1) & ((Var309(u1) | -Var389(u1) | Var338(u1) | Var246(u1) | Var424(u1) | Var291(u1) | Var160(u1)) -> (-Var335(u) | -Var500(u) | Var115(u)))).
+all u exists u1 ((u >= u1) & ((-Var204(u1) | -Var175(u1) | -Var72(u1) | -Var62(u1) | -Var388(u1) | -Var167(u1) | -Var193(u1)) -> (Var472(u) | Var159(u) | Var121(u)))).
+all u exists u1 ((u >= u1) & ((-Var113(u1) | Var54(u1) | Var435(u1) | Var296(u1) | -Var228(u1) | -Var29(u1) | Var20(u1) | Var219(u1) | -Var321(u1)) -> (Var166(u)))).
+all u exists u1 ((u >= u1) & ((Var371(u1) | -Var345(u1) | Var368(u1) | Var378(u1) | Var284(u1) | -Var416(u1) | Var440(u1) | -Var52(u1) | -Var492(u1)) -> (Var391(u)))).
+all u exists u1 ((u >= u1) & ((Var13(u1) | -Var206(u1) | -Var288(u1) | -Var391(u1) | Var345(u1) | Var40(u1) | -Var9(u1) | Var468(u1) | -Var430(u1)) -> (Var241(u)))).
+all u exists u1 ((u >= u1) & ((Var125(u1) | -Var177(u1) | -Var416(u1) | Var437(u1) | Var293(u1)) -> (Var45(u) | -Var264(u) | -Var471(u) | -Var84(u) | Var281(u)))).
+all u exists u1 ((u >= u1) & ((Var425(u1) | -Var322(u1)) -> (Var383(u) | Var120(u) | -Var128(u) | Var329(u) | -Var144(u) | Var91(u) | Var429(u) | -Var101(u)))).
+all u exists u1 ((u >= u1) & ((Var321(u1) | -Var377(u1) | -Var497(u1) | -Var443(u1) | Var223(u1) | -Var482(u1) | -Var451(u1) | -Var448(u1)) -> (-Var155(u) | Var499(u)))).
+all u exists u1 ((u >= u1) & ((-Var440(u1) | Var463(u1) | Var41(u1)) -> (-Var38(u) | Var109(u) | Var495(u) | -Var83(u) | Var134(u) | Var472(u) | Var93(u)))).
+all u exists u1 ((u >= u1) & ((Var385(u1) | Var281(u1) | -Var186(u1) | -Var379(u1) | -Var452(u1)) -> (Var202(u) | Var311(u) | Var108(u) | Var69(u) | -Var87(u)))).
+all u exists u1 ((u >= u1) & ((-Var32(u1) | Var187(u1) | -Var172(u1) | Var455(u1) | Var301(u1) | Var116(u1) | -Var250(u1)) -> (-Var44(u) | -Var38(u) | -Var118(u)))).
+all u exists u1 ((u >= u1) & ((Var415(u1) | -Var465(u1) | Var67(u1) | Var181(u1) | -Var136(u1) | Var203(u1)) -> (-Var490(u) | -Var61(u) | Var282(u) | Var138(u)))).
+
+end_of_list.

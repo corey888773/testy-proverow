@@ -1,18 +1,9 @@
 unknown
-(:binary-propagations  3297
- :decisions            603
- :del-clause           1099
- :final-checks         2
- :max-generation       1
- :max-memory           39.10
- :memory               25.37
- :mk-bool-var          7115
- :mk-clause            1496
- :mk-clause-binary     4016
- :num-allocs           636339235
- :num-checks           1
- :propagations         3413
- :quant-instantiations 1099
- :restarts             1
- :rlimit-count         2387544
- :time                 0.31)
+(:final-checks 1
+ :max-memory   32.39
+ :memory       24.10
+ :mk-bool-var  2000
+ :num-allocs   217312213
+ :num-checks   1
+ :rlimit-count 972249
+ :time         0.30)

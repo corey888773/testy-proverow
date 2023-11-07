@@ -1,18 +1,18 @@
 sat
-(:binary-propagations  315
- :decisions            605
- :del-clause           95
- :final-checks         10
+(:binary-propagations  371
+ :decisions            572
+ :del-clause           96
+ :final-checks         11
  :max-generation       1
- :max-memory           23.80
- :memory               21.13
- :mk-bool-var          540
- :mk-clause            155
- :mk-clause-binary     344
- :num-allocs           12011297
+ :max-memory           23.59
+ :memory               21.02
+ :mk-bool-var          537
+ :mk-clause            153
+ :mk-clause-binary     341
+ :num-allocs           9536155
  :num-checks           1
- :propagations         507
+ :propagations         502
  :quant-instantiations 96
- :restarts             9
- :rlimit-count         216498
- :time                 0.04)
+ :restarts             10
+ :rlimit-count         221490
+ :time                 0.06)

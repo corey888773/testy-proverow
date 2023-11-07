@@ -1,17 +1,17 @@
 unsat
-(:binary-propagations  7
+(:binary-propagations  21
  :conflicts            1
  :final-checks         1
  :max-generation       1
- :max-memory           23.11
+ :max-memory           22.99
  :memory               20.82
- :mk-bool-var          431
- :mk-clause            161
- :mk-clause-binary     391
- :num-allocs           5518337
+ :mk-bool-var          445
+ :mk-clause            168
+ :mk-clause-binary     398
+ :num-allocs           5822855
  :num-checks           1
- :propagations         7
+ :propagations         21
  :quant-instantiations 90
  :restarts             1
- :rlimit-count         52766
+ :rlimit-count         53452
  :time                 0.02)
