@@ -1,0 +1,219 @@
+begin_problem(problem3_c200_a400_prec50_lengths_2_3_4_6_8_10).
+
+list_of_descriptions.
+name({*problem3_c200_a400_prec50_lengths_2_3_4_6_8_10*}).
+author({*Jakub Semczyszyn*}).
+status(unknown).
+description({*The problem was generated randomly*}).
+end_of_list.
+
+list_of_symbols.
+functions[(t1,0), (t2,0)].
+predicates[(var1, 1), (var148, 1), (var206, 1), (var9, 1), (var300, 1), (var314, 1), (var216, 1), (var159, 1), (var25, 1), (var65, 1), (var137, 1), (var91, 1), (var77, 1), (var352, 1), (var260, 1), (var167, 1), (var72, 1), (var48, 1), (var189, 1), (var339, 1), (var71, 1), (var115, 1), (var252, 1), (var367, 1), (var131, 1), (var44, 1), (var67, 1), (var33, 1), (var76, 1), (var351, 1), (var28, 1), (var5, 1), (var315, 1), (var21, 1), (var69, 1), (var59, 1), (var198, 1), (var83, 1), (var284, 1), (var157, 1), (var348, 1), (var345, 1), (var135, 1), (var136, 1), (var246, 1), (var380, 1), (var310, 1), (var326, 1), (var265, 1), (var109, 1), (var34, 1), (var39, 1), (var41, 1), (var32, 1), (var49, 1), (var46, 1), (var228, 1), (var392, 1), (var154, 1), (var57, 1), (var361, 1), (var340, 1), (var42, 1), (var153, 1), (var169, 1), (var241, 1), (var279, 1), (var256, 1), (var145, 1), (var356, 1), (var64, 1), (var350, 1), (var243, 1), (var175, 1), (var45, 1), (var74, 1), (var306, 1), (var282, 1), (var259, 1), (var182, 1), (var221, 1), (var142, 1), (var218, 1), (var155, 1), (var127, 1), (var96, 1), (var199, 1), (var78, 1), (var107, 1), (var376, 1), (var320, 1), (var188, 1), (var277, 1), (var358, 1), (var393, 1), (var248, 1), (var291, 1), (var362, 1), (var23, 1), (var40, 1), (var275, 1), (var181, 1), (var172, 1), (var301, 1), (var387, 1), (var220, 1), (var81, 1), (var270, 1), (var164, 1), (var100, 1), (var209, 1), (var271, 1), (var37, 1), (var294, 1), (var233, 1), (var97, 1), (var262, 1), (var128, 1), (var267, 1), (var249, 1), (var381, 1), (var93, 1), (var179, 1), (var152, 1), (var19, 1), (var212, 1), (var232, 1), (var289, 1), (var11, 1), (var126, 1), (var89, 1), (var224, 1), (var68, 1), (var146, 1), (var322, 1), (var253, 1), (var174, 1), (var389, 1), (var397, 1), (var201, 1), (var103, 1), (var287, 1), (var52, 1), (var304, 1), (var98, 1), (var8, 1), (var386, 1), (var149, 1), (var53, 1), (var244, 1), (var10, 1), (var302, 1), (var372, 1), (var323, 1), (var158, 1), (var258, 1), (var190, 1), (var335, 1), (var298, 1), (var353, 1), (var16, 1), (var370, 1), (var106, 1), (var390, 1), (var63, 1), (var371, 1), (var276, 1), (var333, 1), (var238, 1), (var147, 1), (var395, 1), (var366, 1), (var162, 1), (var379, 1), (var7, 1), (var75, 1), (var219, 1), (var108, 1), (var183, 1), (var4, 1), (var208, 1), (var119, 1), (var193, 1), (var231, 1), (var118, 1), (var215, 1), (var112, 1), (var269, 1), (var15, 1), (var170, 1), (var132, 1), (var226, 1), (var204, 1), (var13, 1), (var338, 1), (var138, 1), (var101, 1), (var332, 1), (var355, 1), (var330, 1), (var130, 1), (var273, 1), (var211, 1), (var283, 1), (var160, 1), (var151, 1), (var185, 1), (var85, 1), (var312, 1), (var31, 1), (var385, 1), (var297, 1), (var168, 1), (var82, 1), (var60, 1), (var80, 1), (var281, 1), (var398, 1), (var292, 1), (var346, 1), (var217, 1), (var343, 1), (var26, 1), (var197, 1), (var51, 1), (var251, 1), (var237, 1), (var311, 1), (var161, 1), (var316, 1), (var14, 1), (var117, 1), (var382, 1), (var293, 1), (var384, 1), (var342, 1), (var58, 1), (var383, 1), (var364, 1), (var18, 1), (var176, 1), (var255, 1), (var296, 1), (var257, 1), (var95, 1), (var213, 1), (var123, 1), (var254, 1), (var192, 1), (var124, 1), (var104, 1), (var140, 1), (var280, 1), (var61, 1), (var62, 1), (var166, 1), (var235, 1), (var236, 1), (var54, 1), (var240, 1), (var344, 1), (var141, 1), (var177, 1), (var173, 1), (var129, 1), (var308, 1), (var22, 1), (var186, 1), (var313, 1), (var56, 1), (var47, 1), (var178, 1), (var225, 1), (var150, 1), (var156, 1), (var30, 1), (var2, 1), (var214, 1), (var171, 1), (var318, 1), (var230, 1), (var184, 1), (var378, 1), (var90, 1), (var377, 1), (var70, 1), (var200, 1), (var102, 1), (var38, 1), (var337, 1), (var388, 1), (var87, 1), (var111, 1), (var396, 1), (var368, 1), (var399, 1), (var250, 1), (var86, 1), (var205, 1), (var347, 1), (var278, 1), (var113, 1), (var234, 1), (var365, 1), (var120, 1), (var239, 1), (var223, 1), (var114, 1), (var191, 1), (var180, 1), (var202, 1), (var203, 1), (var349, 1), (var334, 1), (var307, 1), (var263, 1), (var394, 1), (var43, 1), (var229, 1), (var94, 1), (var134, 1), (var319, 1), (var285, 1), (var133, 1), (var73, 1), (var391, 1), (var17, 1), (var354, 1), (var357, 1), (var374, 1), (var121, 1), (var375, 1), (var3, 1), (var210, 1), (var194, 1), (var242, 1), (var165, 1), (var247, 1), (var92, 1), (var139, 1), (var116, 1), (var6, 1), (var274, 1), (var110, 1), (var373, 1), (var264, 1), (var341, 1), (var286, 1), (var363, 1), (var35, 1), (var207, 1), (var88, 1), (var321, 1), (var261, 1), (var359, 1), (var317, 1), (var84, 1), (var299, 1), (var303, 1), (var29, 1), (var328, 1), (var305, 1), (var245, 1), (var144, 1), (var24, 1), (var360, 1), (var187, 1), (var36, 1), (var369, 1), (var12, 1), (var196, 1), (var222, 1), (var288, 1), (var105, 1), (var195, 1), (var336, 1), (var272, 1), (var329, 1), (var163, 1), (var325, 1), (var20, 1), (var266, 1), (var27, 1), (var227, 1), (var324, 1), (var327, 1), (var50, 1), (var290, 1), (var331, 1), (var122, 1), (var309, 1), (var99, 1), (var400, 1), (var268, 1), (var295, 1), (var79, 1), (var66, 1), (var125, 1), (var55, 1), (var143, 1), (GTE, 2)].
+end_of_list.
+
+list_of_formulae(axioms).
+formula(GTE(t2,t1)).
+formula(forall([T], not(or(var1(T), not(var148(T)))))).
+formula(forall([T], not(or(not(var206(T)), not(var9(T)))))).
+formula(forall([T], not(or(not(var300(T)), var314(T))))).
+formula(forall([T], not(or(var216(T), not(var159(T)))))).
+formula(forall([T], not(or(var25(T), not(var65(T)))))).
+formula(forall([T], not(or(var137(T), var91(T))))).
+formula(forall([T], not(or(var77(T), var352(T))))).
+formula(forall([T], not(or(not(var260(T)), not(var167(T)))))).
+formula(forall([T], not(or(var72(T), not(var48(T)))))).
+formula(forall([T], not(or(not(var189(T)), var339(T))))).
+formula(forall([T], not(or(var71(T), not(var115(T)))))).
+formula(forall([T], not(or(var252(T), not(var367(T)))))).
+formula(forall([T], not(or(var131(T), not(var44(T)))))).
+formula(forall([T], not(or(not(var67(T)), var33(T))))).
+formula(forall([T], not(or(not(var76(T)), var351(T))))).
+formula(forall([T], not(or(var28(T), var5(T))))).
+formula(forall([T], not(or(not(var315(T)), not(var21(T)))))).
+formula(forall([T], not(or(not(var69(T)), not(var59(T)))))).
+formula(forall([T], not(or(not(var198(T)), var83(T))))).
+formula(forall([T], not(or(var284(T), var157(T))))).
+formula(forall([T], not(or(var348(T), var345(T))))).
+formula(forall([T], not(or(not(var135(T)), var136(T))))).
+formula(forall([T], not(or(not(var246(T)), var380(T))))).
+formula(forall([T], not(or(not(var310(T)), var326(T))))).
+formula(forall([T], not(or(not(var265(T)), not(var109(T)))))).
+formula(forall([T], not(or(var34(T), var39(T))))).
+formula(forall([T], not(or(var41(T), not(var32(T)))))).
+formula(forall([T], not(or(not(var49(T)), var46(T))))).
+formula(forall([T], not(or(var228(T), not(var392(T)))))).
+formula(forall([T], not(or(not(var154(T)), not(var57(T)))))).
+formula(forall([T], not(or(var361(T), not(var340(T)))))).
+formula(forall([T], not(or(not(var42(T)), not(var153(T)))))).
+formula(forall([T], not(or(var169(T), var241(T))))).
+formula(forall([T], not(or(not(var279(T)), not(var256(T)))))).
+formula(forall([T], not(or(not(var145(T)), var356(T))))).
+formula(forall([T], not(or(not(var64(T)), var350(T))))).
+formula(forall([T], not(or(not(var243(T)), var175(T))))).
+formula(forall([T], not(or(var45(T), not(var74(T)))))).
+formula(forall([T], not(or(var306(T), not(var282(T)))))).
+formula(forall([T], not(or(not(var259(T)), var182(T))))).
+formula(forall([T], not(or(var221(T), var142(T))))).
+formula(forall([T], not(or(var218(T), not(var155(T)))))).
+formula(forall([T], not(or(var127(T), not(var96(T)))))).
+formula(forall([T], not(or(not(var199(T)), var78(T))))).
+formula(forall([T], not(or(not(var107(T)), var376(T))))).
+formula(forall([T], not(or(var320(T), not(var188(T)))))).
+formula(forall([T], not(or(var277(T), var358(T))))).
+formula(forall([T], not(or(var393(T), not(var248(T)))))).
+formula(forall([T], not(or(var291(T), not(var362(T)))))).
+formula(forall([T], not(or(var23(T), not(var40(T)))))).
+formula(forall([T], not(or(not(var275(T)), not(var181(T)))))).
+formula(forall([T], not(or(var172(T), var301(T))))).
+formula(forall([T], not(or(var387(T), var220(T))))).
+formula(forall([T], not(or(var81(T), not(var270(T)))))).
+formula(forall([T], not(or(var164(T), not(var100(T)))))).
+formula(forall([T], not(or(not(var209(T)), var271(T))))).
+formula(forall([T], not(or(not(var37(T)), var294(T))))).
+formula(forall([T], not(or(var233(T), not(var97(T)))))).
+formula(forall([T], not(or(var262(T), var128(T))))).
+formula(forall([T], not(or(var267(T), not(var249(T)))))).
+formula(forall([T], not(or(not(var381(T)), not(var93(T)))))).
+formula(forall([T], not(or(not(var179(T)), var152(T))))).
+formula(forall([T], not(or(var19(T), var212(T))))).
+formula(forall([T], not(or(not(var232(T)), var289(T))))).
+formula(forall([T], not(or(var11(T), not(var126(T)))))).
+formula(forall([T], not(or(not(var89(T)), not(var224(T)))))).
+formula(forall([T], not(or(not(var68(T)), var146(T))))).
+formula(forall([T], not(or(not(var322(T)), not(var253(T)))))).
+formula(forall([T], not(or(var174(T), not(var389(T)))))).
+formula(forall([T], not(or(var397(T), not(var201(T)))))).
+formula(forall([T], not(or(var103(T), var287(T))))).
+formula(forall([T], not(or(not(var52(T)), var304(T))))).
+formula(forall([T], not(or(not(var98(T)), not(var8(T)))))).
+formula(forall([T], not(or(not(var386(T)), var149(T))))).
+formula(forall([T], not(or(not(var53(T)), not(var244(T)))))).
+formula(forall([T], not(or(var10(T), var302(T))))).
+formula(forall([T], not(or(not(var372(T)), not(var323(T)))))).
+formula(forall([T], not(or(var158(T), var258(T))))).
+formula(forall([T], not(or(var190(T), var335(T))))).
+formula(forall([T], not(or(var298(T), not(var353(T)))))).
+formula(forall([T], not(or(var16(T), not(var370(T)))))).
+formula(forall([T], not(or(not(var106(T)), var390(T))))).
+formula(forall([T], not(or(not(var63(T)), var371(T))))).
+formula(forall([T], not(or(var276(T), not(var333(T)))))).
+formula(forall([T], not(or(var238(T), not(var147(T)))))).
+formula(forall([T], not(or(not(var395(T)), var366(T))))).
+formula(forall([T], not(or(not(var162(T)), var379(T))))).
+formula(forall([T], not(or(not(var7(T)), var75(T))))).
+formula(forall([T], not(or(not(var219(T)), not(var108(T)))))).
+formula(forall([T], not(or(var183(T), not(var4(T)))))).
+formula(forall([T], not(or(var208(T), not(var119(T)))))).
+formula(forall([T], not(or(not(var193(T)), not(var231(T)))))).
+formula(forall([T], not(or(var118(T), not(var215(T)))))).
+formula(forall([T], not(or(var112(T), var269(T))))).
+formula(forall([T], not(or(var15(T), var170(T))))).
+formula(forall([T], not(or(var132(T), var226(T))))).
+formula(forall([T], not(or(var204(T), not(var13(T)))))).
+formula(forall([T], not(or(var338(T), not(var138(T)))))).
+formula(forall([T], not(or(not(var101(T)), var332(T))))).
+formula(forall([T], not(or(not(var355(T)), not(var330(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var130(T1)), var273(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var211(T1), var283(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var160(T1)), not(var151(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var185(T1), var85(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var312(T1), var31(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var385(T1), not(var297(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var168(T1)), not(var82(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var60(T1)), var80(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var281(T1)), var398(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var292(T1), not(var346(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var217(T1), var343(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var26(T1)), not(var197(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var51(T1), not(var251(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var237(T1), not(var311(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var161(T1), not(var316(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var14(T1)), var117(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var382(T1), not(var293(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var384(T1), var342(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var58(T1)), not(var383(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var364(T1), not(var18(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var176(T1), var255(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var296(T1), var257(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var95(T1)), not(var213(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var123(T1)), not(var254(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var192(T1)), not(var124(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var104(T1)), var140(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var280(T1)), not(var61(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var62(T1)), var166(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var235(T1), not(var236(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var54(T1), var240(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var344(T1)), not(var141(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var177(T1), not(var173(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var129(T1), var308(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var22(T1)), var186(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var313(T1)), not(var56(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var47(T1), var178(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var225(T1), not(var150(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var156(T1), not(var30(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var2(T1)), not(var214(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var171(T1)), not(var318(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var230(T1)), var184(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var378(T1)), not(var90(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var377(T1)), var70(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var200(T1), not(var102(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var38(T1)), var337(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var388(T1), not(var87(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var111(T1)), var396(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var368(T1)), not(var399(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var250(T1)), not(var86(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var205(T1), var347(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var278(T1), not(var113(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var234(T1)), var365(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var120(T1)), not(var239(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var223(T1), not(var114(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var191(T1)), not(var180(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var202(T1), not(var203(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var349(T1)), not(var334(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var307(T1), var263(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var394(T1), not(var43(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var229(T1)), not(var94(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var134(T1), var319(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var285(T1)), var133(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var73(T1)), not(var391(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var17(T1), not(var354(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var357(T1), not(var374(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var121(T1)), not(var375(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var3(T1)), not(var210(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var194(T1)), var242(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var165(T1), not(var247(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var92(T1)), var139(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var116(T1), not(var6(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var274(T1), not(var110(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var373(T1)), var264(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var341(T1)), var286(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var363(T1)), not(var35(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var207(T1)), not(var88(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var321(T1), var261(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var359(T1), var317(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var84(T1)), var299(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var303(T1), var29(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var328(T1)), var305(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var245(T1)), var144(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var24(T1)), var360(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var187(T1), not(var36(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var369(T1)), var12(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var196(T1), not(var222(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var288(T1), var105(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var195(T1), var336(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var272(T1)), var329(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var163(T1), var325(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var20(T1), not(var266(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var27(T1), var227(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var324(T1)), not(var327(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var50(T1)), var290(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var331(T1)), not(var122(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var309(T1), var99(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var400(T1)), var268(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var295(T1)), not(var79(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var66(T1)), not(var125(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var55(T1)), not(var143(T))))))).
+end_of_list.
+
+end_problem.
