@@ -107,6 +107,7 @@ class Generator:
             prov9_file2 = self.translateToProver9(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
             prov9_file3 = self.translateToProver9(raw=True, file_name_appendix="_file3_", source_formula=self.formula3)
             prov9_fileR = self.translateToProver9(raw=True, file_name_appendix="_fileR_", source_formula=self.formulaR)
+
             spass_file1 = self.translateToSPASS(raw=True, file_name_appendix="_file1_")
             spass_file2 = self.translateToSPASS(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
             spass_file3 = self.translateToSPASS(raw=True, file_name_appendix="_file3_", source_formula=self.formula3)
@@ -122,10 +123,13 @@ class Generator:
             # join saved files into one file using created pattern (and delete the original files afterwards)
             prov9_input_file = self.joinProver9FilesWithPattern([prov9_file1,prov9_file2,prov9_file3,prov9_fileR],pattern)
             spass_input_file = self.joinSPASSFilesWithPattern([spass_file1,spass_file2,spass_file3,spass_fileR],pattern)
+            vampire_input_file = self.joinVampireWithPattern(pattern, raw=False, file_name_appendix="_", problem_type="problem7")
+
         elif self.test_type.startswith("problem8"):
             # translate both generated formulas to provers formats and save them to files
             prov9_file1 = self.translateToProver9(raw=True, file_name_appendix="_file1_")
             prov9_file2 = self.translateToProver9(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
+
             spass_file1 = self.translateToSPASS(raw=True, file_name_appendix="_file1_")
             spass_file2 = self.translateToSPASS(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
 
@@ -140,6 +144,8 @@ class Generator:
             # join saved files into one file using created pattern (and delete the original files afterwards)
             prov9_input_file = self.joinProver9FilesWithPattern([prov9_file1,prov9_file2],pattern)
             spass_input_file = self.joinSPASSFilesWithPattern([spass_file1,spass_file2],pattern)
+            vampire_input_file = self.joinVampireWithPattern(pattern, raw=False, file_name_appendix="_", problem_type="problem8")
+
         else:
             # if the problem is neither of type 7 nor 8, only one formula was generated - simply translate it and save to file
             vampire_input_file = self.translateToVampire()
@@ -152,12 +158,12 @@ class Generator:
         # return paths to saved files (and path of the output file yet to be generated) with descriptions
         result = defaultdict(None)
         if not self.test_type.startswith(("problem7", "problem8")):
-            result["vampire_input"] = vampire_input_file
             result["snake_input"] = snake_input_file
             result["z3_input"] = z3_input_file
             result["cvc4_input"] = cvc4_input_file
             result["output"] = self.output_file_name
 
+        result["vampire_input"] = vampire_input_file
         result["prover9_input"] = prov9_input_file
         result["spass_input"] = spass_input_file
 
@@ -1670,6 +1676,124 @@ class Generator:
                 os.remove(input_file_name)
 
         return output_file_name
+    
+        def joinVampireWithPattern(self, pattern, raw=False, file_name_appendix="_", problem_type="problem7"):
+
+        source_formulas = [self.formula, self.formula2]
+        if problem_type.startswith("problem7"):
+            source_formulas.append(self.formula3)
+            source_formulas.append(self.formulaR)
+
+        # source_formula = self.formula
+        formula_body = ""
+        formula_name = "formula"
+        formula_string = f"fof({formula_name},axiom,\n\t"
+
+        for item in pattern:
+            if item == "NOT":
+                formula_body += " ~ "
+            elif item == "LP":
+                formula_body += " ( "
+            elif item == "RP":
+                formula_body += " ) "
+            elif item == "OR":
+                formula_body = formula_body[:-5] + " | "
+            elif item == "AND":
+                formula_body = formula_body[:-5] + " & "
+            elif item.startswith("FILE"):
+                source_formula = source_formulas[int(item[-1])]
+                i = 0
+                for clause in source_formula:
+                    i += 1
+                    quantifier = ''
+                    first_atom = False
+                    negation = False
+                    token_num = 0
+                    brackets = ""
+                    expression = ""
+                    formula_part = ""
+                    for token in clause:
+                        token_num += 1
+                        if token.TokenType == 'FORALL':
+                            quantifier = '!'
+                            first_atom = True
+                        elif token.TokenType == 'ATOM' and quantifier == '!':
+                            if str(token)[0] == '-':
+                                if first_atom:
+                                    negation = True
+                                    formula_part += f"{quantifier}[X]: (~("
+                                expression += f"~{str(token)[1:]}(X))"
+                            else:
+                                if first_atom:
+                                    formula_part += f"{quantifier}[X]: ("
+                                expression += f"{str(token)[0:]}(X))"
+                            brackets += "("
+                            first_atom = False
+                        elif token.TokenType == 'OR':
+                            expression += " | "
+                        elif token.TokenType == 'IMP':
+                            expression += " => "
+
+                        elif token.TokenType == 'EXISTS':
+                            quantifier = '?'
+                            first_atom = True
+                        elif token.TokenType == 'ATOM' and quantifier == '?':
+                            if first_atom:
+                                if len(clause) == 2:
+                                    formula_part += f"{quantifier}[X]: ("
+                                else:
+                                    formula_part += f"![X]: {quantifier}[X1]: ("
+                            if str(token)[0] == '-':
+                                if token_num % 4 == 0:
+                                    expression += f"~{str(token)[1:]}(X1))"
+                                else:
+                                    expression += f"~{str(token)[1:]}(X))"
+                            else:
+                                if token_num % 4 == 0:
+                                    expression += f"{str(token)[0:]}(X1))"
+                                else:
+                                    expression += f"{str(token)[0:]}(X))"
+                            brackets += "("
+                            first_atom = False
+
+                        # print(f"{token.TokenType} {token} {token_num}")
+
+                    expression = formula_part + brackets + expression
+                    if negation:
+                        expression += ")"
+                    # if quantifier == '?' and len(clause) < 3:
+                    #     expression += "))"
+                    formula_body += expression + ") &\n"
+        # # problem7a
+        # if problem_type == "problem7a":
+        #     formula_string += formula_body[:-2] + ") ))))).\n"
+        # # problem7b
+        # if problem_type == "problem7b":
+        #     formula_string += formula_body[:-2] + ") ))))) ))))).\n"
+        # # problem8a problem8c
+        # if problem_type == "problem8a" or problem_type == "problem8c":
+        #     formula_string += formula_body[:-5] + ") ))) ))).\n"
+        # # problem8b
+        # if problem_type == "problem8b":
+        #     formula_string += formula_body[:-5] + ") ))).\n"
+        formula_string += formula_body[:-5] + ") ))).\n"
+
+        # build file name and path
+        script_path = os.path.dirname(__file__)
+        os_sep = os.sep
+        file_name = f'{self.output_file_name}{file_name_appendix}vampire.p'
+
+        # the file is saved in a folder called "generated_files", located in the same folder as this script
+        dir_path = f'{script_path}{os_sep}generated_files'
+        if not os.path.exists(dir_path):
+            os.mkdir(dir_path)
+
+        path = f'{dir_path}{os_sep}{file_name}'
+
+        # save clauses to file
+        with open(path, "w+") as file:
+            file.write(formula_string)
+        return path
 
     # Diagnostic
     def printFormula(self, source=[]):
