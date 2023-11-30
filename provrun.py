@@ -31,18 +31,18 @@ class ProverRunner:
 
         if self.prover == 'prover9':
             # run Prover9 with search time limit (parameter -t) and using a file (parameter -f), redirect the output to a file
-            command = ["~/solvers/prover9/bin/mace4 -t", str(time_limit), "-f", self.input_file, ">", self.output_file]
+            command = ["~/solvers/prover9/bin/prover9 -t", str(time_limit), "-f", self.input_file, ">", self.output_file]
             command = " ".join(command)
             # execute the command in a new process, with additional time_limit for the entire execution
             subprocess.call(command, shell=True, timeout=time_limit)
         elif self.prover == 'spass':
             # run SPASS Prover with time limit (parameter -TimeLimit), redirect the output to a file
-            command = [f'SPASS -TimeLimit={str(time_limit)}', self.input_file, ">", self.output_file]
+            command = [f'~/solvers/spass/bin/SPASS -TimeLimit={str(time_limit)}', self.input_file, ">", self.output_file]
             command = " ".join(command)
             # execute the command in a new process
             subprocess.call(command, shell=True)
         elif self.prover == 'cvc4':
-            command = ["cvc4", "--lang", "smt", "--stats", "--tlimit", str(time_limit),self.input_file, ">", self.output_file, "2>>", self.output_file]
+            command = ["~/solvers/cvc5/bin/cvc5", "--lang", "smt", "--stats", "--tlimit", str(time_limit),self.input_file, ">", self.output_file, "2>>", self.output_file]
             command = " ".join(command)
             # execute the command in a new process
             subprocess.call(command, shell=True)
@@ -62,6 +62,6 @@ class ProverRunner:
             # execute the command in a new process
             subprocess.call(command, shell=True)
         elif self.prover == 'e':
-            command = ["~/solvers/e/bin/e_rel --cpu-limit-15 -sR", self.input_file, ">", self.output_file]
+            command = ["~/solvers/e/bin/eprover --cpu-limit-15 -sR", self.input_file, ">", self.output_file]
             command = " ".join(command)
             subprocess.call(command, shell=True)
