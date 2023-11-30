@@ -6,6 +6,7 @@ import subprocess
 from statistics import mean, mode
 from customerrors import RFGError, RFGTimeoutError
 
+MAIN_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class TestEnv:
     def __init__(self, config_file_path):
@@ -16,9 +17,9 @@ class TestEnv:
 
     def makeTests(self):
         # open a file to log errors into
-        with open('./generated_files/error_log.txt','a') as erlog:
+        with open('./generated_files_out/error_log.txt','a') as erlog:
             # open a .csv file for results
-            with open('./generated_files/test_session_results.csv', 'w', newline='') as csvfile:
+            with open('./generated_files_out/test_session_results.csv', 'w', newline='') as csvfile:
                 # setup CSV writer with comma separator and standard quotes character
                 results_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 # write column names row
@@ -130,10 +131,12 @@ class TestEnv:
         # perform three tests on the same formula to get more truthful results
         for attempt in range(1, 4):
             # include the attempt number in output file name
-            current_output_file = os.path.dirname(__file__) + \
-                "/generated_files/" + self.filenames["output"] + \
-                "_attempt" + str(attempt) + "_" + prover_name + ".out"
-            
+
+            output_dir = f'{MAIN_DIR}/generated_files_out/{prover_name}'
+            if not os.path.exists(output_dir):
+                os.makedirs(output_dir)
+
+            current_output_file = f'{output_dir}/{self.filenames["output"]}_attempt{attempt}_{prover_name}.out'
             # run prover and read output file
             usage_dict = runner.performMeasurements(current_output_file)
 
@@ -171,7 +174,7 @@ class TestEnv:
                 else:
                     if line == "end of problem":
                         # the problem block has ended
-                        with open('./generated_files/error_log.txt','a') as erlog:
+                        with open('./generated_files_out/error_log.txt','a') as erlog:
                             try:
                                 # generate test cases with current case maker and add them to test cases list
                                 new_cases = current_case_maker.makeCases()
