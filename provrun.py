@@ -41,7 +41,7 @@ class ProverRunner:
             command = " ".join(command)
             # execute the command in a new process
             subprocess.call(command, shell=True)
-        elif self.prover == 'cvc4':
+        elif self.prover == 'cvc5':
             command = ["~/solvers/cvc5/bin/cvc5", "--lang", "smt", "--stats", "--tlimit", str(time_limit),self.input_file, ">", self.output_file, "2>>", self.output_file]
             command = " ".join(command)
             # execute the command in a new process

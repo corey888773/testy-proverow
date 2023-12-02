@@ -151,7 +151,7 @@ class Generator:
             vampire_input_file = self.translateToVampire()
             snake_input_file = self.translateToSnake()
             z3_input_file = self.translateToZ3()
-            cvc4_input_file = self.translateToCVC4()
+            cvc5_input_file = self.translateToCVC5()
             prov9_input_file = self.translateToProver9()
             spass_input_file = self.translateToSPASS()
 
@@ -160,7 +160,7 @@ class Generator:
         if not self.test_type.startswith(("problem7", "problem8")):
             result["snake_input"] = snake_input_file
             result["z3_input"] = z3_input_file
-            result["cvc4_input"] = cvc4_input_file
+            result["cvc5_input"] = cvc5_input_file
             result["output"] = self.output_file_name
 
         result["vampire_input"] = vampire_input_file
@@ -169,7 +169,7 @@ class Generator:
 
         return dict(result)
         # return {"vampire_input": vampire_input_file, "snake_input": snake_input_file, "z3_input": z3_input_file, "output": self.output_file_name 
-        #         # "prover9_input": prov9_input_file, "spass_input": spass_input_file, "cvc4_input": cvc4_input_file
+        #         # "prover9_input": prov9_input_file, "spass_input": spass_input_file, "cvc5_input": cvc5_input_file
         #         }
 
     def generateProblem1(self, clauses_lengths, clauses_num, safety_coeff=0.5, target_formula=1):
@@ -747,7 +747,7 @@ class Generator:
         file_name = f'{self.output_file_name}{file_name_appendix}snake.in'
 
         # the file is saved in a folder called "generated_files_in", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files_in/snake'
+        dir_path = f'{script_path}{os_sep}generated_files_in/snake' 
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -1256,7 +1256,7 @@ class Generator:
 
         return path
 
-    def translateToCVC4(self, raw=False, file_name_appendix="_", source_formula=[]):
+    def translateToCVC5(self, raw=False, file_name_appendix="_", source_formula=[]):
         # by default the source formula is the first one
         if not source_formula:
             source_formula = self.formula
@@ -1421,10 +1421,10 @@ class Generator:
         # build file name and path
         script_path = os.path.dirname(__file__)
         os_sep = os.sep
-        file_name = f'{self.output_file_name}{file_name_appendix}cvc4.in'
+        file_name = f'{self.output_file_name}{file_name_appendix}cvc5.in'
 
         # the file is saved in a folder called "generated_files_in", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files_in/cvc4'
+        dir_path = f'{script_path}{os_sep}generated_files_in/cvc5'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 

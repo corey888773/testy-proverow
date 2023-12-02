@@ -181,7 +181,7 @@ def analyseZ3(out_file : str, prover : str) -> AnalyseCtx:
     return ctx
 
 
-def analyseCVC4(out_file : str, prover : str) -> AnalyseCtx:
+def analyseCVC5(out_file : str, prover : str) -> AnalyseCtx:
     ctx = AnalyseCtx(prover, "CV_FindResult")
 
     with open(out_file,'r') as f:
@@ -216,7 +216,7 @@ prover_anaylser = {
     "vampire": analyseVampireOrSnake,
     "snake": analyseVampireOrSnake,
     "z3": analyseZ3,
-    "cvc4": analyseCVC4
+    "cvc5": analyseCVC5
 }   
 
 def getMeasuresFromFile(prover, out_file) -> dict:
