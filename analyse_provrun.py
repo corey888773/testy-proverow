@@ -51,7 +51,7 @@ def analyseP9(out_file : str, prover : str) -> AnalyseCtx:
                 if line.startswith("User_CPU"):
                     time_report = line.split(", ")
                     cpu_time = time_report[0].split("=")
-                    total_time += float(cpu_time[1])
+                    ctx.total_time += float(cpu_time[1])
 
                     # all results were read, mark the success and finish reading the file
                     ctx.state = "P9_Success"
@@ -107,9 +107,9 @@ def analyseSPASS(out_file : str, prover : str) -> AnalyseCtx:
                     split_times = times.split(":")
 
                     # convert hours and minutes to seconds
-                    total_time += float(split_times[0]) * 3600
-                    total_time += float(split_times[1]) * 60
-                    total_time += float(split_times[2])
+                    ctx.total_time += float(split_times[0]) * 3600
+                    ctx.total_time += float(split_times[1]) * 60
+                    ctx.total_time += float(split_times[2])
 
                     # all results were read, mark the success and finish reading the file
                     ctx.state = "SP_Success"
