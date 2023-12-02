@@ -1,2 +1,5 @@
-generated_files
+generated_files/
+generated_files_in/
+generated_files_out/
+
 __pycache__
