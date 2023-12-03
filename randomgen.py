@@ -148,8 +148,11 @@ class Generator:
 
         else:
             # if the problem is neither of type 7 nor 8, only one formula was generated - simply translate it and save to file
-            vampire_input_file = self.translateToVampire()
-            snake_input_file = self.translateToSnake()
+            tptp_files = self.translateToTPTP(['vampire','snake','e'])
+            
+            vampire_input_file = tptp_files['vampire']
+            snake_input_file = tptp_files['snake']
+            e_input_file = tptp_files['e']
             z3_input_file = self.translateToZ3()
             cvc5_input_file = self.translateToCVC5()
             prov9_input_file = self.translateToProver9()
@@ -565,7 +568,7 @@ class Generator:
 
         return most_frequent_key
 
-    def translateToVampire(self, raw=False, file_name_appendix="_", source_formula=[]):
+    def translateToTPTP(self, prover_names : list, raw=False, file_name_appendix="_", source_formula=[]) -> dict:
         # by default the source formula is the first one
         if not source_formula:
             source_formula = self.formula
@@ -638,137 +641,38 @@ class Generator:
             # add the clause string to the list of clauses strings
             clause_str_list.append(clause_str)
 
-        # build file name and path
-        script_path = os.path.dirname(__file__)
-        os_sep = os.sep
-        file_name = f'{self.output_file_name}{file_name_appendix}vampire.in'
+        paths = {}
 
-        # the file is saved in a folder called "generated_files_in", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files_in/vampire'
-        if not os.path.exists(dir_path):
-            os.mkdir(dir_path)
+        for prover_name in prover_names:
+            # build file name and path
+            script_path = os.path.dirname(__file__)
+            os_sep = os.sep
+            file_name = f'{self.output_file_name}{file_name_appendix}{prover_name}.in'
 
-        path = f'{dir_path}{os_sep}{file_name}'
+            # the file is saved in a folder called "generated_files_in", located in the same folder as this script
+            dir_path = f'{script_path}{os_sep}generated_files_in{os_sep}{prover_name}' 
+            if not os.path.exists(dir_path):
+                os.mkdir(dir_path)
 
-        # save clauses to file
-        with open(path, "w+") as file:
-            if not raw:
-                # add header
-                file.write('%------------------------------------------------------------------------ \n')
-                # add gte relation
-                file.write('fof(gte_relation,axiom,(\n\tgte(X,X1))).\n')
-                # write clauses in Clause Normal Form
-                file.write('\n'.join(clause_str_list))
-                # add footer
-                file.write('\n%------------------------------------------------------------------------ ')
-            else:
-                # file format is raw: write clauses in Conjunctive Normal Form and nothing else
-                file.write("((" + ") & (".join(clause_str_list) + "))")
+            path = f'{dir_path}{os_sep}{file_name}'
+            paths[prover_name] = path
 
-        return path
-    
-    
-    def translateToSnake(self, raw=False, file_name_appendix="_", source_formula=[]):
-        # by default the source formula is the first one
-        if not source_formula:
-            source_formula = self.formula
-
-        clause_str_list = []
-        for clause_nr, clause in enumerate(source_formula):
-            # clear all temporary variable values
-            quantifiers_list = []  # quantifiers tokens
-            left_list = []  # atoms on the left side of IMP operator
-            right_list = []  # atoms on the right side of IMP operator
-            imp_exists = False  # a flag stating whether there is an IMP token in current clause
-
-            for token in clause:
-                if (token.TokenType in ['FORALL', 'EXISTS']):
-                    # translate the quantifier into Prover9 format
-                    operator = '!' if token.TokenType == 'FORALL' else '?'
-                    # place it in quantifiers list along with the quantified variable
-                    quantifiers_list.extend([operator, '[X] :'])
-                elif (token.TokenType == 'OR'):
-                    # translate the operator into Prover9 format
-                    # place it in left list if no implication was encountered or in right list otherwise
-                    if imp_exists:
-                        right_list.append('|')
-                    else:
-                        left_list.append('|')
-                elif (token.TokenType == 'ATOM'):
-                    # translate the atom into Prover9 format unary predicate
-                    # by changing the first letter of it's name to uppercase and adding a variable as parameter
-                    if str(token)[0] == 'v':
-                        token_str = f'v{str(token)[1:]}(X)'
-                    else:
-                        token_str = f'~v{str(token)[2:]}(X)'
-
-                    # place it in left list if no implication was encountered or in right list otherwise
-                    if imp_exists:
-                        right_list.append(token_str)
-                    else:
-                        left_list.append(token_str)
-                elif (token.TokenType == 'IMP'):
-                    # add the existential quantifier along with new quantified variable to quantifiers list
-                    quantifiers_list.extend(['?', '[X1] :'])
-                    # set the implication existance flag
-                    imp_exists = True
-                    # this only occurs in liveness clauses
-                    # so the first quantifier in the list had to be 'exists' - replace it with 'all'
-                    quantifiers_list[0] = '!'
-
-            # begin the clause string by joining the quantifiers list
-            clause_str = f'fof(clause{clause_nr},axiom,(\n\t'
-            clause_str += f'{" ".join(quantifiers_list)}'
-            # normally the clauses end with a dot, but if the format is raw they should not
-            dot = "" if raw else "."
-            if imp_exists:
-                # until now all predicates had variable 'X' as parameter
-                # replace it with 'u1' in the left side subclause
-                left_list = [elem.replace('(X)', '(X1)') for elem in left_list]
-
-                # add the variables relation string and implication between left subclause and right subclause to the clause string
-                clause_str += f' (gte(X,X1) & (({" ".join(left_list)}) => ({" ".join(right_list)}))))){dot}'
-            else:
-                if quantifiers_list[0] == '!':
-                    # if clause is a safety clause, all the tokens are in left list
-                    # add them to the clause string, negated
-                    clause_str += f' (~({" ".join(left_list)})))){dot}'
+            # save clauses to file
+            with open(path, "w+") as file:
+                if not raw:
+                    # add header
+                    file.write('%------------------------------------------------------------------------ \n')
+                    # add gte relation
+                    file.write('fof(gte_relation,axiom,(\n\tgte(X,X1))).\n')
+                    # write clauses in Clause Normal Form
+                    file.write('\n'.join(clause_str_list))
+                    # add footer
+                    file.write('\n%------------------------------------------------------------------------ ')
                 else:
-                    # the clause is a liveness clause in general form
-                    # add it to the clause string
-                    clause_str += f' ({" ".join(left_list)}))){dot}'
+                    # file format is raw: write clauses in Conjunctive Normal Form and nothing else
+                    file.write("((" + ") & (".join(clause_str_list) + "))")
 
-            # add the clause string to the list of clauses strings
-            clause_str_list.append(clause_str)
-
-        # build file name and path
-        script_path = os.path.dirname(__file__)
-        os_sep = os.sep
-        file_name = f'{self.output_file_name}{file_name_appendix}snake.in'
-
-        # the file is saved in a folder called "generated_files_in", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files_in/snake' 
-        if not os.path.exists(dir_path):
-            os.mkdir(dir_path)
-
-        path = f'{dir_path}{os_sep}{file_name}'
-
-        # save clauses to file
-        with open(path, "w+") as file:
-            if not raw:
-                # add header
-                file.write('%------------------------------------------------------------------------ \n')
-                # add gte relation
-                file.write('fof(gte_relation,axiom,(\n\tgte(X,X1))).\n')
-                # write clauses in Clause Normal Form
-                file.write('\n'.join(clause_str_list))
-                # add footer
-                file.write('\n%------------------------------------------------------------------------ ')
-            else:
-                # file format is raw: write clauses in Conjunctive Normal Form and nothing else
-                file.write("((" + ") & (".join(clause_str_list) + "))")
-
-        return path
+        return paths
 
 
 
@@ -1257,200 +1161,49 @@ class Generator:
         return path
 
     def translateToCVC5(self, raw=False, file_name_appendix="_", source_formula=[]):
-        # by default the source formula is the first one
-        if not source_formula:
-            source_formula = self.formula
-
-
-        clause_str_list = []
-        formula_info = {
-            'all_atoms': [],  # list of all atoms present in the formula
-            'imp_exists': False  # a flag stating whether there is an IMP token in the formula
-        }
-        for clause in source_formula:
-            queue = []  # a queue of tuples (TokenType, list of tokens) to be transformed into strings
-            atoms = []  # a list of all atoms in the (sub)clause
-            or_atoms = None  # a list of atoms in the (sub)clause joined with disjunction tokens
-            first_tuple = None  # a tuple for storing the quantifier
-            imp_tuple = None  # a tuple for storing the implication operator
-            isIMP=False
-
-            # generate tokens queue
-            for token in clause:
-                if token.TokenType in ['FORALL', 'EXISTS']:
-                    # save the quantifier in the quantifier tuple
-                    # the token type represents the whole quantifier, no need to save additional information
-                    first_tuple = (token.TokenType, [])
-                elif token.TokenType == 'OR':
-                    # all atoms in atoms list will from now on appear in disjunct atoms list as well
-                    if not or_atoms:
-                        or_atoms = atoms
-                elif token.TokenType == 'ATOM':
-                    # add the atom name to the list of all atoms
-                    formula_info['all_atoms'].append(token.Value)
-                    # add the token to the atoms list
-                    atoms.append(token)
-                elif token.TokenType == 'IMP':
-                    # save the implication operator in the implication tuple
-                    # the token type represents the whole operator, no need to save additional information
-                    imp_tuple = (token.TokenType, [])
-                    # set the implication flag for the whole formula
-                    formula_info['imp_exists'] = True
-                    isIMP = True
-
-                    # if the left-side subclause consisted of disjunction
-                    if or_atoms:
-                        # create a tuple consisting of OR TokenType and list of disjunct atoms
-                        or_tuple = ('OR', or_atoms)
-                        # add the created tuple to the queue
-                        queue.append(or_tuple)
-                    # else if left-side subclause consisted of a single atom
-                    elif atoms:
-                        # add a tuple consisting of ATOM TokenType and list with said atom token to the queue
-                        queue.append(('ATOM', atoms))
-
-                    # left subclause has ended - clear the atoms lists and move on to the right subclause
-                    atoms, or_atoms = [], None
-
-            # if there was no implication, no atoms have been saved to the queue yet
-            # even if there was an implication, the atoms of the right subclause have not been saved to the queue yet
-
-            # if the remaining atoms were disjunct
-            if or_atoms:
-                # add a tuple consisting of OR TokenType and list of disjunct atoms to the queue
-                queue.append(('OR', atoms))
-            # else if there is only one remaining atom
-            elif atoms:
-                # add a tuple consisting of ATOM TokenType and list with said atom token to the queue
-                queue.append(('ATOM', atoms))
-
-            # by default the quantified variable is 'T'
-            var_str = '(x)'
-            if imp_tuple:
-                # if there was an implication in current clause, 'T1' variable will be used first, for the left subclause
-                var_str = '(x1)'
-                # add the implication tuple to the queue
-                queue.append(imp_tuple)
-            # add the quantifier tuple to the queue
-            queue.append(first_tuple)
-
-            # process the queue
-            clause_str = ''
-            for token_type, tokens in queue:
-                if token_type == 'ATOM':
-                    # the list consists of only one atom token
-                    token = tokens[0]
-                    # translate the token into SPASS format string with current variable
-                    token_str = self.__getAtomStr(token, var_str)
-                    with_not=False
-                    if token_str[0]=='n':
-                        with_not=True
-                        token_str=token_str[4:-1]
-                    token_str=token_str.replace("("," ")
-                    token_str="("+token_str
-                    if with_not:
-                        token_str = "(not" + token_str+")"
-
-                    # add the translation to the clause string
-                    clause_str = f'{clause_str} {token_str}' if len(clause_str) else token_str
-                    # the entire (sub)clause was processed - switch to the other variable
-                    var_str = '(x)' if var_str == "(x1)" else "(x1)"
-                elif token_type == 'OR':
-                    # the list consists of multiple atom tokens;
-                    # translate them all into SPASS format string with current variable
-                    atom_str_list = []
-                    for token in tokens:
-                        token_str = self.__getAtomStr(token, var_str)
-                        with_not = False
-                        if token_str[0] == 'n':
-                            with_not = True
-                            token_str = token_str[4:-1]
-                        token_str = token_str.replace("(", " ")
-                        token_str = "(" + token_str
-                        if with_not:
-                            token_str = "(not" + token_str+")"
-                        atom_str_list.append(token_str)
-
-                    # join all the atoms strings with commas and encapsulate them in 'or()' opearator
-                    or_operator_str = f'or {" ".join(atom_str_list)}'
-                    if isIMP==True:
-                        or_operator_str = f'(or {" ".join(atom_str_list)})'
-                    # add the joined translation to the clause string
-                    clause_str = f'{clause_str} {or_operator_str}' if len(clause_str) else or_operator_str
-                    # the entire (sub)clause was processed - switch to the other variable
-                    var_str = '(x)' if var_str == "(x1)" else "(x1)"
-                elif token_type == 'IMP':
-                    # the implication tuple appears after all the atoms tuples,
-                    # so the current clause string is ready to be encapsulated in 'implies()' operator
-                    # print(clause_str)
-                    clause_str = f'(implies {clause_str})'
-                elif token_type in ['FORALL', 'EXISTS']:
-                    # the quantifier tuple appears at the end of the queue
-
-                    # if the clause contained implication, it is a liveness clause in conditional form
-                    if imp_tuple:
-                        # add both quantifiers and variables relation string to the clause string
-                        clause_str = f'forall ((x Bool))  (exists ((x1 Bool)) (and(GTE x x1)  {clause_str}))'
-                    # else if the quantifier type is EXISTS, it is a liveness clause in general form
-                    elif token_type == 'EXISTS':
-                        # add existential quantifier to the clause string
-                        clause_str = f'exists ((x Bool)) ({clause_str})'
-                    # else if the quantifier type is FORALL, it is a safety clause
-                    elif token_type == 'FORALL':
-                        # add universal quantifier to the clause string
-                        clause_str = f'forall ((x Bool)) (not({clause_str}))'
-
-            # append the whole clasue string to the list of clauses strings
-            clause_str_list.append("(assert ("+clause_str+"))")
-
-        # if format is not raw, add header and footer of formulas list and encapsulate each clause in 'formula()' keyword
-        if not raw:
-            clause_str_list = list(map(lambda c_str: f'{c_str}', clause_str_list))
-
-        # convert the list of all atoms to a dictionary to eliminate atoms repetitions and add the arity of atoms predicates
-        all_atoms = dict.fromkeys(formula_info['all_atoms'], 1)
-
-
-        # create the predicates list based on the dictionary
-        predicates = []
-        for pred, pred_value in all_atoms.items():
-            predicates.append(f'(declare-fun {pred} (Bool) Bool)')
-        predicates.append(f'(declare-fun GTE (Bool Bool) Bool)')
-        predicates.append(f'(define-fun implies ((p Bool)(q Bool)) Bool (or (not p) q))')
-
-        # build file name and path
+        z3_input = self.translateToZ3(raw, file_name_appendix= "__", source_formula=source_formula)
         script_path = os.path.dirname(__file__)
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}cvc5.in'
 
-        # the file is saved in a folder called "generated_files_in", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files_in/cvc5'
+        # change z3 script to generate cvc5 smt-lib2 file
+        with open(z3_input, "r") as file:
+            z3_input_lines = file.readlines()
+            
+            # remove two last lines
+            z3_input_lines = z3_input_lines[:-2]
+
+            # add print(s.sexpr()) line
+            z3_input_lines.append('print(s.sexpr())\n')
+
+        with open(z3_input, "w") as file:
+            file.writelines(z3_input_lines)
+        
+
+        # run dir_path = f'{script_path}{os_sep}generated_files_in/cvc5'
+        dir_path = f'{script_path}{os_sep}generated_files_in{os_sep}cvc5'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
-
         path = f'{dir_path}{os_sep}{file_name}'
 
-        # save clauses to file
-        with open(path, "w+") as file:
-            if not raw:
-                # write the problem header
-                file.write('(set-logic ALL)\n')
-                file.write('(set-option :fmf-bound true)\n')
-                file.write('(set-option :produce-models true)\n')
-                file.write('(declare-sort Object 0)\n')
-                file.write('\n')
-                # write the symbols list
-                file.write('\n'.join(predicates))
-                file.write('\n\n')
-                # write clauses in Clause Normal Form
-                file.write('\n'.join(clause_str_list))
-                file.write('\n')
-                # write the problem footer
-                file.write('(check-sat)\n')
-                file.write('(get-model)\n')
-            else:
-                # file format is raw: write clauses in Conjunctive Normal Form and nothing else
-                file.write("and(" + ','.join(clause_str_list) + ")")
+        # script to generate cvc5 smt-lib2 file
+        os.system(f'python3 {z3_input} > {path}')
+
+        # if format is raw, return the path to the file
+        if raw:
+            return path
+
+        # load cvc5 input file
+        with open(path, "r") as file:
+            cvc5_input_lines = file.readlines()
+            cvc5_input_lines = ['(set-logic ALL)\n', '(set-option :produce-models true)\n'] + cvc5_input_lines + ['(check-sat)\n', '(get-model)\n']
+
+        # add header and footer
+        with open(path, "w") as file:
+            file.writelines(cvc5_input_lines)
+
+        # remove z3 temp script
+        os.remove(z3_input)
 
         return path
 
@@ -1806,6 +1559,9 @@ class Generator:
             for token in clause:
                 print(token, end=' ')
             print(']')
+
+    def joinTPTPFilesWithPattern(self, files_list, pattern, remove=True):
+        
 
     def saveFormulas(self):
         # for each generated formula create a seperate file and
