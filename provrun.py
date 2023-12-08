@@ -62,6 +62,9 @@ class ProverRunner:
             # execute the command in a new process
             subprocess.call(command, shell=True)
         elif self.prover == 'e':
-            command = ["~/solvers/e/bin/eprover --cpu-limit-15 -sR", self.input_file, ">", self.output_file]
+            command = [f"~/solvers/e/bin/eprover --cpu-limit={str(time_limit)}", "-sR", self.input_file, ">", self.output_file]
             command = " ".join(command)
+            print(command)
             subprocess.call(command, shell=True)
+
+            #~/solvers/spass/bin/dfg2tptp 

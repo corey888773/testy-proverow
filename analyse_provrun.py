@@ -210,13 +210,47 @@ def analyseCVC5(out_file : str, prover : str) -> AnalyseCtx:
     return ctx
 
 
+def analyseE(out_file : str, prover : str) -> AnalyseCtx: # TODO - write analyser for E
+    ctx = AnalyseCtx(prover, "E_FindResult")
+
+    sat_map = {"Satisfiable": "True", "Unsatisfiable": "False"}
+
+    with open(out_file,'r') as f:
+        for line in f:
+            if not line.startswith(('#')):
+                continue
+
+            elif ctx.state == "E_FindResult":
+                if "resident set size" in line:
+                    ctx.total_memory = int(line.split(" ")[-2])
+
+                elif "SZS status" in line:
+                    result = line.split(" ")[-1]
+                    if result in sat_map:
+                        ctx.sat = sat_map[result]
+                    else:
+                        ctx.sat = "unknown"
+
+                elif "Total time" in line:
+                    ctx.total_time = float(line.split(" ")[-2])
+
+                if ctx.total_memory != 0 and ctx.sat != None and ctx.total_time != 0:
+                    ctx.state="E_Success"
+                    ctx.success = True
+                    break
+
+    ctx.success = True
+    return ctx
+
+
 prover_anaylser = { 
     "prover9": analyseP9,
     "spass": analyseSPASS,
     "vampire": analyseVampireOrSnake,
     "snake": analyseVampireOrSnake,
     "z3": analyseZ3,
-    "cvc5": analyseCVC5
+    "cvc5": analyseCVC5,
+    "e": analyseE
 }   
 
 def getMeasuresFromFile(prover, out_file) -> dict:

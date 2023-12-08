@@ -5,8 +5,6 @@ m = [2, 3, 4, 5]
 distribution = ["even", "more_short", "more_long"]
 percentage = [10, 20, 35, 50, 65, 80, 90]
 
-
-
 # Problem 1
 for i in n:
 
