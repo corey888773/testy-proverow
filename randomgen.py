@@ -50,6 +50,7 @@ class Generator:
         # save generated formulas to a .txt file
         self.saveFormulas()
 
+
     def generate(self, precentage_of_safty_clauses, clause_lengths, clauses_num, poisson, atoms_num_coeff, problem5_distribution):
         # check if the parameters don't force a different problem type than requested by user
         if self.test_type != 'problem3' and atoms_num_coeff != 0.5:
@@ -100,6 +101,7 @@ class Generator:
         else:
             raise RFGError("Generator.generate: Unknown name of problem.", self.output_file_name)
 
+
     def translateAndSave(self):
         if self.test_type.startswith("problem7"):
             # translate all generated formulas to provers formats and save them to files
@@ -107,7 +109,6 @@ class Generator:
             prov9_file2 = self.translateToProver9(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
             prov9_file3 = self.translateToProver9(raw=True, file_name_appendix="_file3_", source_formula=self.formula3)
             prov9_fileR = self.translateToProver9(raw=True, file_name_appendix="_fileR_", source_formula=self.formulaR)
-
             spass_file1 = self.translateToSPASS(raw=True, file_name_appendix="_file1_")
             spass_file2 = self.translateToSPASS(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
             spass_file3 = self.translateToSPASS(raw=True, file_name_appendix="_file3_", source_formula=self.formula3)
@@ -121,15 +122,12 @@ class Generator:
             pattern = ["NOT","LP","FILE0",delimiter,"FILE1",delimiter,"FILE2","RP","OR","FILE3"]
 
             # join saved files into one file using created pattern (and delete the original files afterwards)
-            prov9_input_file = self.joinProver9FilesWithPattern([prov9_file1,prov9_file2,prov9_file3,prov9_fileR],pattern)
-            spass_input_file = self.joinSPASSFilesWithPattern([spass_file1,spass_file2,spass_file3,spass_fileR],pattern)
-            vampire_input_file = self.joinVampireWithPattern(pattern, raw=False, file_name_appendix="_", problem_type="problem7")
-
+            prov9_input_file = self.joinProver9FilesWithPattern([prov9_file1,prov9_file2,prov9_file3,prov9_fileR],pattern, False)
+            spass_input_file = self.joinSPASSFilesWithPattern([spass_file1,spass_file2,spass_file3,spass_fileR],pattern, False)
         elif self.test_type.startswith("problem8"):
             # translate both generated formulas to provers formats and save them to files
             prov9_file1 = self.translateToProver9(raw=True, file_name_appendix="_file1_")
             prov9_file2 = self.translateToProver9(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
-
             spass_file1 = self.translateToSPASS(raw=True, file_name_appendix="_file1_")
             spass_file2 = self.translateToSPASS(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
 
@@ -142,17 +140,10 @@ class Generator:
                 pattern = ["LP","NOT","FILE0","OR","FILE1","RP","AND","NOT","LP","NOT","FILE1","OR","FILE0","RP"]
 
             # join saved files into one file using created pattern (and delete the original files afterwards)
-            prov9_input_file = self.joinProver9FilesWithPattern([prov9_file1,prov9_file2],pattern)
-            spass_input_file = self.joinSPASSFilesWithPattern([spass_file1,spass_file2],pattern)
-            vampire_input_file = self.joinVampireWithPattern(pattern, raw=False, file_name_appendix="_", problem_type="problem8")
-
+            prov9_input_file = self.joinProver9FilesWithPattern([prov9_file1,prov9_file2],pattern, False)
+            spass_input_file = self.joinSPASSFilesWithPattern([spass_file1,spass_file2],pattern, False)
         else:
             # if the problem is neither of type 7 nor 8, only one formula was generated - simply translate it and save to file
-            tptp_files = self.translateToTPTP(['vampire','snake','e'])
-            
-            vampire_input_file = tptp_files['vampire']
-            snake_input_file = tptp_files['snake']
-            e_input_file = tptp_files['e']
             z3_input_file = self.translateToZ3()
             cvc5_input_file = self.translateToCVC5()
             prov9_input_file = self.translateToProver9()
@@ -161,12 +152,13 @@ class Generator:
         # return paths to saved files (and path of the output file yet to be generated) with descriptions
         result = defaultdict(None)
         if not self.test_type.startswith(("problem7", "problem8")):
-            result["snake_input"] = snake_input_file
             result["z3_input"] = z3_input_file
             result["cvc5_input"] = cvc5_input_file
-            result["output"] = self.output_file_name
-
-        result["vampire_input"] = vampire_input_file
+            
+        result["output"] = self.output_file_name
+        result["vampire_input"] = self.translateDfgToTptp('vampire', spass_input_file)
+        result["snake_input"] = self.translateDfgToTptp('snake', spass_input_file)
+        result["e_input"] = self.translateDfgToTptp('e', spass_input_file)
         result["prover9_input"] = prov9_input_file
         result["spass_input"] = spass_input_file
 
@@ -174,6 +166,7 @@ class Generator:
         # return {"vampire_input": vampire_input_file, "snake_input": snake_input_file, "z3_input": z3_input_file, "output": self.output_file_name 
         #         # "prover9_input": prov9_input_file, "spass_input": spass_input_file, "cvc5_input": cvc5_input_file
         #         }
+
 
     def generateProblem1(self, clauses_lengths, clauses_num, safety_coeff=0.5, target_formula=1):
         formula = []
@@ -225,6 +218,7 @@ class Generator:
             self.formula2 = formula
         elif target_formula == 3:
             self.formula3 = formula
+
 
     def generateProblem2(self, clauses_num, safety_coeff=0.5, target_formula=1):
         formula = []
@@ -290,6 +284,7 @@ class Generator:
         elif target_formula == 3:
             self.formula3 = formula
 
+
     def generateProblem3(self, clause_length, clauses_num, atoms_num_coeff):
         # the proper number of atoms has already benn generated in the constructor;
         # only thing left to do is to remove lengths exceeding the limit from the lengths list
@@ -298,6 +293,7 @@ class Generator:
             raise RFGError("Generator.generateProblem3: No usable lengths", self.output_file_name)
         # generate the formula as if it was of problem1, using new clauses lengths
         self.generateProblem1(new_clause_length, clauses_num)
+
 
     def generateProblem4(self, clause_length, clauses_num, safety_coeff=0.5):
         # calculate how many of the clauses should be safety clauses
@@ -313,6 +309,7 @@ class Generator:
                 clause = self.generateLivenessClause(clause_length)
 
             self.formula.append(clause)
+
 
     def generateProblem5(self, clauses_lengths, clauses_num, distribution, safety_coeff=0.5):
         if clauses_num < 4:
@@ -367,6 +364,7 @@ class Generator:
                 clause = self.generateLivenessClause(random.choice(clauses_lengths))
             self.formula.append(clause)
 
+
     def generateProblem6(self, clause_length, clauses_num, safety_precentage, poisson):
         # check if the value of safety_precentage parameter is valid precentage
         if safety_precentage < 0 or safety_precentage > 100:
@@ -378,6 +376,7 @@ class Generator:
         else:
             # generate formula as if it was of problem1, with adjusted safety clauses precentage
             self.generateProblem1(clause_length, clauses_num, safety_coeff=safety_precentage/100)
+
 
     def generateProblem7(self, clause_length, clauses_num, poisson):
         if poisson:
@@ -393,6 +392,7 @@ class Generator:
         # generate additional formula of type R
         self.generateFormulaR()
 
+
     def generateProblem8(self, clause_length, clauses_num, poisson):
         if poisson:
             # generate 2 formulas of problem2, each time saving them to a different list
@@ -403,6 +403,7 @@ class Generator:
             self.generateProblem1(clause_length, clauses_num, target_formula=1)
             self.generateProblem1(clause_length, clauses_num, target_formula=2)
 
+
     def generateFormulaR(self):
         # the easiest way to produce Liveness clause in general form with more than one atom
         # is to generate it as safety clause and replace the quantifier
@@ -410,11 +411,13 @@ class Generator:
         self.formulaR.append(self.generateSafetyClause(4))
         self.formulaR[0][0] = utils.LogicToken("EXISTS")
 
+
     def generateSafetyClause(self, clause_length):
         # generate a generic clause and put a FORALL token at the beginning of it
         clause = self.generateClause(clause_length)
         clause.insert(0, utils.LogicToken("FORALL"))
         return clause
+
 
     def generateLivenessClause(self, clause_length):
         # generate a generic clause
@@ -430,6 +433,7 @@ class Generator:
         clause.insert(0, utils.LogicToken("EXISTS"))
         return clause
 
+
     def generateClause(self, length):
         # randomly pick atoms to be used in the clause
         atoms = self.getRandomAtomList(length)
@@ -442,6 +446,7 @@ class Generator:
         # zip the list of atoms with the list of relations
         clause = utils.zipToList(atoms, relations)
         return clause
+
 
     def getRandomAtomList(self, length):
         random.seed()
@@ -466,12 +471,14 @@ class Generator:
         # return the atoms as token list
         return atoms
 
+
     def getRandomRelation(self):
         random.seed()
         # choose randomly a relation from list of all possible ones and return it as token
         # *In this program version the only available relation type is OR*
         token = random.choice(utils.LogicToken.relation_types)
         return utils.LogicToken(token)
+
 
     def replaceORwithIMP(self, clause):
         # randomly change one OR into IMP to separate P and Q subclauses:
@@ -484,6 +491,7 @@ class Generator:
             or_to_change = random.choice(clause)
         # change the token's type to IMP (all of it's other fields are, and should stay, empty)
         or_to_change.TokenType = "IMP"
+
 
     def cleanup(self, precentage_of_safty_clauses):
         # set a list of formulas to cleanup
@@ -546,6 +554,7 @@ class Generator:
                         # else randomly change one OR into IMP to separate P and Q subclauses
                         self.replaceORwithIMP(current_formula[i])
 
+
     def getMostFrequentKey(self):
         # go through the dictionary and find the most frequent atom
         highest_frequency = 0
@@ -567,6 +576,24 @@ class Generator:
                     "Generator.getMostFrequentKey: The number of atoms is to big to use all of them.", self.output_file_name)
 
         return most_frequent_key
+
+
+    def translateDfgToTptp(self, prover_name, spass_input, file_name_appendix='_') -> str:
+        # build file name and path
+        script_path = os.path.dirname(__file__)
+        os_sep = os.sep
+        dir_path = f'{script_path}{os_sep}generated_files_in{os_sep}{prover_name}'
+        file_name = f'{self.output_file_name}{file_name_appendix}{prover_name}.in'
+
+        if not os.path.exists(dir_path):
+            os.mkdir(dir_path)
+
+        SPASS_BINARIES_PATH = '~/solvers/spass/bin/' # TODO make it cleaner
+
+        path = f'{dir_path}{os_sep}{file_name}'
+        os.system(f'{SPASS_BINARIES_PATH}dfg2tptp {spass_input} {path}')
+        return path
+
 
     def translateToTPTP(self, prover_names : list, raw=False, file_name_appendix="_", source_formula=[]) -> dict:
         # by default the source formula is the first one
@@ -676,6 +703,7 @@ class Generator:
 
 
 
+
     def translateToProver9(self, raw=False, file_name_appendix="_", source_formula=[]):
         # by default the source formula is the first one
         if not source_formula:
@@ -776,6 +804,7 @@ class Generator:
                 file.write("((" + ") & (".join(clause_str_list) + "))")  
 
         return path
+
 
     def translateToSPASS(self, raw=False, file_name_appendix="_", source_formula=[]):
         # by default the source formula is the first one
@@ -981,6 +1010,7 @@ class Generator:
 
         return path
 
+
     def translateToZ3(self, raw=False, file_name_appendix="_", source_formula=[]):
         # by default the source formula is the first one
         if not source_formula:
@@ -1160,6 +1190,7 @@ class Generator:
 
         return path
 
+
     def translateToCVC5(self, raw=False, file_name_appendix="_", source_formula=[]):
         z3_input = self.translateToZ3(raw, file_name_appendix= "__", source_formula=source_formula)
         script_path = os.path.dirname(__file__)
@@ -1206,6 +1237,7 @@ class Generator:
         os.remove(z3_input)
 
         return path
+
 
 
     def joinProver9FilesWithPattern(self, files_list, pattern, remove=True):
@@ -1257,6 +1289,14 @@ class Generator:
                 os.remove(input_file_name)
 
         return output_file_name
+
+
+    def joinZ3FilesWithPattern(self, files_list, pattern, remove=True):
+        output_file_name = ""
+        input_files_contents = []
+
+        
+
 
     def joinSPASSFilesWithPattern(self, files_list, pattern, remove=True):
         # remove the file number from file name
@@ -1429,124 +1469,7 @@ class Generator:
                 os.remove(input_file_name)
 
         return output_file_name
-    
-        def joinVampireWithPattern(self, pattern, raw=False, file_name_appendix="_", problem_type="problem7"):
 
-        source_formulas = [self.formula, self.formula2]
-        if problem_type.startswith("problem7"):
-            source_formulas.append(self.formula3)
-            source_formulas.append(self.formulaR)
-
-        # source_formula = self.formula
-        formula_body = ""
-        formula_name = "formula"
-        formula_string = f"fof({formula_name},axiom,\n\t"
-
-        for item in pattern:
-            if item == "NOT":
-                formula_body += " ~ "
-            elif item == "LP":
-                formula_body += " ( "
-            elif item == "RP":
-                formula_body += " ) "
-            elif item == "OR":
-                formula_body = formula_body[:-5] + " | "
-            elif item == "AND":
-                formula_body = formula_body[:-5] + " & "
-            elif item.startswith("FILE"):
-                source_formula = source_formulas[int(item[-1])]
-                i = 0
-                for clause in source_formula:
-                    i += 1
-                    quantifier = ''
-                    first_atom = False
-                    negation = False
-                    token_num = 0
-                    brackets = ""
-                    expression = ""
-                    formula_part = ""
-                    for token in clause:
-                        token_num += 1
-                        if token.TokenType == 'FORALL':
-                            quantifier = '!'
-                            first_atom = True
-                        elif token.TokenType == 'ATOM' and quantifier == '!':
-                            if str(token)[0] == '-':
-                                if first_atom:
-                                    negation = True
-                                    formula_part += f"{quantifier}[X]: (~("
-                                expression += f"~{str(token)[1:]}(X))"
-                            else:
-                                if first_atom:
-                                    formula_part += f"{quantifier}[X]: ("
-                                expression += f"{str(token)[0:]}(X))"
-                            brackets += "("
-                            first_atom = False
-                        elif token.TokenType == 'OR':
-                            expression += " | "
-                        elif token.TokenType == 'IMP':
-                            expression += " => "
-
-                        elif token.TokenType == 'EXISTS':
-                            quantifier = '?'
-                            first_atom = True
-                        elif token.TokenType == 'ATOM' and quantifier == '?':
-                            if first_atom:
-                                if len(clause) == 2:
-                                    formula_part += f"{quantifier}[X]: ("
-                                else:
-                                    formula_part += f"![X]: {quantifier}[X1]: ("
-                            if str(token)[0] == '-':
-                                if token_num % 4 == 0:
-                                    expression += f"~{str(token)[1:]}(X1))"
-                                else:
-                                    expression += f"~{str(token)[1:]}(X))"
-                            else:
-                                if token_num % 4 == 0:
-                                    expression += f"{str(token)[0:]}(X1))"
-                                else:
-                                    expression += f"{str(token)[0:]}(X))"
-                            brackets += "("
-                            first_atom = False
-
-                        # print(f"{token.TokenType} {token} {token_num}")
-
-                    expression = formula_part + brackets + expression
-                    if negation:
-                        expression += ")"
-                    # if quantifier == '?' and len(clause) < 3:
-                    #     expression += "))"
-                    formula_body += expression + ") &\n"
-        # # problem7a
-        # if problem_type == "problem7a":
-        #     formula_string += formula_body[:-2] + ") ))))).\n"
-        # # problem7b
-        # if problem_type == "problem7b":
-        #     formula_string += formula_body[:-2] + ") ))))) ))))).\n"
-        # # problem8a problem8c
-        # if problem_type == "problem8a" or problem_type == "problem8c":
-        #     formula_string += formula_body[:-5] + ") ))) ))).\n"
-        # # problem8b
-        # if problem_type == "problem8b":
-        #     formula_string += formula_body[:-5] + ") ))).\n"
-        formula_string += formula_body[:-5] + ") ))).\n"
-
-        # build file name and path
-        script_path = os.path.dirname(__file__)
-        os_sep = os.sep
-        file_name = f'{self.output_file_name}{file_name_appendix}vampire.p'
-
-        # the file is saved in a folder called "generated_files", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}generated_files'
-        if not os.path.exists(dir_path):
-            os.mkdir(dir_path)
-
-        path = f'{dir_path}{os_sep}{file_name}'
-
-        # save clauses to file
-        with open(path, "w+") as file:
-            file.write(formula_string)
-        return path
 
     # Diagnostic
     def printFormula(self, source=[]):
@@ -1560,8 +1483,25 @@ class Generator:
                 print(token, end=' ')
             print(']')
 
-    def joinTPTPFilesWithPattern(self, files_list, pattern, remove=True):
-        
+
+    def joinTPTPFilesWithPattern(self, files_list, pattern, prover_name, remove=True):
+        output_file_name = 'xyz'
+        input_files_contents = []
+
+        # load files contents into a list
+        for input_file_name in files_list:
+            with open(input_file_name, "r") as input_file:
+                # they should contain one line
+                for line in input_file:
+                    input_files_contents.append(line)
+                    break
+
+        final_formula = [] 
+
+        for item in pattern:
+            pass
+
+
 
     def saveFormulas(self):
         # for each generated formula create a seperate file and
@@ -1594,6 +1534,7 @@ class Generator:
                     for token in clause:
                         file.write(str(token) + ' ')
                     file.write(']\n')
+
 
     def __getAtomStr(self, token, time_str):
         # translate an atom token to SPASS format
