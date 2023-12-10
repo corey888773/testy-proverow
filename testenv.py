@@ -18,9 +18,9 @@ class TestEnv:
 
     def makeTests(self):
         # open a file to log errors into
-        with open('./generated_files_out/error_log.txt','a') as erlog:
+        with open(f'{curr_dir}{os.sep}data{os.sep}error_log.txt','a') as erlog:
             # open a .csv file for results
-            with open('./generated_files_out/test_session_results.csv', 'w', newline='') as csvfile:
+            with open(f'{curr_dir}{os.sep}data{os.sep}test_session_results.csv', 'w', newline='') as csvfile:
                 # setup CSV writer with comma separator and standard quotes character
                 results_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 # write column names row
@@ -60,7 +60,6 @@ class TestEnv:
                    
                     # read parameters, representing CSV columns, from test case object and save them to a list
                     try:
-                        pass
                         test_stats = [case.parameters_list[0]]
                         test_stats.append(round(case.parameters_list[3]*case.parameters_list[5]))
                         test_stats.append(case.parameters_list[1])
@@ -127,11 +126,11 @@ class TestEnv:
         for attempt in range(1, 4):
             # include the attempt number in output file name
 
-            output_dir = f'{curr_dir}/generated_files_out/{prover_name}'
+            output_dir = f'{curr_dir}{os.sep}data{os.sep}generated_files_out{os.sep}{prover_name}'
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
 
-            current_output_file = f'{output_dir}/{self.filenames["output"]}_attempt{attempt}_{prover_name}.out'
+            current_output_file = f'{output_dir}{os.sep}{self.filenames["output"]}_attempt{attempt}_{prover_name}.out'
             try:
                 # run prover and read output file
                 usage_dict = runner.performMeasurements(current_output_file, os_specific_stats=config.OS_SPECIFIC_STATS)
@@ -174,7 +173,7 @@ class TestEnv:
                 else:
                     if line == "end of problem":
                         # the problem block has ended
-                        with open('./generated_files_out/error_log.txt','a') as erlog:
+                        with open(f'{curr_dir}{os.sep}data{os.sep}generated_files_out{os.sep}error_log.txt','a') as erlog:
                             try:
                                 # generate test cases with current case maker and add them to test cases list
                                 new_cases = current_case_maker.makeCases()

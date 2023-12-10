@@ -163,7 +163,6 @@ def analyseVampireOrSnake(out_file : str, prover : str,
 
                 elif "SZS status" in line:
                     result = line.split(" ")[-3].rstrip().replace('\n', '')
-                    print(result)
                     if result in SAT_MAP:
                         ctx.sat = SAT_MAP[result]
                     else:
