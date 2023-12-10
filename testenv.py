@@ -5,8 +5,9 @@ import os
 import subprocess
 from statistics import mean, mode
 from customerrors import RFGError, RFGTimeoutError
+from config import config
 
-MAIN_DIR = os.path.dirname(os.path.abspath(__file__))
+curr_dir = os.path.dirname(os.path.abspath(__file__))
 
 class TestEnv:
     def __init__(self, config_file_path):
@@ -126,13 +127,18 @@ class TestEnv:
         for attempt in range(1, 4):
             # include the attempt number in output file name
 
-            output_dir = f'{MAIN_DIR}/generated_files_out/{prover_name}'
+            output_dir = f'{curr_dir}/generated_files_out/{prover_name}'
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
 
             current_output_file = f'{output_dir}/{self.filenames["output"]}_attempt{attempt}_{prover_name}.out'
-            # run prover and read output file
-            usage_dict = runner.performMeasurements(current_output_file, os_specific_stats="/usr/bin/time -l")
+            try:
+                # run prover and read output file
+                usage_dict = runner.performMeasurements(current_output_file, os_specific_stats=config.OS_SPECIFIC_STATS)
+            except Exception as e:
+                print(e)
+                # if timeout error is raised, save the results as timeout
+                usage_dict = {"memory": -1, "time": -1, "sat": "timeout"}
 
             # save results in lists
             memory_usages.append(usage_dict["memory"])

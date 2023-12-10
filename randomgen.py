@@ -166,7 +166,7 @@ class Generator:
         result["vampire_input"] = self.translateDfgToTptp('vampire', spass_input_file)
         result["snake_input"] = self.translateDfgToTptp('snake', spass_input_file)
         result["e_input"] = self.translateDfgToTptp('e', spass_input_file)
-        result["cvc5_input"] = self.translateZ3ToSmtLib2('cvc5', z3_input_file, remove=False)
+        result["cvc5_input"] = self.translateZ3ToSmt2('cvc5', z3_input_file)
         result["prover9_input"] = prov9_input_file
         result["spass_input"] = spass_input_file
         result["z3_input"] = z3_input_file
@@ -1202,7 +1202,7 @@ class Generator:
         return path
 
 
-    def translateZ3ToSmtLib2(self, prover_name, z3_input_file, file_name_appendix="_", raw=False, remove=True):
+    def translateZ3ToSmt2(self, prover_name, z3_input_file, file_name_appendix="_", raw=False, remove=True):
         script_path = os.path.dirname(__file__)
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}{prover_name}.in'

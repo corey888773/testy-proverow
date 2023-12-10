@@ -1,3 +1,7 @@
+from typing import Callable, Tuple
+from config import config
+
+
 class AnalyseCtx:
     def __init__(self, prover : str, state : str):
         self.prover = prover # name of the prover
@@ -11,7 +15,8 @@ class AnalyseCtx:
         return {"prover" : self.prover, "memory": self.total_memory, "time": self.total_time, "sat": self.sat}
 
 
-def analyseP9(out_file : str, prover : str) -> AnalyseCtx:
+def analyseP9(out_file : str, prover : str, 
+                os_specyfic_analysis : Callable[[str], Tuple[str, str]]=None) -> AnalyseCtx:
     ctx = AnalyseCtx(prover, "P9_FindStatisticsBlock")
 
     with open(out_file,'r') as f:
@@ -58,10 +63,18 @@ def analyseP9(out_file : str, prover : str) -> AnalyseCtx:
                     ctx.success = True
                     break
 
+    if os_specyfic_analysis != None:
+        time, memory = os_specyfic_analysis(out_file)
+        ctx.total_time = time
+        ctx.total_memory = memory
+        ctx.state="P9_Success"
+        ctx.success = True
+
     return ctx
 
 
-def analyseSPASS(out_file : str, prover : str) -> AnalyseCtx:
+def analyseSPASS(out_file : str, prover : str, 
+                os_specyfic_analysis : Callable[[str], Tuple[str, str]]=None) -> AnalyseCtx:
     ctx = AnalyseCtx(prover, "SP_FindResult")
 
     valid_lines = 0
@@ -123,11 +136,21 @@ def analyseSPASS(out_file : str, prover : str) -> AnalyseCtx:
             ctx.state = "SP_Success"
             ctx.success = True
 
+    if os_specyfic_analysis != None:
+        time, memory = os_specyfic_analysis(out_file)
+        ctx.total_time = time
+        ctx.total_memory = memory
+        ctx.state="SP_Success"
+        ctx.success = True
+
     return ctx
 
 
-def analyseVampireOrSnake(out_file : str, prover : str) -> AnalyseCtx:
+def analyseVampireOrSnake(out_file : str, prover : str, 
+                os_specyfic_analysis : Callable[[str], Tuple[str, str]]=None) -> AnalyseCtx:
     ctx = AnalyseCtx(prover, "VS_FindResult")
+
+    SAT_MAP = {"Unsatisfiable" : "False", "Satisfiable" : "True"}
 
     with open(out_file,'r') as f:
         for line in f:
@@ -138,8 +161,13 @@ def analyseVampireOrSnake(out_file : str, prover : str) -> AnalyseCtx:
                 if "Memory used" in line:
                     ctx.total_memory=int(line.split(":")[-1])
 
-                elif "Termination reason" in line:
-                    ctx.sat = str(line.split(":")[-1][1:] == "Success")
+                elif "SZS status" in line:
+                    result = line.split(" ")[-3].rstrip().replace('\n', '')
+                    print(result)
+                    if result in SAT_MAP:
+                        ctx.sat = SAT_MAP[result]
+                    else:
+                        ctx.sat = "unknown"
                     
                 elif "Success in time" in line:
                     ctx.total_time=float(line.split(" ")[-2])
@@ -149,23 +177,36 @@ def analyseVampireOrSnake(out_file : str, prover : str) -> AnalyseCtx:
                     ctx.success = True
                     break
             
+    if os_specyfic_analysis != None:
+        time, memory = os_specyfic_analysis(out_file)
+        ctx.total_time = time
+        ctx.total_memory = memory
+        ctx.state="VS_Success"
+        ctx.success = True
+
     return ctx
 
 
-def analyseZ3(out_file : str, prover : str) -> AnalyseCtx:
+def analyseZ3(out_file : str, prover : str, 
+                os_specyfic_analysis : Callable[[str], Tuple[str, str]]=None) -> AnalyseCtx:
     ctx = AnalyseCtx(prover, "Z3_FindResult")
 
-    with open(out_file,'r') as f:
-        for line in f:
-            if not line.startswith(('=','%','G','M','U',"SPASS",'\t',' ','u','s','d')):
-                continue
+    SAT_MAP = {"sat": "True", "unsat": "False"}
 
+    with open(out_file,'r') as f:
+        for idx, line in enumerate(f):
             if ctx.state == "Z3_FindResult":
+                # result is in the first line
+                if idx == 0:
+                    line = line.split(" ")
+                    result = line[0].rstrip().replace('\n', '')
+                    if result in SAT_MAP:
+                        ctx.sat = SAT_MAP[result]
+                    else:
+                        ctx.sat = "unknown"
+
                 if "memory" in line:
                     ctx.total_memory = int(float(line.split(" ")[-1]) * 100)
-
-                elif "sat" in line:
-                    ctx.sat = str(line==" sat")
 
                 elif "unknown" in line:
                     ctx.sat = "unknown"
@@ -178,10 +219,18 @@ def analyseZ3(out_file : str, prover : str) -> AnalyseCtx:
                     ctx.success = True
                     break
 
+    if os_specyfic_analysis != None:
+        time, memory = os_specyfic_analysis(out_file)
+        ctx.total_time = time
+        ctx.total_memory = memory
+        ctx.state="Z3_Success"
+        ctx.success = True
+
     return ctx
 
 
-def analyseCVC5(out_file : str, prover : str) -> AnalyseCtx:
+def analyseCVC5(out_file : str, prover : str, 
+                os_specyfic_analysis : Callable[[str], Tuple[str, str]]=None) -> AnalyseCtx:
     ctx = AnalyseCtx(prover, "CV_FindResult")
 
     SAT_MAP = {"sat": "True", "unsat": "False"}
@@ -210,10 +259,18 @@ def analyseCVC5(out_file : str, prover : str) -> AnalyseCtx:
                     ctx.success = True
                     break
 
+    if os_specyfic_analysis != None:
+        time, memory = os_specyfic_analysis(out_file)
+        ctx.total_time = time
+        ctx.total_memory = memory
+        ctx.state="CV_Success"
+        ctx.success = True
+
     return ctx
 
 
-def analyseE(out_file : str, prover : str) -> AnalyseCtx: # TODO - write analyser for E
+def analyseE(out_file : str, prover : str, 
+            os_specyfic_analysis : Callable[[str], Tuple[str, str]]=None) -> AnalyseCtx:
     ctx = AnalyseCtx(prover, "E_FindResult")
 
     SAT_MAP = {"Satisfiable": "True", "Unsatisfiable": "False"}
@@ -228,7 +285,7 @@ def analyseE(out_file : str, prover : str) -> AnalyseCtx: # TODO - write analyse
                     ctx.total_memory = int(line.split(" ")[-2])
 
                 elif "SZS status" in line:
-                    result = line.split(" ")[-1]
+                    result = line.split(" ")[-1].rstrip().replace('\n', '')
                     if result in SAT_MAP:
                         ctx.sat = SAT_MAP[result]
                     else:
@@ -242,11 +299,41 @@ def analyseE(out_file : str, prover : str) -> AnalyseCtx: # TODO - write analyse
                     ctx.success = True
                     break
 
-    ctx.success = True
+    if os_specyfic_analysis != None:
+        time, memory = os_specyfic_analysis(out_file)
+        ctx.total_time = time
+        ctx.total_memory = memory
+        ctx.state="E_Success"
+        ctx.success = True
+
     return ctx
 
 
-prover_anaylser = { 
+def analyse_macos_specifc_stats(out_file):
+    time = 0
+    memory = 0
+
+    with open(out_file,'r') as f:
+        # for the last 19 lines
+        for line in f.readlines()[-19:]:
+            # if line containser real user sys
+            if all(x in line for x in ["real", "user", "sys"]):
+                # strip the spaces and split by space
+                line = line.strip().split(" ")
+                time = float(line[0])
+
+            if "maximum resident set size" in line:
+                line = line.strip().split(" ")
+                memory = float(line[0])
+
+    return time, memory
+                
+
+OS_SPECIFIC_STATS = {
+    "macos_arm64": analyse_macos_specifc_stats
+}
+
+PROVER_ANALYSER = { 
     "prover9": analyseP9,
     "spass": analyseSPASS,
     "vampire": analyseVampireOrSnake,
@@ -255,11 +342,11 @@ prover_anaylser = {
     "cvc5": analyseCVC5,
     "e": analyseE
 }   
-
 def getMeasuresFromFile(prover, out_file) -> dict:
-    func = prover_anaylser[prover]
+    func = PROVER_ANALYSER[prover]
+    os_specific_stats_func = OS_SPECIFIC_STATS[config.OS_NAME]
 
-    ctx = func(out_file, prover)
+    ctx = func(out_file, prover, os_specific_stats_func)
 
     if ctx.success == False:
         att = out_file.split(".")[:-1][0]
