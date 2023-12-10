@@ -2,8 +2,8 @@ import subprocess
 import os
 
 from config import config
-from customerrors import RFGError, RFGTimeoutError
-from analyse_provrun import getMeasuresFromFile
+from common.customerrors import RFGError, RFGTimeoutError
+from run.analyse_provrun import getMeasuresFromFile
 
 class ProverRunner:
     def __init__(self, prover, input_file):

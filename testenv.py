@@ -1,10 +1,10 @@
-from randomgen import Generator
-import provrun
+from generation.randomgen import Generator
+from run import provrun
 import csv
 import os
 import subprocess
 from statistics import mean, mode
-from customerrors import RFGError, RFGTimeoutError
+from common.customerrors import RFGError, RFGTimeoutError
 from config import config
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))

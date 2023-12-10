@@ -1,12 +1,14 @@
 import random
-import utils
+from common import utils
 import os
 from scipy import stats
 from collections import defaultdict
 
 from config import config
 
-from customerrors import RFGError
+from common.customerrors import RFGError
+
+main_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class Generator:
     def __init__(self, test_type, precentage_of_safty_clauses=50, clause_lengths=[2,3,4,6,8,10],
@@ -591,9 +593,8 @@ class Generator:
 
     def translateDfgToTptp(self, prover_name, spass_input, file_name_appendix='_') -> str:
         # build file name and path
-        script_path = os.path.dirname(__file__)
         os_sep = os.sep
-        dir_path = f'{script_path}{os_sep}data{os_sep}generated_files_in{os_sep}{prover_name}'
+        dir_path = f'{main_dir}{os_sep}data{os_sep}generated_files_in{os_sep}{prover_name}'
         file_name = f'{self.output_file_name}{file_name_appendix}{prover_name}.in'
 
         if not os.path.exists(dir_path):
@@ -681,12 +682,12 @@ class Generator:
 
         for prover_name in prover_names:
             # build file name and path
-            script_path = os.path.dirname(__file__)
+
             os_sep = os.sep
             file_name = f'{self.output_file_name}{file_name_appendix}{prover_name}.in'
 
             # the file is saved in a folder called "generated_files_in", located in the same folder as this script
-            dir_path = f'{script_path}{os_sep}data{os_sep}generated_files_in{os_sep}{prover_name}' 
+            dir_path = f'{main_dir}{os_sep}data{os_sep}generated_files_in{os_sep}{prover_name}' 
             if not os.path.exists(dir_path):
                 os.mkdir(dir_path)
 
@@ -786,12 +787,11 @@ class Generator:
             clause_str_list.append(clause_str)
 
         # build file name and path
-        script_path = os.path.dirname(__file__)
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}prover9.in'
 
         # the file is saved in a folder called "generated_files_in", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}data{os_sep}generated_files_in/prover9'
+        dir_path = f'{main_dir}{os_sep}data{os_sep}generated_files_in/prover9'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -987,12 +987,11 @@ class Generator:
             ]
 
         # build file name and path
-        script_path = os.path.dirname(__file__)
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}spass.in'
         
         # the file is saved in a folder called "generated_files_in", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}data{os_sep}generated_files_in/spass'
+        dir_path = f'{main_dir}{os_sep}data{os_sep}generated_files_in/spass'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -1158,12 +1157,11 @@ class Generator:
         predicates.append(f'GTE = Function(\'GTE\', Object, Object, BoolSort())')
 
         # build file name and path
-        script_path = os.path.dirname(__file__)
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}z3.py'
 
         # the file is saved in a folder called "generated_files_in", located in the same folder as this script
-        dir_path = f'{script_path}{os_sep}data{os_sep}generated_files_in/z3'
+        dir_path = f'{main_dir}{os_sep}data{os_sep}generated_files_in/z3'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -1203,7 +1201,6 @@ class Generator:
 
 
     def translateZ3ToSmt2(self, prover_name, z3_input_file, file_name_appendix="_", raw=False, remove=True):
-        script_path = os.path.dirname(__file__)
         os_sep = os.sep
         file_name = f'{self.output_file_name}{file_name_appendix}{prover_name}.in'
 
@@ -1221,8 +1218,8 @@ class Generator:
 
             z3_input_lines.append('s.pop()\n')
 
-        # run dir_path = f'{script_path}{os_sep}data{os_sep}generated_files_in/PROVER_NAME'
-        dir_path = f'{script_path}{os_sep}data{os_sep}generated_files_in{os_sep}{prover_name}'
+        # run dir_path = f'{main_dir}{os_sep}data{os_sep}generated_files_in/PROVER_NAME'
+        dir_path = f'{main_dir}{os_sep}data{os_sep}generated_files_in{os_sep}{prover_name}'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
 
@@ -1577,28 +1574,28 @@ class Generator:
         # for each generated formula create a seperate file and
         # write each clause as list of tokens separated by spaces, encapsulated in square brackets
         if self.formula:
-            with open(f'{os.path.dirname(__file__)}{os.sep}data{os.sep}generated_files_in/formulas/F1{os.sep}{self.output_file_name}_F1_generated.txt', "w") as file:
+            with open(f'{main_dir}{os.sep}data{os.sep}generated_files_in/formulas/F1{os.sep}{self.output_file_name}_F1_generated.txt', "w") as file:
                 for clause in self.formula:
                     file.write('[ ')
                     for token in clause:
                         file.write(str(token) + ' ')
                     file.write(']\n')
         if self.formula2:
-            with open(f'{os.path.dirname(__file__)}{os.sep}data{os.sep}generated_files_in/formulas/F2{os.sep}{self.output_file_name}_F2_generated.txt', "w") as file:
+            with open(f'{main_dir}{os.sep}data{os.sep}generated_files_in/formulas/F2{os.sep}{self.output_file_name}_F2_generated.txt', "w") as file:
                 for clause in self.formula2:
                     file.write('[ ')
                     for token in clause:
                         file.write(str(token) + ' ')
                     file.write(']\n')
         if self.formula3:
-            with open(f'{os.path.dirname(__file__)}{os.sep}data{os.sep}generated_files_in/formulas/F3{os.sep}{self.output_file_name}_F3_generated.txt', "w") as file:
+            with open(f'{main_dir}{os.sep}data{os.sep}generated_files_in/formulas/F3{os.sep}{self.output_file_name}_F3_generated.txt', "w") as file:
                 for clause in self.formula3:
                     file.write('[ ')
                     for token in clause:
                         file.write(str(token) + ' ')
                     file.write(']\n')
         if self.formulaR:
-            with open(f'{os.path.dirname(__file__)}{os.sep}data{os.sep}generated_files_in/formulas/R{os.sep}{self.output_file_name}_FR_generated.txt', "w") as file:
+            with open(f'{main_dir}{os.sep}data{os.sep}generated_files_in/formulas/R{os.sep}{self.output_file_name}_FR_generated.txt', "w") as file:
                 for clause in self.formulaR:
                     file.write('[ ')
                     for token in clause:

@@ -1,6 +1,6 @@
 from testenv import TestEnv
-from randomgen import Generator
-from provrun import ProverRunner
+from generation.randomgen import Generator
+from run.provrun import ProverRunner
 import os
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))

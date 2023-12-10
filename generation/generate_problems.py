@@ -1,4 +1,4 @@
-from randomgen import Generator
+from generation.randomgen import Generator
 
 n = [50, 100, 200, 500, 1000]
 m = [2, 3, 4, 5]
