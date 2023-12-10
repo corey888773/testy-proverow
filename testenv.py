@@ -28,7 +28,11 @@ class TestEnv:
                     "Vampire sat", "Vampire memory","Vampire time", \
                     "Snake sat", "Snake memory","Snake time", \
                     "E sat", "E memory","E time", \
-                    "Z3 sat", "Z3 memory","Z3 time"])
+                    "Z3 sat", "Z3 memory","Z3 time", \
+                    "SPASS sat", "SPASS memory","SPASS time", \
+                    "CVC5 sat", "CVC5 memory","CVC5 time", \
+                    "Prover9 sat", "Prover9 memory","Prover9 time"])
+
                 for case in self.testCases:
                     try:
                         # create Generator object for current test case (this also cause formula to be generated and saved to a text file)
@@ -39,57 +43,71 @@ class TestEnv:
                         # log any errors to error log file
                         erlog.write(str(rfg_err))
                     
-                    # vampire_stats = self.runProver("vampire")
+                    vampire_stats = self.runProver("vampire")
                     
-                    # snake_stats = self.runProver("snake")
+                    snake_stats = self.runProver("snake")
                     
-                    # e_stats = self.runProver("e")
+                    e_stats = self.runProver("e")
                  
                     z3_stats = self.runProver("z3")
 
-                    # spass_stats = self.runProver("spass")
+                    spass_stats = self.runProver("spass")
 
                     cvc5_stats = self.runProver("cvc5")
                     
-                    # prover9_stats = self.runProver("prover9")
-                        
-                    #cvc4_stats = self.runProver("cvc4")
+                    prover9_stats = self.runProver("prover9")
                    
                     # read parameters, representing CSV columns, from test case object and save them to a list
                     try:
                         pass
-                        # test_stats = [case.parameters_list[0]]
-                        # test_stats.append(round(case.parameters_list[3]*case.parameters_list[5]))
-                        # test_stats.append(case.parameters_list[1])
-                        # cl_string = ""
-                        # for cl in case.parameters_list[2]:
-                        #     cl_string += str(cl) + ", "
-                        # test_stats.append(cl_string[:-2])
-                        # test_stats.append(case.parameters_list[3])
-                        # if (case.parameters_list[4] and case.parameters_list[0] in \
-                        #     ["problem6","problem7a","problem7b","problem8a","problem8b","problem8c"]) \
-                        #     or case.parameters_list[0] == "problem2":
-                        #     test_stats.append("poisson")
-                        # else:
-                        #     test_stats.append(case.parameters_list[6])
-                        # #test_stats.append(sat_result)
-                        # test_stats.append(vampire_stats["sat"])
-                        # test_stats.append(vampire_stats["memory"])
-                        # test_stats.append(vampire_stats["time"])
+                        test_stats = [case.parameters_list[0]]
+                        test_stats.append(round(case.parameters_list[3]*case.parameters_list[5]))
+                        test_stats.append(case.parameters_list[1])
+                        cl_string = ""
+                        for cl in case.parameters_list[2]:
+                            cl_string += str(cl) + ", "
+                        test_stats.append(cl_string[:-2])
+                        test_stats.append(case.parameters_list[3])
+                        if (case.parameters_list[4] and case.parameters_list[0] in \
+                            ["problem6","problem7a","problem7b","problem8a","problem8b","problem8c"]) \
+                            or case.parameters_list[0] == "problem2":
+                            test_stats.append("poisson")
+                        else:
+                            test_stats.append(case.parameters_list[6])
+
+                        test_stats.append(vampire_stats["sat"])
+                        test_stats.append(vampire_stats["memory"])
+                        test_stats.append(vampire_stats["time"])
                         
-                        # test_stats.append(snake_stats["sat"])
-                        # test_stats.append(snake_stats["memory"])
-                        # test_stats.append(snake_stats["time"])
+                        test_stats.append(snake_stats["sat"])
+                        test_stats.append(snake_stats["memory"])
+                        test_stats.append(snake_stats["time"])
+
+                        test_stats.append(e_stats["sat"])
+                        test_stats.append(e_stats["memory"])
+                        test_stats.append(e_stats["time"])
                         
-                        # test_stats.append(z3_stats["sat"])
-                        # test_stats.append(z3_stats["memory"])
-                        # test_stats.append(z3_stats["time"])
+                        test_stats.append(z3_stats["sat"])
+                        test_stats.append(z3_stats["memory"])
+                        test_stats.append(z3_stats["time"])
+
+                        test_stats.append(spass_stats["sat"])
+                        test_stats.append(spass_stats["memory"])
+                        test_stats.append(spass_stats["time"])
+
+                        test_stats.append(cvc5_stats["sat"])
+                        test_stats.append(cvc5_stats["memory"]) 
+                        test_stats.append(cvc5_stats["time"])
+
+                        test_stats.append(prover9_stats["sat"])
+                        test_stats.append(prover9_stats["memory"])
+                        test_stats.append(prover9_stats["time"])
                         
-                        # # write the list as a row to CSV
-                        # results_writer.writerow(test_stats)
+                        # write the list as a row to CSV
+                        results_writer.writerow(test_stats)
 
                         # kill all prover processes that did not end by themselves
-                        # subprocess.call('pkill -f "prover9|SPASS"', shell=True)
+                        subprocess.call('pkill -f "prover9|SPASS"', shell=True)
                     except RFGError as rfg_err:
                         # log any errors to error log file
                         erlog.write(str(rfg_err))

@@ -6,7 +6,7 @@ import os
 MAIN_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def main() -> None:
-    enviroment = TestEnv(MAIN_DIR + "/dane_testowe/scenario4")
+    enviroment = TestEnv(MAIN_DIR + "/dane_testowe/scenario3")
     enviroment.makeTests()
 
     # test = Generator('problem3', clauses_num=2000, atoms_num_coeff=0.5)

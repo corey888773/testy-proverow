@@ -10,7 +10,7 @@ class ProverRunner:
         self.input_file = input_file
         self.prover = prover
 
-    def performMeasurements(self, output_file, time_limit=300, os_specific_stats='') -> dict:
+    def performMeasurements(self, output_file, time_limit=60, os_specific_stats='') -> dict:
         try:
             # run the prover with given file
             self.runProver(output_file, time_limit, os_specific_stats)
@@ -31,13 +31,13 @@ class ProverRunner:
 
         if self.prover == 'prover9':
             # run Prover9 with search time limit (parameter -t) and using a file (parameter -f), redirect the output to a file
-            command = [os_specific_stats, '~/solvers/prover9/bin/prover9 -t', str(time_limit), '-f', self.input_file, '>', self.output_file]
+            command = [os_specific_stats, '~/solvers/prover9/bin/prover9 -t', str(time_limit), '-f', self.input_file, '&>', self.output_file]
             command = ' '.join(command)
             # execute the command in a new process, with additional time_limit for the entire execution
             subprocess.call(command, shell=True, timeout=time_limit)
         elif self.prover == 'spass':
             # run SPASS Prover with time limit (parameter -TimeLimit), redirect the output to a file
-            command = [f'~/solvers/spass/bin/SPASS -TimeLimit={str(time_limit)}', self.input_file, '>', self.output_file]
+            command = [os_specific_stats, f'~/solvers/spass/bin/SPASS -TimeLimit={str(time_limit)}', self.input_file, '&>', self.output_file]
             command = ' '.join(command)
             # execute the command in a new process
             subprocess.call(command, shell=True)
@@ -52,19 +52,18 @@ class ProverRunner:
             # execute the command in a new process
             subprocess.call(command, shell=True)
         elif self.prover == 'vampire':
-            command = [os_specific_stats, '~/solvers/vampire/bin/vampire_rel', '--mode', 'casc_sat', '-t', str(time_limit), '<', self.input_file, '>', self.output_file]
+            command = [os_specific_stats, '~/solvers/vampire/bin/vampire_rel', '--mode', 'casc_sat', '-t', str(time_limit), '<', self.input_file, '&>', self.output_file]
             command = ' '.join(command)
             # execute the command in a new process
             subprocess.call(command, shell=True)
         elif self.prover == 'snake':
-            command = [os_specific_stats, '~/solvers/snake/bin/vampire_rel --input_syntax tptp --proof off --output_axiom_names on --mode portfolio --schedule snake_tptp_uns --cores 1 -m 12000','-t', str(time_limit), self.input_file, '>', self.output_file]
+            command = [os_specific_stats, '~/solvers/snake/bin/vampire_rel --input_syntax tptp --proof off --output_axiom_names on --mode portfolio --schedule snake_tptp_uns --cores 1 -m 12000','-t', str(time_limit), self.input_file, '&>', self.output_file]
             command = ' '.join(command)
             # execute the command in a new process
             subprocess.call(command, shell=True)
         elif self.prover == 'e':
-            command = [os_specific_stats, f'~/solvers/e/bin/eprover --cpu-limit={str(time_limit)}', '-sR', self.input_file, '>', self.output_file]
+            command = [os_specific_stats, f'~/solvers/e/bin/eprover --cpu-limit={str(time_limit)}', '-sR', self.input_file, '&>', self.output_file]
             command = ' '.join(command)
-            print(command)
             subprocess.call(command, shell=True)
 
             #~/solvers/spass/bin/dfg2tptp 
