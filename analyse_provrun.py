@@ -184,23 +184,26 @@ def analyseZ3(out_file : str, prover : str) -> AnalyseCtx:
 def analyseCVC5(out_file : str, prover : str) -> AnalyseCtx:
     ctx = AnalyseCtx(prover, "CV_FindResult")
 
-    with open(out_file,'r') as f:
-        for line in f:
-            if not line.startswith(('=','%','G','M','U',"SPASS",'\t',' ','u','s','d')):
-                continue
+    SAT_MAP = {"sat": "True", "unsat": "False"}
 
-            elif ctx.state == "CV_FindResult":
+    with open(out_file,'r') as f:
+        for idx, line in enumerate(f):
+            if ctx.state == "CV_FindResult":
                 if "resourceUnitsUsed" in line:
                     ctx.total_memory = int(line.split(" ")[-1])
 
-                elif "sat" in line and ":" not in line:
-                    ctx.sat=str(line=="sat")
-
-                elif "unknown" in line and ":" not in line:
-                    ctx.sat=str("unknown")
+                if idx == 0:
+                    line = line.split(" ")
+                    result = line[0].replace('\n', '')
+                    if result in SAT_MAP:
+                        ctx.sat = SAT_MAP[result]
+                    else:
+                        ctx.sat = "unknown"
 
                 elif "totalTime" in line:
-                    ctx.total_time = float(line.split(" ")[-1])
+                    total_time_in_ms = line.split(" ")[-1].rstrip() # e.g 21ms
+                    ctx.total_time = float(total_time_in_ms[:-2]) / 1000 # convert to seconds
+                    
 
                 if ctx.total_memory != 0 and ctx.sat != None and ctx.total_time != 0:
                     ctx.state="CV_Success"
@@ -213,7 +216,7 @@ def analyseCVC5(out_file : str, prover : str) -> AnalyseCtx:
 def analyseE(out_file : str, prover : str) -> AnalyseCtx: # TODO - write analyser for E
     ctx = AnalyseCtx(prover, "E_FindResult")
 
-    sat_map = {"Satisfiable": "True", "Unsatisfiable": "False"}
+    SAT_MAP = {"Satisfiable": "True", "Unsatisfiable": "False"}
 
     with open(out_file,'r') as f:
         for line in f:
@@ -226,8 +229,8 @@ def analyseE(out_file : str, prover : str) -> AnalyseCtx: # TODO - write analyse
 
                 elif "SZS status" in line:
                     result = line.split(" ")[-1]
-                    if result in sat_map:
-                        ctx.sat = sat_map[result]
+                    if result in SAT_MAP:
+                        ctx.sat = SAT_MAP[result]
                     else:
                         ctx.sat = "unknown"
 

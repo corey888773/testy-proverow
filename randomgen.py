@@ -113,6 +113,10 @@ class Generator:
             spass_file2 = self.translateToSPASS(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
             spass_file3 = self.translateToSPASS(raw=True, file_name_appendix="_file3_", source_formula=self.formula3)
             spass_fileR = self.translateToSPASS(raw=True, file_name_appendix="_fileR_", source_formula=self.formulaR)
+            z3_file1 = self.translateToZ3(raw=True, file_name_appendix="_file1_")
+            z3_file2 = self.translateToZ3(raw=True, file_name_appendix="_file2_", source_formula=self.formula2, file_idx=1)
+            z3_file3 = self.translateToZ3(raw=True, file_name_appendix="_file3_", source_formula=self.formula3, file_idx=2)
+            z3_fileR = self.translateToZ3(raw=True, file_name_appendix="_fileR_", source_formula=self.formulaR, file_idx=3)
 
             # create a pattern for joining files
             if self.test_type[-1] == 'a':
@@ -124,12 +128,16 @@ class Generator:
             # join saved files into one file using created pattern (and delete the original files afterwards)
             prov9_input_file = self.joinProver9FilesWithPattern([prov9_file1,prov9_file2,prov9_file3,prov9_fileR],pattern, False)
             spass_input_file = self.joinSPASSFilesWithPattern([spass_file1,spass_file2,spass_file3,spass_fileR],pattern, False)
+            z3_input_file = self.joinZ3FilesWithPattern([z3_file1,z3_file2,z3_file3,z3_fileR], self.test_type, False)
+
         elif self.test_type.startswith("problem8"):
             # translate both generated formulas to provers formats and save them to files
             prov9_file1 = self.translateToProver9(raw=True, file_name_appendix="_file1_")
             prov9_file2 = self.translateToProver9(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
             spass_file1 = self.translateToSPASS(raw=True, file_name_appendix="_file1_")
             spass_file2 = self.translateToSPASS(raw=True, file_name_appendix="_file2_", source_formula=self.formula2)
+            z3_file1 = self.translateToZ3(raw=True, file_name_appendix="_file1_")
+            z3_file2 = self.translateToZ3(raw=True, file_name_appendix="_file2_", source_formula=self.formula2, file_idx=1)
 
             # create a pattern for joining files
             if self.test_type[-1] == 'a':
@@ -142,25 +150,26 @@ class Generator:
             # join saved files into one file using created pattern (and delete the original files afterwards)
             prov9_input_file = self.joinProver9FilesWithPattern([prov9_file1,prov9_file2],pattern, False)
             spass_input_file = self.joinSPASSFilesWithPattern([spass_file1,spass_file2],pattern, False)
+            z3_input_file = self.joinZ3FilesWithPattern([z3_file1,z3_file2], self.test_type, False)
         else:
             # if the problem is neither of type 7 nor 8, only one formula was generated - simply translate it and save to file
             z3_input_file = self.translateToZ3()
-            cvc5_input_file = self.translateToCVC5()
             prov9_input_file = self.translateToProver9()
             spass_input_file = self.translateToSPASS()
 
         # return paths to saved files (and path of the output file yet to be generated) with descriptions
         result = defaultdict(None)
         if not self.test_type.startswith(("problem7", "problem8")):
-            result["z3_input"] = z3_input_file
-            result["cvc5_input"] = cvc5_input_file
+            pass
             
         result["output"] = self.output_file_name
         result["vampire_input"] = self.translateDfgToTptp('vampire', spass_input_file)
         result["snake_input"] = self.translateDfgToTptp('snake', spass_input_file)
         result["e_input"] = self.translateDfgToTptp('e', spass_input_file)
+        result["cvc5_input"] = self.translateZ3ToSmtLib2('cvc5', z3_input_file, remove=False)
         result["prover9_input"] = prov9_input_file
         result["spass_input"] = spass_input_file
+        result["z3_input"] = z3_input_file
 
         return dict(result)
         # return {"vampire_input": vampire_input_file, "snake_input": snake_input_file, "z3_input": z3_input_file, "output": self.output_file_name 
@@ -1011,7 +1020,7 @@ class Generator:
         return path
 
 
-    def translateToZ3(self, raw=False, file_name_appendix="_", source_formula=[]):
+    def translateToZ3(self, raw=False, file_name_appendix="_", source_formula=[], file_idx=0):
         # by default the source formula is the first one
         if not source_formula:
             source_formula = self.formula
@@ -1160,6 +1169,8 @@ class Generator:
 
         path = f'{dir_path}{os_sep}{file_name}'
 
+        axioms_name = "axioms" + str(file_idx)
+
         # save clauses to file
         with open(path, "w+") as file:
             if not raw:
@@ -1174,70 +1185,77 @@ class Generator:
                 file.write('x = Const(\'x\', Object)\n')
                 file.write('x1 = Const(\'x1\', Object)\n')
                 file.write('\n')
-                file.write('axioms = [\n\t')
+                file.write(f'{axioms_name} = [\n\t')
                 # write clauses in Clause Normal Form
                 file.write(',\n\t'.join(clause_str_list))
                 # write the problem footer
                 file.write('\n]\n')
                 file.write('s = Solver()\n')
                 file.write('s.set(\"timeout\", 300)\n')
-                file.write('s.add(axioms)\n')
+                file.write(f's.add({axioms_name})\n')
                 file.write('print(s.check())\n')
                 file.write('print(s.statistics())\n')
             else:
                 # file format is raw: write clauses in Conjunctive Normal Form and nothing else
-                file.write("and(" + ','.join(clause_str_list) + ")")
+                file.write(f'{axioms_name} = [' + ','.join(clause_str_list) + "]")
 
         return path
 
 
-    def translateToCVC5(self, raw=False, file_name_appendix="_", source_formula=[]):
-        z3_input = self.translateToZ3(raw, file_name_appendix= "__", source_formula=source_formula)
+    def translateZ3ToSmtLib2(self, prover_name, z3_input_file, file_name_appendix="_", raw=False, remove=True):
         script_path = os.path.dirname(__file__)
         os_sep = os.sep
-        file_name = f'{self.output_file_name}{file_name_appendix}cvc5.in'
+        file_name = f'{self.output_file_name}{file_name_appendix}{prover_name}.in'
 
-        # change z3 script to generate cvc5 smt-lib2 file
-        with open(z3_input, "r") as file:
+        # change z3 script to generate PROVER_NAME smt-lib2 file
+        with open(z3_input_file, 'r') as file:
             z3_input_lines = file.readlines()
             
             # remove two last lines
             z3_input_lines = z3_input_lines[:-2]
 
+            z3_input_lines.append('s.push()\n')
+
             # add print(s.sexpr()) line
             z3_input_lines.append('print(s.sexpr())\n')
 
-        with open(z3_input, "w") as file:
-            file.writelines(z3_input_lines)
-        
+            z3_input_lines.append('s.pop()\n')
 
-        # run dir_path = f'{script_path}{os_sep}generated_files_in/cvc5'
-        dir_path = f'{script_path}{os_sep}generated_files_in{os_sep}cvc5'
+        # run dir_path = f'{script_path}{os_sep}generated_files_in/PROVER_NAME'
+        dir_path = f'{script_path}{os_sep}generated_files_in{os_sep}{prover_name}'
         if not os.path.exists(dir_path):
             os.mkdir(dir_path)
+
+        temp_file = f'{dir_path}{os_sep}{file_name}_temp.py'
+        with open(temp_file, 'w') as file:
+            file.writelines(z3_input_lines)
+
         path = f'{dir_path}{os_sep}{file_name}'
 
-        # script to generate cvc5 smt-lib2 file
-        os.system(f'python3 {z3_input} > {path}')
+        # script to generate PROVER_NAME smt-lib2 file
+        os.system(f'python3 {temp_file} > {path}')
 
         # if format is raw, return the path to the file
         if raw:
             return path
 
-        # load cvc5 input file
+        # load PROVER_NAME input file
         with open(path, "r") as file:
-            cvc5_input_lines = file.readlines()
-            cvc5_input_lines = ['(set-logic ALL)\n', '(set-option :produce-models true)\n'] + cvc5_input_lines + ['(check-sat)\n', '(get-model)\n']
+            input_lines = file.readlines()
+            input_lines =\
+                ['(set-logic ALL)\n', '(set-option :produce-models true)\n', '(set-option :finite-model-find true)\n', '(set-option :sets-ext true)\n'] +\
+                input_lines +\
+                ['(check-sat)\n', '(get-model)\n']
 
         # add header and footer
         with open(path, "w") as file:
-            file.writelines(cvc5_input_lines)
+            file.writelines(input_lines)
 
         # remove z3 temp script
-        os.remove(z3_input)
+        if remove:
+            os.remove(temp_file)
 
         return path
-
 
 
     def joinProver9FilesWithPattern(self, files_list, pattern, remove=True):
@@ -1291,11 +1309,63 @@ class Generator:
         return output_file_name
 
 
-    def joinZ3FilesWithPattern(self, files_list, pattern, remove=True):
-        output_file_name = ""
+    PATTERN_MAP = {
+        'problem7a':'pattern = Or(Not(Or(And(*axioms0), And(*axioms1), And(*axioms2))), And(*axioms3))',
+        'problem7b':'pattern = Or(Not(And(And(*axioms0), And(*axioms1), And(*axioms2))), And(*axioms3))',
+        'problem8a':'pattern = And(Or(Not(And(*axioms0)), Not(And(*axioms1))), Or(And(*axioms0), And(*axioms1)))',
+        'problem8b':'pattern = Not(And(Not(And(*axioms0)), Not(And(*axioms1))))',
+        'problem8c':'pattern = And(Or(Not(And(*axioms0)), And(*axioms1)), Not(Or(And(*axioms0), Not(And(*axioms1)))))',
+    }
+    def joinZ3FilesWithPattern(self, files_list, problem, remove=True) -> str:
+        output_file_name = files_list[0][:-11] + "z3.py"
         input_files_contents = []
 
-        
+        for input_file_name in files_list:
+            with open(input_file_name, "r") as input_file:
+                # they should contain one line
+                for line in input_file:
+                    input_files_contents.append(line)
+                    break
+
+       # convert the list of all atoms to a dictionary to eliminate atoms repetitions and add the arity of atoms predicates
+        all_atoms = [atom for atom in self.atom_counting_dict.keys()]
+
+        # create the predicates list based on the dictionary
+        predicates = []
+        for pred in all_atoms:
+            predicates.append(f'{pred} = Function(\'{pred}\', Object, BoolSort())')
+        predicates.append(f'GTE = Function(\'GTE\', Object, Object, BoolSort())')
+
+        final_formula = []
+        with open(output_file_name, "w+") as file:
+            # write the problem header
+            file.write('from z3 import *\n')
+            file.write('\n')
+            file.write('Object = DeclareSort(\'Object\')\n')
+            file.write('\n')
+            # write the symbols list
+            file.write('\n'.join(predicates))
+            file.write('\n\n')
+            file.write('x = Const(\'x\', Object)\n')
+            file.write('x1 = Const(\'x1\', Object)\n')
+            file.write('\n')
+
+            for line in input_files_contents:
+                file.write(line)
+                file.write('\n')
+
+            file.write(self.PATTERN_MAP[problem] + '\n')
+            file.write('s = Solver()\n')
+            file.write('s.set(\"timeout\", 300)\n')
+            file.write(f's.add(pattern)\n')
+            file.write('print(s.check())\n')
+            file.write('print(s.statistics())\n')
+
+        if remove:
+            for input_file_name in files_list:
+                os.remove(input_file_name)
+
+        return output_file_name
 
 
     def joinSPASSFilesWithPattern(self, files_list, pattern, remove=True):

@@ -9,61 +9,61 @@ end_of_list.
 
 list_of_symbols.
 functions[(t1,0), (t2,0)].
-predicates[(var8, 1), (var12, 1), (var14, 1), (var21, 1), (var3, 1), (var24, 1), (var19, 1), (var15, 1), (var20, 1), (var6, 1), (var4, 1), (var1, 1), (var2, 1), (var16, 1), (var7, 1), (var18, 1), (var10, 1), (var17, 1), (var13, 1), (var11, 1), (var23, 1), (var22, 1), (var9, 1), (var5, 1), (var25, 1), (GTE, 2)].
+predicates[(var2, 1), (var9, 1), (var19, 1), (var23, 1), (var21, 1), (var18, 1), (var3, 1), (var16, 1), (var7, 1), (var13, 1), (var5, 1), (var12, 1), (var10, 1), (var24, 1), (var17, 1), (var20, 1), (var11, 1), (var15, 1), (var6, 1), (var8, 1), (var22, 1), (var1, 1), (var14, 1), (var25, 1), (var4, 1), (GTE, 2)].
 end_of_list.
 
 list_of_formulae(axioms).
 formula(GTE(t2,t1)).
-formula(forall([T], not(or(var8(T), not(var12(T)), var14(T), var21(T), not(var3(T)))))).
-formula(forall([T], not(or(not(var24(T)), var19(T), var12(T), not(var15(T)), not(var14(T)))))).
-formula(forall([T], not(or(var24(T), not(var20(T)), var19(T), var6(T), var4(T))))).
-formula(forall([T], not(or(not(var24(T)), not(var1(T)), not(var2(T)), var6(T), var16(T))))).
-formula(forall([T], not(or(var16(T), not(var12(T)), var21(T), var7(T), not(var3(T)))))).
-formula(forall([T], not(or(not(var12(T)), var4(T), not(var18(T)), var8(T), not(var24(T)))))).
-formula(forall([T], not(or(var10(T), not(var6(T)), not(var24(T)), not(var20(T)), var7(T))))).
-formula(forall([T], not(or(not(var17(T)), var15(T), not(var3(T)), not(var19(T)), var8(T))))).
-formula(forall([T], not(or(not(var13(T)), not(var11(T)), not(var23(T)), var15(T), var14(T))))).
-formula(forall([T], not(or(var1(T), not(var24(T)), not(var2(T)), var17(T), not(var12(T)))))).
-formula(forall([T], not(or(not(var23(T)), not(var14(T)), var13(T), var15(T), var7(T))))).
-formula(forall([T], not(or(var8(T), var18(T), not(var23(T)), var16(T), var15(T))))).
-formula(forall([T], not(or(not(var22(T)), var3(T), var9(T), var10(T), not(var13(T)))))).
-formula(forall([T], not(or(not(var8(T)), var6(T), var9(T), var12(T), var5(T))))).
-formula(forall([T], not(or(var12(T), not(var5(T)), not(var2(T)), not(var8(T)), var13(T))))).
-formula(forall([T], not(or(not(var21(T)), var8(T), not(var22(T)), var2(T), var10(T))))).
-formula(forall([T], not(or(var1(T), not(var20(T)), not(var4(T)), not(var6(T)), not(var17(T)))))).
-formula(forall([T], not(or(var20(T), var10(T), not(var18(T)), not(var4(T)), var5(T))))).
-formula(forall([T], not(or(var2(T), not(var20(T)), not(var3(T)), not(var5(T)), not(var22(T)))))).
-formula(forall([T], not(or(not(var7(T)), not(var17(T)), not(var14(T)), var5(T), var22(T))))).
-formula(forall([T], not(or(var6(T), not(var25(T)), not(var5(T)), not(var7(T)), not(var13(T)))))).
-formula(forall([T], not(or(var25(T), not(var21(T)), not(var10(T)), var14(T), var6(T))))).
-formula(forall([T], not(or(not(var15(T)), not(var17(T)), not(var12(T)), not(var21(T)), var4(T))))).
-formula(forall([T], not(or(not(var15(T)), var4(T), var9(T), var11(T), var21(T))))).
-formula(forall([T], not(or(var11(T), var13(T), var15(T), var22(T), var21(T))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var24(T1), var15(T1)), or(not(var2(T)), not(var1(T)), var21(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var14(T1), var19(T1), not(var9(T1)), var6(T1)), not(var18(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var5(T1), not(var17(T1)), not(var4(T1))), or(not(var25(T)), var20(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var5(T1), var8(T1), not(var2(T1))), or(not(var1(T)), not(var9(T)))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var16(T1), var18(T1), var5(T1)), or(var1(T), not(var10(T)))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(var24(T1), or(not(var11(T)), not(var8(T)), not(var7(T)), var17(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var2(T1)), var14(T1), var11(T1)), or(not(var12(T)), not(var5(T)))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(var2(T1), or(var24(T), var9(T), var4(T), not(var22(T)))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var10(T1)), not(var18(T1)), not(var13(T1))), or(var21(T), var11(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var6(T1)), not(var21(T1))), or(not(var20(T)), var18(T), not(var8(T)))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(var6(T1), or(not(var23(T)), var8(T), var3(T), var13(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var3(T1)), var24(T1)), or(not(var6(T)), var13(T), var19(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var24(T1)), var11(T1), not(var5(T1)), var20(T1)), not(var8(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var17(T1)), not(var1(T1)), var25(T1), not(var19(T1))), var9(T)))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var12(T1), var3(T1)), or(not(var10(T)), var8(T), not(var21(T)))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var2(T1), not(var18(T1))), or(var11(T), var25(T), not(var9(T)))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var1(T1)), or(var21(T), var5(T), not(var22(T)), not(var14(T)))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var18(T1)), not(var9(T1)), var21(T1), var8(T1)), var6(T)))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var23(T1)), var12(T1), var18(T1)), or(var1(T), not(var16(T)))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var3(T1), not(var12(T1))), or(var18(T), not(var7(T)), var11(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var2(T1)), not(var1(T1))), or(not(var25(T)), not(var20(T)), var16(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var2(T1), not(var23(T1)), var9(T1), not(var25(T1))), var15(T)))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var13(T1), var23(T1), var9(T1)), or(var4(T), not(var5(T)))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var2(T1), var12(T1), var11(T1), not(var15(T1))), not(var4(T))))))).
-formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var16(T1)), var13(T1), not(var11(T1))), or(not(var1(T)), not(var4(T)))))))).
+formula(forall([T], not(or(not(var2(T)), not(var9(T)), not(var19(T)), var23(T), var21(T))))).
+formula(forall([T], not(or(var9(T), not(var18(T)), var3(T), not(var21(T)), not(var16(T)))))).
+formula(forall([T], not(or(not(var7(T)), not(var13(T)), not(var2(T)), var16(T), var5(T))))).
+formula(forall([T], not(or(var12(T), not(var10(T)), var2(T), not(var7(T)), var24(T))))).
+formula(forall([T], not(or(var18(T), var10(T), not(var17(T)), not(var13(T)), var21(T))))).
+formula(forall([T], not(or(var20(T), not(var11(T)), not(var5(T)), not(var7(T)), not(var15(T)))))).
+formula(forall([T], not(or(var24(T), not(var20(T)), var6(T), var16(T), not(var17(T)))))).
+formula(forall([T], not(or(var21(T), var10(T), not(var20(T)), var8(T), var16(T))))).
+formula(forall([T], not(or(not(var22(T)), not(var21(T)), var1(T), var18(T), var14(T))))).
+formula(forall([T], not(or(not(var10(T)), var12(T), not(var11(T)), var21(T), not(var14(T)))))).
+formula(forall([T], not(or(not(var12(T)), var20(T), var19(T), not(var3(T)), not(var1(T)))))).
+formula(forall([T], not(or(not(var25(T)), var13(T), var21(T), var14(T), var23(T))))).
+formula(forall([T], not(or(var6(T), var3(T), not(var14(T)), not(var12(T)), var18(T))))).
+formula(forall([T], not(or(var7(T), not(var20(T)), var22(T), var16(T), not(var12(T)))))).
+formula(forall([T], not(or(var1(T), not(var12(T)), var23(T), var2(T), not(var4(T)))))).
+formula(forall([T], not(or(var21(T), var13(T), var25(T), not(var19(T)), var15(T))))).
+formula(forall([T], not(or(var20(T), var22(T), var4(T), not(var1(T)), var2(T))))).
+formula(forall([T], not(or(var9(T), not(var24(T)), not(var7(T)), not(var16(T)), not(var15(T)))))).
+formula(forall([T], not(or(var23(T), var22(T), var5(T), not(var17(T)), not(var2(T)))))).
+formula(forall([T], not(or(var16(T), var25(T), var19(T), var10(T), not(var23(T)))))).
+formula(forall([T], not(or(not(var25(T)), var6(T), not(var8(T)), var12(T), not(var16(T)))))).
+formula(forall([T], not(or(var20(T), var1(T), var6(T), not(var8(T)), var18(T))))).
+formula(forall([T], not(or(var20(T), not(var4(T)), var17(T), not(var10(T)), var21(T))))).
+formula(forall([T], not(or(not(var17(T)), var16(T), not(var10(T)), var4(T), not(var19(T)))))).
+formula(forall([T], not(or(not(var10(T)), var20(T), not(var6(T)), not(var8(T)), not(var18(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var14(T1), or(var17(T), var7(T), var18(T), not(var25(T)))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var20(T1)), not(var21(T1)), var3(T1)), or(var4(T), var17(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var14(T1), or(not(var3(T)), not(var6(T)), not(var16(T)), not(var25(T)))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var12(T1), not(var7(T1)), var10(T1), var19(T1)), var3(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var22(T1)), var18(T1)), or(var24(T), var9(T), var20(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var4(T1), not(var24(T1)), not(var13(T1)), not(var18(T1))), not(var15(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var23(T1)), or(var19(T), not(var9(T)), var20(T), not(var2(T)))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var1(T1), var16(T1), not(var5(T1)), not(var12(T1))), var3(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var22(T1), var8(T1), var1(T1), not(var3(T1))), var18(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var14(T1), not(var3(T1))), or(var23(T), var2(T), not(var13(T)))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var18(T1), var1(T1)), or(not(var9(T)), var2(T), var17(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var24(T1), or(var3(T), not(var5(T)), not(var13(T)), var2(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var7(T1)), not(var9(T1))), or(not(var22(T)), not(var18(T)), var3(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var16(T1)), var4(T1), not(var15(T1)), var2(T1)), not(var23(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var13(T1)), not(var3(T1)), var14(T1)), or(not(var4(T)), not(var16(T)))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var3(T1), or(not(var1(T)), not(var15(T)), var5(T), var11(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var4(T1), var14(T1), not(var24(T1)), var11(T1)), var9(T)))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var19(T1), or(not(var7(T)), not(var10(T)), var1(T), var11(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var17(T1), or(var14(T), var2(T), var7(T), var1(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(not(var23(T1)), or(not(var4(T)), var14(T), not(var7(T)), var12(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(var2(T1), or(var15(T), not(var16(T)), var14(T), var6(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var14(T1), var19(T1)), or(not(var9(T)), not(var16(T)), not(var4(T)))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var18(T1), var7(T1)), or(var5(T), not(var1(T)), var23(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(var25(T1), var20(T1), var24(T1), not(var9(T1))), not(var1(T))))))).
+formula(forall([T], exists([T1], and(GTE(T, T1), implies(or(not(var10(T1)), not(var12(T1))), or(not(var16(T)), var19(T), var3(T))))))).
 end_of_list.
 
 end_problem.

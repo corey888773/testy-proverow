@@ -27,6 +27,7 @@ class TestEnv:
                     "Clauses lengths","Number of clauses", "Distribution of lengths", \
                     "Vampire sat", "Vampire memory","Vampire time", \
                     "Snake sat", "Snake memory","Snake time", \
+                    "E sat", "E memory","E time", \
                     "Z3 sat", "Z3 memory","Z3 time"])
                 for case in self.testCases:
                     try:
@@ -38,79 +39,54 @@ class TestEnv:
                         # log any errors to error log file
                         erlog.write(str(rfg_err))
                     
-                    vampire_stats = self.runProver("vampire")
+                    # vampire_stats = self.runProver("vampire")
                     
-                    snake_stats = self.runProver("snake")
-                        
+                    # snake_stats = self.runProver("snake")
+                    
+                    # e_stats = self.runProver("e")
+                 
                     z3_stats = self.runProver("z3")
+
+                    # spass_stats = self.runProver("spass")
+
+                    cvc5_stats = self.runProver("cvc5")
+                    
+                    # prover9_stats = self.runProver("prover9")
                         
                     #cvc4_stats = self.runProver("cvc4")
-                    """
+                   
+                    # read parameters, representing CSV columns, from test case object and save them to a list
                     try:
-                        # execute Prover9 and get results
-                        prover9_stats = self.runProver("prover9")
-                    except RFGTimeoutError as tm_err:
-                        # if process was terminated due to timeout, set the results manually
-                        prover9_stats = {"sat": "Timeout", "memory": 0, "time": 300}
-                        # write appropiate information to error log file                   
-                        erlog.write(str(tm_err))
-                    except RFGError as rfg_err:
-                        # log any other errors to error log file
-                        erlog.write(str(rfg_err))
-
-                    try:
-                        # execute SPASS and get results
-                        spass_stats = self.runProver("spass")
-
-                        # if both provers got a valid result and the results are different, raise an error
-                        if spass_stats["sat"] in ["True", "False"] and prover9_stats["sat"] in ["True", "False"] and prover9_stats["sat"] != spass_stats["sat"]:
-                            raise RFGError(f'TestEnv.makeTests: Provers got different results. Spass: {spass_stats["sat"]}; Prover9: {prover9_stats["sat"]}', self.filenames["output"])
-
-                        # if any prover exceeded the memory limit, set "Memory limit" result
-                        if prover9_stats["sat"] == "Memory limit" or spass_stats["sat"] == "Memory limit":
-                            sat_result = "Memory limit"
-                        # else if any prover exceeded the time limit, set "Timeout" result
-                        elif prover9_stats["sat"] == "Timeout" or spass_stats["sat"] == "Timeout":
-                            sat_result = "Timeout"
-                        # else - they both got the same valid result, save it
-                        else:
-                            sat_result = prover9_stats["sat"]
-                    """                        
-                        # read parameters, representing CSV columns, from test case object and save them to a list
-                    try:
-                        test_stats = [case.parameters_list[0]]
-                        test_stats.append(round(case.parameters_list[3]*case.parameters_list[5]))
-                        test_stats.append(case.parameters_list[1])
-                        cl_string = ""
-                        for cl in case.parameters_list[2]:
-                            cl_string += str(cl) + ", "
-                        test_stats.append(cl_string[:-2])
-                        test_stats.append(case.parameters_list[3])
-                        if (case.parameters_list[4] and case.parameters_list[0] in \
-                            ["problem6","problem7a","problem7b","problem8a","problem8b","problem8c"]) \
-                            or case.parameters_list[0] == "problem2":
-                            test_stats.append("poisson")
-                        else:
-                            test_stats.append(case.parameters_list[6])
-                        #test_stats.append(sat_result)
-                        test_stats.append(vampire_stats["sat"])
-                        test_stats.append(vampire_stats["memory"])
-                        test_stats.append(vampire_stats["time"])
+                        pass
+                        # test_stats = [case.parameters_list[0]]
+                        # test_stats.append(round(case.parameters_list[3]*case.parameters_list[5]))
+                        # test_stats.append(case.parameters_list[1])
+                        # cl_string = ""
+                        # for cl in case.parameters_list[2]:
+                        #     cl_string += str(cl) + ", "
+                        # test_stats.append(cl_string[:-2])
+                        # test_stats.append(case.parameters_list[3])
+                        # if (case.parameters_list[4] and case.parameters_list[0] in \
+                        #     ["problem6","problem7a","problem7b","problem8a","problem8b","problem8c"]) \
+                        #     or case.parameters_list[0] == "problem2":
+                        #     test_stats.append("poisson")
+                        # else:
+                        #     test_stats.append(case.parameters_list[6])
+                        # #test_stats.append(sat_result)
+                        # test_stats.append(vampire_stats["sat"])
+                        # test_stats.append(vampire_stats["memory"])
+                        # test_stats.append(vampire_stats["time"])
                         
-                        test_stats.append(snake_stats["sat"])
-                        test_stats.append(snake_stats["memory"])
-                        test_stats.append(snake_stats["time"])
+                        # test_stats.append(snake_stats["sat"])
+                        # test_stats.append(snake_stats["memory"])
+                        # test_stats.append(snake_stats["time"])
                         
-                        test_stats.append(z3_stats["sat"])
-                        test_stats.append(z3_stats["memory"])
-                        test_stats.append(z3_stats["time"])
+                        # test_stats.append(z3_stats["sat"])
+                        # test_stats.append(z3_stats["memory"])
+                        # test_stats.append(z3_stats["time"])
                         
-                        #test_stats.append(cvc4_stats["sat"])
-                        #test_stats.append(cvc4_stats["memory"])
-                        #test_stats.append(cvc4_stats["time"])
-
-                        # write the list as a row to CSV
-                        results_writer.writerow(test_stats)
+                        # # write the list as a row to CSV
+                        # results_writer.writerow(test_stats)
 
                         # kill all prover processes that did not end by themselves
                         # subprocess.call('pkill -f "prover9|SPASS"', shell=True)
@@ -138,7 +114,7 @@ class TestEnv:
 
             current_output_file = f'{output_dir}/{self.filenames["output"]}_attempt{attempt}_{prover_name}.out'
             # run prover and read output file
-            usage_dict = runner.performMeasurements(current_output_file)
+            usage_dict = runner.performMeasurements(current_output_file, os_specific_stats="/usr/bin/time -l")
 
             # save results in lists
             memory_usages.append(usage_dict["memory"])
