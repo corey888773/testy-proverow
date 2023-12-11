@@ -1,11 +1,13 @@
-from randomgen import Generator
-import provrun
+from generation.randomgen import Generator
+from run import provrun
 import csv
 import os
 import subprocess
 from statistics import mean, mode
-from customerrors import RFGError, RFGTimeoutError
+from common.customerrors import RFGError, RFGTimeoutError
+from config import config
 
+curr_dir = os.path.dirname(os.path.abspath(__file__))
 
 class TestEnv:
     def __init__(self, config_file_path):
@@ -16,9 +18,9 @@ class TestEnv:
 
     def makeTests(self):
         # open a file to log errors into
-        with open('./generated_files/error_log.txt','a') as erlog:
+        with open(f'{curr_dir}{os.sep}data{os.sep}error_log.txt','a') as erlog:
             # open a .csv file for results
-            with open('./generated_files/test_session_results.csv', 'w', newline='') as csvfile:
+            with open(f'{curr_dir}{os.sep}data{os.sep}test_session_results.csv', 'w', newline='') as csvfile:
                 # setup CSV writer with comma separator and standard quotes character
                 results_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 # write column names row
@@ -26,7 +28,12 @@ class TestEnv:
                     "Clauses lengths","Number of clauses", "Distribution of lengths", \
                     "Vampire sat", "Vampire memory","Vampire time", \
                     "Snake sat", "Snake memory","Snake time", \
-                    "Z3 sat", "Z3 memory","Z3 time"])
+                    "E sat", "E memory","E time", \
+                    "Z3 sat", "Z3 memory","Z3 time", \
+                    "SPASS sat", "SPASS memory","SPASS time", \
+                    "CVC5 sat", "CVC5 memory","CVC5 time", \
+                    "Prover9 sat", "Prover9 memory","Prover9 time"])
+
                 for case in self.testCases:
                     try:
                         # create Generator object for current test case (this also cause formula to be generated and saved to a text file)
@@ -40,42 +47,18 @@ class TestEnv:
                     vampire_stats = self.runProver("vampire")
                     
                     snake_stats = self.runProver("snake")
-                        
+                    
+                    e_stats = self.runProver("e")
+                 
                     z3_stats = self.runProver("z3")
-                        
-                    #cvc4_stats = self.runProver("cvc4")
-                    """
-                    try:
-                        # execute Prover9 and get results
-                        prover9_stats = self.runProver("prover9")
-                    except RFGTimeoutError as tm_err:
-                        # if process was terminated due to timeout, set the results manually
-                        prover9_stats = {"sat": "Timeout", "memory": 0, "time": 300}
-                        # write appropiate information to error log file                   
-                        erlog.write(str(tm_err))
-                    except RFGError as rfg_err:
-                        # log any other errors to error log file
-                        erlog.write(str(rfg_err))
 
-                    try:
-                        # execute SPASS and get results
-                        spass_stats = self.runProver("spass")
+                    spass_stats = self.runProver("spass")
 
-                        # if both provers got a valid result and the results are different, raise an error
-                        if spass_stats["sat"] in ["True", "False"] and prover9_stats["sat"] in ["True", "False"] and prover9_stats["sat"] != spass_stats["sat"]:
-                            raise RFGError(f'TestEnv.makeTests: Provers got different results. Spass: {spass_stats["sat"]}; Prover9: {prover9_stats["sat"]}', self.filenames["output"])
-
-                        # if any prover exceeded the memory limit, set "Memory limit" result
-                        if prover9_stats["sat"] == "Memory limit" or spass_stats["sat"] == "Memory limit":
-                            sat_result = "Memory limit"
-                        # else if any prover exceeded the time limit, set "Timeout" result
-                        elif prover9_stats["sat"] == "Timeout" or spass_stats["sat"] == "Timeout":
-                            sat_result = "Timeout"
-                        # else - they both got the same valid result, save it
-                        else:
-                            sat_result = prover9_stats["sat"]
-                    """                        
-                        # read parameters, representing CSV columns, from test case object and save them to a list
+                    cvc5_stats = self.runProver("cvc5")
+                    
+                    prover9_stats = self.runProver("prover9")
+                   
+                    # read parameters, representing CSV columns, from test case object and save them to a list
                     try:
                         test_stats = [case.parameters_list[0]]
                         test_stats.append(round(case.parameters_list[3]*case.parameters_list[5]))
@@ -91,7 +74,7 @@ class TestEnv:
                             test_stats.append("poisson")
                         else:
                             test_stats.append(case.parameters_list[6])
-                        #test_stats.append(sat_result)
+
                         test_stats.append(vampire_stats["sat"])
                         test_stats.append(vampire_stats["memory"])
                         test_stats.append(vampire_stats["time"])
@@ -99,20 +82,32 @@ class TestEnv:
                         test_stats.append(snake_stats["sat"])
                         test_stats.append(snake_stats["memory"])
                         test_stats.append(snake_stats["time"])
+
+                        test_stats.append(e_stats["sat"])
+                        test_stats.append(e_stats["memory"])
+                        test_stats.append(e_stats["time"])
                         
                         test_stats.append(z3_stats["sat"])
                         test_stats.append(z3_stats["memory"])
                         test_stats.append(z3_stats["time"])
-                        
-                        #test_stats.append(cvc4_stats["sat"])
-                        #test_stats.append(cvc4_stats["memory"])
-                        #test_stats.append(cvc4_stats["time"])
 
+                        test_stats.append(spass_stats["sat"])
+                        test_stats.append(spass_stats["memory"])
+                        test_stats.append(spass_stats["time"])
+
+                        test_stats.append(cvc5_stats["sat"])
+                        test_stats.append(cvc5_stats["memory"]) 
+                        test_stats.append(cvc5_stats["time"])
+
+                        test_stats.append(prover9_stats["sat"])
+                        test_stats.append(prover9_stats["memory"])
+                        test_stats.append(prover9_stats["time"])
+                        
                         # write the list as a row to CSV
                         results_writer.writerow(test_stats)
 
                         # kill all prover processes that did not end by themselves
-                        # subprocess.call('pkill -f "prover9|SPASS"', shell=True)
+                        subprocess.call('pkill -f "prover9|SPASS"', shell=True)
                     except RFGError as rfg_err:
                         # log any errors to error log file
                         erlog.write(str(rfg_err))
@@ -130,12 +125,19 @@ class TestEnv:
         # perform three tests on the same formula to get more truthful results
         for attempt in range(1, 4):
             # include the attempt number in output file name
-            current_output_file = os.path.dirname(__file__) + \
-                "/generated_files/" + self.filenames["output"] + \
-                "_attempt" + str(attempt) + "_" + prover_name + ".out"
-            
-            # run prover and read output file
-            usage_dict = runner.performMeasurements(current_output_file)
+
+            output_dir = f'{curr_dir}{os.sep}data{os.sep}generated_files_out{os.sep}{prover_name}'
+            if not os.path.exists(output_dir):
+                os.makedirs(output_dir)
+
+            current_output_file = f'{output_dir}{os.sep}{self.filenames["output"]}_attempt{attempt}_{prover_name}.out'
+            try:
+                # run prover and read output file
+                usage_dict = runner.performMeasurements(current_output_file, os_specific_stats=config.OS_SPECIFIC_STATS)
+            except Exception as e:
+                print(e)
+                # if timeout error is raised, save the results as timeout
+                usage_dict = {"memory": -1, "time": -1, "sat": "timeout"}
 
             # save results in lists
             memory_usages.append(usage_dict["memory"])
@@ -171,7 +173,7 @@ class TestEnv:
                 else:
                     if line == "end of problem":
                         # the problem block has ended
-                        with open('./generated_files/error_log.txt','a') as erlog:
+                        with open(f'{curr_dir}{os.sep}data{os.sep}generated_files_out{os.sep}error_log.txt','a') as erlog:
                             try:
                                 # generate test cases with current case maker and add them to test cases list
                                 new_cases = current_case_maker.makeCases()

@@ -1,1 +1,0 @@
-[ EXISTS -var79 OR -var29 OR var41 OR var84 ]

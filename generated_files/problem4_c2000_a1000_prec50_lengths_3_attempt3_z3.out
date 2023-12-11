@@ -1,9 +1,0 @@
-unknown
-(:final-checks 1
- :max-memory   29.70
- :memory       23.19
- :mk-bool-var  2000
- :num-allocs   140457316
- :num-checks   1
- :rlimit-count 902978
- :time         0.21)

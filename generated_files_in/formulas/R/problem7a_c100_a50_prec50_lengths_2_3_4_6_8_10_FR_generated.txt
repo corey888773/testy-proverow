@@ -1,1 +1,0 @@
-[ EXISTS -var4 OR var9 OR var5 OR -var15 ]
